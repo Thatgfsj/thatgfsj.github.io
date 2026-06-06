@@ -7,7 +7,7 @@ title: 关于
   <div class="section-header">
     <div class="section-icon">👤</div>
     <h2 class="section-title">关于我</h2>
-    <p class="section-subtitle">全栈开发者 · 开源爱好者 · 工具制造者</p>
+    <p class="section-subtitle">AI前沿探索者 · 开源贡献者</p>
   </div>
 
   <!-- Bio -->
@@ -20,7 +20,7 @@ title: 关于
       <p>
         技术栈覆盖 Python、Rust、Java/Kotlin、Go 等多种语言，
         擅长自动化工具、Android 应用开发、CLI 工具链和 AI 系统集成。
-        积极参与 <strong>OpenClaw</strong> 开源社区贡献者。
+        AI前沿探索者，OpenClaw等热门仓库贡献者。
         我相信好的工具应该简洁、高效、开箱即用。
       </p>
     </div>
@@ -63,11 +63,11 @@ title: 关于
 
     <div class="resume-item">
       <h3>🤖 AI 工程与自动化</h3>
-      <div class="resume-meta">RAG · Agent · OpenClaw 技能开发</div>
+      <div class="resume-meta">RAG · Agent · 开源生态</div>
       <ul>
         <li>Self-hosted AI 平台（Ollama 本地部署）</li>
         <li>神经记忆系统（neuroweave-cortex）</li>
-        <li><strong>OpenClaw</strong> 社区贡献</li>
+        <li>OpenClaw 等热门仓库贡献者</li>
         <li>AI 音频工具与多媒体生成</li>
       </ul>
     </div>
@@ -115,7 +115,7 @@ title: 关于
     <h2><span class="icon">🌐</span> 开源贡献</h2>
 
     <div class="about-bio" style="margin-bottom: 20px;">
-      <p><strong>OpenClaw</strong> 开源社区贡献者，参与 AI Agent 生态建设。</p>
+      <p>AI前沿探索者，OpenClaw等热门仓库贡献者。</p>
     </div>
 
     <div class="github-stats" style="margin-top: 20px;">
