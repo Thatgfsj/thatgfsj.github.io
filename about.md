@@ -7,7 +7,7 @@ title: 关于
   <div class="section-header">
     <div class="section-icon">👤</div>
     <h2 class="section-title">关于我</h2>
-    <p class="section-subtitle">AI前沿探索者 · 开源贡献者</p>
+    <p class="section-subtitle">全栈开发者 · 熟练vibe coding工作者</p>
   </div>
 
   <!-- Bio -->
@@ -19,7 +19,7 @@ title: 关于
       </p>
       <p>
         技术栈覆盖 Python、Rust、Java/Kotlin、Go 等多种语言，
-        擅长自动化工具、Android 应用开发、CLI 工具链和 AI 系统集成。
+        全栈开发者，熟练vibe coding工作者。
         AI前沿探索者，OpenClaw等热门仓库贡献者。
         我相信好的工具应该简洁、高效、开箱即用。
       </p>

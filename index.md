@@ -13,7 +13,7 @@ layout: default
       <p class="hero-tagline">{{ site.tagline }}</p>
       <p class="hero-bio">
         {{ site.description }}
-        擅长 Python 自动化、Rust 系统编程、Android 原生开发。
+        全栈开发者，熟练vibe coding工作者。
         AI前沿探索者，OpenClaw等热门仓库贡献者。
       </p>
       <div class="hero-actions">
