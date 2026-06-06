@@ -197,7 +197,11 @@ layout: default
         </div>
         <div class="bp-content">
           <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+          {% if post.description %}
+          <p>{{ post.description }}</p>
+          {% else %}
           <p>{{ post.excerpt | strip_html | truncate: 140 }}</p>
+          {% endif %}
         </div>
       </div>
       {% endfor %}

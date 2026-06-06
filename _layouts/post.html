@@ -4,10 +4,10 @@ layout: default
 <article class="post">
   <header class="post-header">
     <div class="wrapper">
-      <div class="post-meta">
-        <time datetime="{{ page.date | date_to_xmlschema }}">
-          <i class="far fa-calendar-alt"></i> {{ page.date | date: "%Y 年 %m 月 %d 日" }}
-        </time>
+      <div class="post-meta-bar">
+        <span class="post-date">
+          <i class="far fa-calendar-alt"></i> {{ page.date | date: "%Y-%m-%d" }}
+        </span>
         {% if page.tags %}
           <span class="post-tags">
             {% for tag in page.tags %}
@@ -15,8 +15,16 @@ layout: default
             {% endfor %}
           </span>
         {% endif %}
+        <span class="post-reading-time">
+          <i class="far fa-clock"></i>
+          {% assign words = content | number_of_words %}
+          {% if words < 300 %} 1 分钟阅读
+          {% else %}{{ words | divided_by: 200 }} 分钟阅读
+          {% endif %}
+        </span>
       </div>
       <h1 class="post-title">{{ page.title }}</h1>
+      <p class="post-desc">{{ page.description }}</p>
     </div>
   </header>
 

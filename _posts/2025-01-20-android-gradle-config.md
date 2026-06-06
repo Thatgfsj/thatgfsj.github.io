@@ -3,6 +3,7 @@ layout: post
 title: "Android 开发：Gradle 构建配置最佳实践"
 date: 2025-01-20 10:30:00 +0800
 tags: [Android, Gradle]
+description: "使用 Version Catalog 统一管理依赖、构建变体配置、以及优化 Gradle 构建效率的实用技巧。"
 ---
 
 Android 项目使用 Gradle 构建，良好的构建配置能显著提升开发效率。

@@ -23,7 +23,11 @@ title: 博客
         {% endif %}
       </div>
       <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+      {% if post.description %}
+      <p class="blog-list-excerpt">{{ post.description }}</p>
+      {% else %}
       <p class="blog-list-excerpt">{{ post.excerpt | strip_html | truncate: 200 }}</p>
+      {% endif %}
     </div>
     {% endfor %}
   </div>
