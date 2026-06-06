@@ -2,10 +2,10 @@
 # Jekyll 配置 — 个人简历 / 作品集
 # ============================
 title: "Thatgfsj"
-tagline: "全栈开发者 · 熟练vibe coding工作者"
+tagline: "全栈开发者 · 开源贡献者"
 description: >-
-  全栈开发者，熟练vibe coding工作者。
-  喜欢折腾工具链、自动化流程和 AI 工程化。
+  全栈开发者，熟练vibe coding。
+  折腾工具链、自动化流程和 AI 工程化。
 author: "Thatgfsj"
 avatar: "https://github.com/Thatgfsj.png"
 repository: "Thatgfsj/thatgfsj.github.io"
