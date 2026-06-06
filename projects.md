@@ -27,6 +27,7 @@ title: 项目
               {% if repo.language %}
               <span class="lang-dot" style="background: {{ repo.language | downcase | replace: 'python', '#3572A5' | replace: 'rust', '#DEA584' | replace: 'java', '#B07219' | replace: 'kotlin', '#A97BFF' | replace: 'go', '#00ADD8' | replace: 'c#', '#178600' | replace: 'c++', '#f34b7d' | replace: 'javascript', '#F7DF1E' | replace: 'typescript', '#3178C6' | replace: 'css', '#563D7C' | replace: 'html', '#E34F26' | replace: 'shell', '#89E051' | default: '#888' }}"></span>
               {{ repo.language }}
+              {% endif %}
             </span>
             <span class="stars"><i class="far fa-star"></i> {{ repo.stargazers_count }}</span>
           </div>
