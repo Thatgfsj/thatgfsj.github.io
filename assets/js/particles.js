@@ -50,9 +50,9 @@
   var CONNECT_RADIUS = 300;
   var ATTRACT_RADIUS = 220;
   var MAX_OFFSET_RATIO = 0.10; // 锚点偏移上限（相对于视口短边）
-  var LINE_OPACITY_MAX = 0.25;
-  var LINE_WIDTH = 1.2;
-  var PARTICLE_RADIUS = 2.8;
+  var LINE_OPACITY_MAX = 0.35;
+  var LINE_WIDTH = 1.5;
+  var PARTICLE_RADIUS = 3.6;
   var FADE_SPEED = 0.025;
   var COLOR = [147, 197, 253]; // 淡蓝色 tailwind blue-300
 
@@ -337,7 +337,7 @@
         ',' +
         COLOR[2] +
         ',' +
-        0.65 * p.alpha +
+        0.85 * p.alpha +
         ')';
       ctx.fill();
     }
