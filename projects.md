@@ -8,95 +8,44 @@ title: 项目
     <div class="section-header">
       <div class="section-icon">🚀</div>
       <h2 class="section-title">开源项目</h2>
-      <p class="section-subtitle">GitHub 上的所有公开仓库</p>
+      <p class="section-subtitle">精选开源项目 · 点击卡片查看源码</p>
     </div>
 
     <div class="project-grid">
-      {% assign projects = site.github.public_repositories | sort: 'stargazers_count' | reverse %}
-      {% if projects.size > 0 %}
-        {% for repo in projects %}
-        <a href="{{ repo.html_url }}" target="_blank" rel="noopener" class="project-card" style="text-decoration: none; color: inherit;">
-          <div class="project-name">
-            <i class="fas fa-folder"></i> {{ repo.name }}
-          </div>
-          <div class="project-desc">
-            {{ repo.description | default: '暂无描述' | truncate: 120 }}
-          </div>
-          <div class="project-meta">
-            <span class="lang">
-              {% if repo.language %}
-              <span class="lang-dot" style="background: {{ repo.language | downcase | replace: 'python', '#3572A5' | replace: 'rust', '#DEA584' | replace: 'java', '#B07219' | replace: 'kotlin', '#A97BFF' | replace: 'go', '#00ADD8' | replace: 'c#', '#178600' | replace: 'c++', '#f34b7d' | replace: 'javascript', '#F7DF1E' | replace: 'typescript', '#3178C6' | replace: 'css', '#563D7C' | replace: 'html', '#E34F26' | replace: 'shell', '#89E051' | default: '#888' }}"></span>
-              {{ repo.language }}
-              {% endif %}
-            </span>
-            <span class="stars"><i class="far fa-star"></i> {{ repo.stargazers_count }}</span>
-          </div>
-        </a>
-        {% endfor %}
-      {% else %}
-        {% comment %}Since Jekyll GitHub Pages doesn't support site.github.public_repositories natively,
-        we show the fallback list.{% endcomment %}
+        <!-- neuroweave-cortex -->
         <a href="https://github.com/Thatgfsj/neuroweave-cortex" target="_blank" rel="noopener" class="project-card" style="text-decoration: none; color: inherit;">
           <div class="project-name"><i class="fas fa-folder"></i> neuroweave-cortex</div>
-          <div class="project-desc">海马体启发的星图记忆系统，带睡眠巩固。AI 长期记忆——锚点、扩散激活、夜间回放/合并/修剪/桥接。</div>
-          <div class="project-meta"><span class="lang"><span class="lang-dot" style="background: #3572A5"></span> Python</span><span class="stars"><i class="far fa-star"></i> 2</span></div>
+          <div class="project-desc">海马体启发的星图记忆系统，带睡眠巩固。AI 长期记忆通过锚点、扩散激活和夜间回放/合并/修剪/桥接循环实现自我整合。基于 Python 实现。</div>
+          <div class="project-meta"><span class="lang"><span class="lang-dot" style="background:#3572A5"></span> Python</span><span class="stars"><i class="far fa-star"></i> 2</span></div>
         </a>
-        <a href="https://github.com/Thatgfsj/playwright-crawler-helper" target="_blank" rel="noopener" class="project-card" style="text-decoration: none; color: inherit;">
-          <div class="project-name"><i class="fas fa-folder"></i> playwright-crawler-helper</div>
-          <div class="project-desc">Playwright爬虫辅助工具，通过分析浏览器网络请求辅助编写爬虫脚本。</div>
-          <div class="project-meta"><span class="lang"><span class="lang-dot" style="background: #3572A5"></span> Python</span><span class="stars"><i class="far fa-star"></i> 2</span></div>
+
+        <!-- claude-email-cli -->
+        <a href="https://github.com/Thatgfsj/claude-email-cli" target="_blank" rel="noopener" class="project-card" style="text-decoration: none; color: inherit;">
+          <div class="project-name"><i class="fas fa-folder"></i> claude-email-cli</div>
+          <div class="project-desc">通过邮件控制 Claude AI 的 CLI 工具。无需打开浏览器，发一封邮件就能与 AI 交互，适合自动化工作流。Python 实现。</div>
+          <div class="project-meta"><span class="lang"><span class="lang-dot" style="background:#3572A5"></span> Python</span><span class="stars"><i class="far fa-star"></i> 1</span></div>
         </a>
-        <a href="https://github.com/Thatgfsj/Excel-Date-Error-Fixer" target="_blank" rel="noopener" class="project-card" style="text-decoration: none; color: inherit;">
-          <div class="project-name"><i class="fas fa-folder"></i> Excel-Date-Error-Fixer</div>
-          <div class="project-desc">批量纠正 Excel 表格中的不规则日期格式，转换为标准格式。</div>
-          <div class="project-meta"><span class="lang"><span class="lang-dot" style="background: #3572A5"></span> Python</span><span class="stars"><i class="far fa-star"></i> 2</span></div>
-        </a>
-        <a href="https://github.com/Thatgfsj/guaardvark" target="_blank" rel="noopener" class="project-card" style="text-decoration: none; color: inherit;">
-          <div class="project-name"><i class="fas fa-folder"></i> guaardvark</div>
-          <div class="project-desc">Self-hosted AI platform — RAG chat, image/video generation, voice, self-improving agents.</div>
-          <div class="project-meta"><span class="lang"><span class="lang-dot" style="background: #888"></span> 多语言</span><span class="stars"><i class="far fa-star"></i> 2</span></div>
-        </a>
+
+        <!-- rsklls -->
         <a href="https://github.com/Thatgfsj/rsklls" target="_blank" rel="noopener" class="project-card" style="text-decoration: none; color: inherit;">
           <div class="project-name"><i class="fas fa-folder"></i> rsklls</div>
-          <div class="project-desc">Rust Skills for OpenClaw — Rust 编程、Python-Rust 互操作。</div>
-          <div class="project-meta"><span class="lang"><span class="lang-dot" style="background: #89E051"></span> Shell</span><span class="stars"><i class="far fa-star"></i> 1</span></div>
+          <div class="project-desc">Rust Skills 技能包 — 为 OpenClaw 提供 Rust 编程能力。涵盖 Rust 核心编程、Python-Rust 互操作（PyO3），以及跨平台 CLI 工具开发。</div>
+          <div class="project-meta"><span class="lang"><span class="lang-dot" style="background:#89E051"></span> Shell / Rust</span><span class="stars"><i class="far fa-star"></i> 1</span></div>
         </a>
-        <a href="https://github.com/Thatgfsj/excelfind" target="_blank" rel="noopener" class="project-card" style="text-decoration: none; color: inherit;">
-          <div class="project-name"><i class="fas fa-folder"></i> excelfind</div>
-          <div class="project-desc">轻量级桌面工具，批量搜索 Excel/CSV 表格内容，自动复制匹配文件并生成汇总报告。</div>
-          <div class="project-meta"><span class="lang"><span class="lang-dot" style="background: #3572A5"></span> Python</span><span class="stars"><i class="far fa-star"></i> 1</span></div>
+
+        <!-- playwright-crawler-helper -->
+        <a href="https://github.com/Thatgfsj/playwright-crawler-helper" target="_blank" rel="noopener" class="project-card" style="text-decoration: none; color: inherit;">
+          <div class="project-name"><i class="fas fa-folder"></i> playwright-crawler-helper</div>
+          <div class="project-desc">Playwright 爬虫辅助工具 — 通过分析浏览器网络请求（Network Panel）来辅助编写爬虫脚本，让抓包过程半自动化。Python 实现。</div>
+          <div class="project-meta"><span class="lang"><span class="lang-dot" style="background:#3572A5"></span> Python</span><span class="stars"><i class="far fa-star"></i> 2</span></div>
         </a>
-        <a href="https://github.com/Thatgfsj/PowerShell" target="_blank" rel="noopener" class="project-card" style="text-decoration: none; color: inherit;">
-          <div class="project-name"><i class="fas fa-folder"></i> PowerShell</div>
-          <div class="project-desc">PowerShell for every system!</div>
-          <div class="project-meta"><span class="lang"><span class="lang-dot" style="background: #178600"></span> C#</span><span class="stars"><i class="far fa-star"></i> 1</span></div>
+
+        <!-- thatgfsj-code -->
+        <a href="https://github.com/Thatgfsj/thatgfsj-code" target="_blank" rel="noopener" class="project-card" style="text-decoration: none; color: inherit;">
+          <div class="project-name"><i class="fas fa-folder"></i> thatgfsj-code</div>
+          <div class="project-desc">个人代码片段库与工具集合。TypeScript 实现，累积日常开发中提炼的实用代码、组件和工具函数。</div>
+          <div class="project-meta"><span class="lang"><span class="lang-dot" style="background:#3178C6"></span> TypeScript</span><span class="stars"><i class="far fa-star"></i> 0</span></div>
         </a>
-        <a href="https://github.com/Thatgfsj/Thatgfsj.web.sky" target="_blank" rel="noopener" class="project-card" style="text-decoration: none; color: inherit;">
-          <div class="project-name"><i class="fas fa-folder"></i> Thatgfsj.web.sky</div>
-          <div class="project-desc">个人网站前端项目</div>
-          <div class="project-meta"><span class="lang"><span class="lang-dot" style="background: #563D7C"></span> CSS</span><span class="stars"><i class="far fa-star"></i> 1</span></div>
-        </a>
-        <a href="https://github.com/Thatgfsj/OrgExplorer" target="_blank" rel="noopener" class="project-card" style="text-decoration: none; color: inherit;">
-          <div class="project-name"><i class="fas fa-folder"></i> OrgExplorer</div>
-          <div class="project-desc">Intuitive Dashboard to Explore Large GitHub Organizations</div>
-          <div class="project-meta"><span class="lang"><span class="lang-dot" style="background: #888"></span> 多语言</span><span class="stars"><i class="far fa-star"></i> 1</span></div>
-        </a>
-        <a href="https://github.com/Thatgfsj/labo-ai-audio-tools" target="_blank" rel="noopener" class="project-card" style="text-decoration: none; color: inherit;">
-          <div class="project-name"><i class="fas fa-folder"></i> labo-ai-audio-tools</div>
-          <div class="project-desc">AI 音频处理工具集</div>
-          <div class="project-meta"><span class="lang"><span class="lang-dot" style="background: #888"></span> 多语言</span><span class="stars"><i class="far fa-star"></i> 1</span></div>
-        </a>
-        <a href="https://github.com/Thatgfsj/aws-sam-cli" target="_blank" rel="noopener" class="project-card" style="text-decoration: none; color: inherit;">
-          <div class="project-name"><i class="fas fa-folder"></i> aws-sam-cli</div>
-          <div class="project-desc">CLI tool to build, test, debug, and deploy Serverless applications using AWS SAM</div>
-          <div class="project-meta"><span class="lang"><span class="lang-dot" style="background: #888"></span> 多语言</span><span class="stars"><i class="far fa-star"></i> 1</span></div>
-        </a>
-        <a href="https://github.com/Thatgfsj/large-task-scheduler" target="_blank" rel="noopener" class="project-card" style="text-decoration: none; color: inherit;">
-          <div class="project-name"><i class="fas fa-folder"></i> large-task-scheduler</div>
-          <div class="project-desc">OpenClaw技能：大型任务调度器 - 自动识别≥100字任务，拆分任务清单，定时执行</div>
-          <div class="project-meta"><span class="lang"><span class="lang-dot" style="background: #888"></span> 多语言</span><span class="stars"><i class="far fa-star"></i> 1</span></div>
-        </a>
-      {% endif %}
     </div>
   </div>
 </section>
