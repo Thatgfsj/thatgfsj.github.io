@@ -33,6 +33,13 @@ title: 项目
           <div class="project-meta"><span class="lang"><span class="lang-dot" style="background:#89E051"></span> Shell / Rust</span><span class="stars"><i class="far fa-star"></i> 1</span></div>
         </a>
 
+        <!-- android-gradle-skills -->
+        <a href="https://github.com/Thatgfsj/android-gradle-skills" target="_blank" rel="noopener" class="project-card" style="text-decoration: none; color: inherit;">
+          <div class="project-name"><i class="fas fa-folder"></i> android-gradle-skills</div>
+          <div class="project-desc">OpenClaw Android 开发技能包 — AGP/Gradle 版本兼容、项目模板、构建自动化脚本，让 AI Agent 理解 Android 构建体系。Python 实现。</div>
+          <div class="project-meta"><span class="lang"><span class="lang-dot" style="background:#3572A5"></span> Python</span><span class="stars"><i class="far fa-star"></i> 0</span></div>
+        </a>
+
         <!-- playwright-crawler-helper -->
         <a href="https://github.com/Thatgfsj/playwright-crawler-helper" target="_blank" rel="noopener" class="project-card" style="text-decoration: none; color: inherit;">
           <div class="project-name"><i class="fas fa-folder"></i> playwright-crawler-helper</div>
