@@ -975,6 +975,53 @@ img { max-width: 100%; height: auto; }
 
   .stat-card { padding: 20px 16px; }
   .stat-card .stat-number { font-size: 1.5rem; }
+
+  /* --- 手机端表格优化：横向滚动 + 紧凑排版 --- */
+  .post-content table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+    font-size: 0.82rem;
+  }
+  .post-content table::-webkit-scrollbar { height: 4px; }
+  .post-content table::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+  .post-content th,
+  .post-content td {
+    padding: 8px 10px;
+    min-width: 80px;
+  }
+
+  /* --- 手机端代码块优化 --- */
+  .post-content pre {
+    font-size: 0.78rem;
+    padding: 14px 16px;
+    white-space: pre;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .post-content pre::-webkit-scrollbar { height: 4px; }
+  .post-content pre::-webkit-scrollbar-thumb { background: #444; border-radius: 2px; }
+
+  .post-content code {
+    font-size: 0.8em;
+    word-break: break-all;
+  }
+  .post-content pre code {
+    word-break: normal;
+  }
+
+  /* --- 大段代码示例/URL 折行 --- */
+  .post-content p code,
+  .post-content li code {
+    white-space: normal;
+    word-break: break-all;
+  }
+
+  /* --- 正文间距微调 --- */
+  .post-content h2 { font-size: 1.25rem; margin: 28px 0 10px; }
+  .post-content h3 { font-size: 1.05rem; margin: 22px 0 8px; }
+  .post-content blockquote { padding: 10px 14px; font-size: 0.9rem; }
 }
 
 @media (max-width: 480px) {
