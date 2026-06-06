@@ -1,0 +1,63 @@
+# ============================
+# Jekyll 博客配置
+# ============================
+title: "Thatgfsj's Blog"
+tagline: "写点东西，记录思考"
+description: >-
+  个人技术博客，记录编程、开源项目与日常思考。
+author: "Thatgfsj"
+avatar: "https://github.com/Thatgfsj.png"
+
+# 社交链接
+github_username: "Thatgfsj"
+# twitter_username: ""
+
+# 构建与部署
+url: "https://thatgfsj.github.io"
+baseurl: ""
+permalink: /:year/:month/:title/
+
+# 主题（使用 GitHub Pages 内置主题作为基础）
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# 排除无关文件（不参与 Jekyll 构建）
+exclude:
+  - README.md
+  - CLAUDE_COPY.md
+  - "*.bat"
+  - "*.py"
+  - "C:"
+  - backup_claude.py
+  - check_claude.py
+  - check_claude2.py
+  - check_path.py
+  - check_perm.py
+  - check_preserved.py
+  - check_reg_path.py
+  - clean_all_models.py
+  - clean_free_only.py
+  - clean_models.py
+  - copy_claude.bat
+  - fix_path.py
+  - fix_permission.py
+  - nul
+  - run_write.bat
+  - test_cmd.py
+  - verify_clean.py
+  - write_claude.py
+  - _write_claude.py
+  - .codegraph/
+
+# Markdown 处理
+markdown: kramdown
+highlighter: rouge
+
+# 分页
+paginate: 5
+paginate_path: "/page:num/"
+
+# 语言
+lang: zh-CN

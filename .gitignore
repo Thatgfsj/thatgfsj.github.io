@@ -1,0 +1,15 @@
+# Jekyll 构建输出
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+Thumbs.db
+.DS_Store
