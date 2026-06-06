@@ -14,7 +14,7 @@ layout: default
       <p class="hero-bio">
         {{ site.description }}
         擅长 Python 自动化、Rust 系统编程、Android 原生开发。
-        热爱开源，为 <strong>OpenClaw</strong> 生态贡献了多个 AI Agent 技能包。
+        热爱开源，<strong>OpenClaw</strong> 社区贡献者。
       </p>
       <div class="hero-actions">
         <a href="{{ '/projects' | relative_url }}" class="btn btn-primary">

@@ -53,9 +53,9 @@
     - name: "AI 工程"
       level: 75
       desc: "RAG、Agent 系统、Ollama 本地部署"
-    - name: "OpenClaw 技能开发"
+    - name: "OpenClaw"
       level: 80
-      desc: "Agent 技能包、工具链集成、生态贡献"
+      desc: "开源社区贡献者、AI Agent 生态"
     - name: "爬虫与自动化"
       level: 90
       desc: "Playwright、Scrapy、网络抓包分析"

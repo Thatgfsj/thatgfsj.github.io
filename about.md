@@ -20,7 +20,7 @@ title: 关于
       <p>
         技术栈覆盖 Python、Rust、Java/Kotlin、Go 等多种语言，
         擅长自动化工具、Android 应用开发、CLI 工具链和 AI 系统集成。
-        积极参与 <strong>OpenClaw</strong> 开源生态建设，开发了多个 AI Agent 技能包。
+        积极参与 <strong>OpenClaw</strong> 开源社区贡献者。
         我相信好的工具应该简洁、高效、开箱即用。
       </p>
     </div>
@@ -67,7 +67,7 @@ title: 关于
       <ul>
         <li>Self-hosted AI 平台（Ollama 本地部署）</li>
         <li>神经记忆系统（neuroweave-cortex）</li>
-        <li><strong>OpenClaw</strong> Agent 技能包开发（Rust、Android、任务调度）</li>
+        <li><strong>OpenClaw</strong> 社区贡献</li>
         <li>AI 音频工具与多媒体生成</li>
       </ul>
     </div>
@@ -115,26 +115,7 @@ title: 关于
     <h2><span class="icon">🌐</span> 开源贡献</h2>
 
     <div class="about-bio" style="margin-bottom: 20px;">
-      <p>积极参与 <strong><a href="https://github.com/openclaw" target="_blank">OpenClaw</a></strong> 生态建设，开发了多个 AI Agent 技能包，贡献于开源社区：</p>
-    </div>
-
-    <div class="resume-item" style="border-left-color: var(--primary);">
-      <h3>🦞 OpenClaw 技能开发</h3>
-      <div class="resume-meta">AI Agent 技能包 · 工具链集成</div>
-      <ul>
-        <li>
-          <strong><a href="https://github.com/Thatgfsj/rsklls" target="_blank">rsklls</a></strong> —
-          Rust 编程技能包，为 OpenClaw 提供 Rust 核心编程与 Python-Rust 互操作能力（PyO3）
-        </li>
-        <li>
-          <strong><a href="https://github.com/Thatgfsj/android-gradle-skills" target="_blank">android-gradle-skills</a></strong> —
-          Android 开发技能包，涵盖 AGP/Gradle 版本兼容、项目模板和构建自动化
-        </li>
-        <li>
-          <strong><a href="https://github.com/Thatgfsj/large-task-scheduler" target="_blank">large-task-scheduler</a></strong> —
-          大型任务调度器，自动识别 ≥100 字任务并拆分清单、定时执行
-        </li>
-      </ul>
+      <p><strong>OpenClaw</strong> 开源社区贡献者，参与 AI Agent 生态建设。</p>
     </div>
 
     <div class="github-stats" style="margin-top: 20px;">
