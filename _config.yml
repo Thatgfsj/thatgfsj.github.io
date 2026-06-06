@@ -1,29 +1,33 @@
 # ============================
-# Jekyll 博客配置
+# Jekyll 配置 — 个人简历 / 作品集
 # ============================
-title: "Thatgfsj's Blog"
-tagline: "写点东西，记录思考"
+title: "Thatgfsj"
+tagline: "全栈开发者 · 开源爱好者"
 description: >-
-  个人技术博客，记录编程、开源项目与日常思考。
+  热爱编程，专注于 Rust、Python、Android 开发。
+  喜欢折腾工具链、自动化流程和 AI 工程化。
 author: "Thatgfsj"
 avatar: "https://github.com/Thatgfsj.png"
+repository: "Thatgfsj/thatgfsj.github.io"
 
 # 社交链接
 github_username: "Thatgfsj"
 # twitter_username: ""
-
-# 构建与部署
 url: "https://thatgfsj.github.io"
 baseurl: ""
-permalink: /:year/:month/:title/
 
-# 主题（使用 GitHub Pages 内置主题作为基础）
+# 页面永久链接
+permalink: /blog/:year/:month/:title/
+
+# 主题配置
 theme: minima
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-github-metadata
+  - jekyll-paginate
 
-# 排除无关文件（不参与 Jekyll 构建）
+# 排除无关文件
 exclude:
   - README.md
   - CLAUDE_COPY.md
@@ -51,13 +55,27 @@ exclude:
   - _write_claude.py
   - .codegraph/
 
-# Markdown 处理
+# Markdown
 markdown: kramdown
 highlighter: rouge
 
 # 分页
 paginate: 5
-paginate_path: "/page:num/"
+paginate_path: "/blog/page:num/"
 
 # 语言
 lang: zh-CN
+
+# 默认 front matter
+defaults:
+  - scope:
+      path: "_posts"
+      type: posts
+    values:
+      layout: post
+      permalink: /blog/:year/:month/:title/
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: page

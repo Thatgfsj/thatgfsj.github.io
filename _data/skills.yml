@@ -1,0 +1,61 @@
+# ============================
+# 技能分类 — 用于简历/作品集展示
+# ============================
+
+- category: "编程语言"
+  icon: "⚡"
+  items:
+    - name: "Python"
+      level: 95
+      desc: "爬虫、自动化、数据工具、AI 集成"
+    - name: "Rust"
+      level: 80
+      desc: "系统编程、CLI 工具、性能敏感模块"
+    - name: "Java / Kotlin"
+      level: 75
+      desc: "Android 应用、Gradle 构建、后端服务"
+    - name: "Go"
+      level: 65
+      desc: "后端微服务、并发处理"
+    - name: "C#"
+      level: 60
+      desc: ".NET 应用、PowerShell 扩展"
+    - name: "C / C++"
+      level: 55
+      desc: "底层编程、算法实现"
+
+- category: "移动 & 前端"
+  icon: "📱"
+  items:
+    - name: "Android (Gradle)"
+      level: 80
+      desc: "原生应用开发、Jetpack Compose、构建配置"
+    - name: "HTML / CSS / JS"
+      level: 70
+      desc: "响应式设计、静态站点、前端脚本"
+
+- category: "数据库 & 工具"
+  icon: "🛠"
+  items:
+    - name: "MySQL"
+      level: 75
+      desc: "数据库设计、查询优化、数据迁移"
+    - name: "Git / GitHub"
+      level: 85
+      desc: "版本控制、CI/CD、GitHub Actions、API"
+    - name: "Docker"
+      level: 60
+      desc: "容器化部署、开发环境"
+
+- category: "AI & 创新"
+  icon: "🤖"
+  items:
+    - name: "AI 工程"
+      level: 75
+      desc: "RAG、Agent 系统、Ollama 本地部署"
+    - name: "爬虫与自动化"
+      level: 90
+      desc: "Playwright、Scrapy、网络抓包分析"
+    - name: "CLI 工具开发"
+      level: 85
+      desc: "跨平台命令行工具、实用脚本"

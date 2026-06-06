@@ -1,26 +1,162 @@
 ---
-layout: page
-title: "关于"
+layout: default
+title: 关于
 ---
 
-## 关于我
+<div class="wrapper" style="padding-top: 32px;">
+  <div class="section-header">
+    <div class="section-icon">👤</div>
+    <h2 class="section-title">关于我</h2>
+    <p class="section-subtitle">全栈开发者 · 开源爱好者 · 工具制造者</p>
+  </div>
 
-我是 **Thatgfsj**，一名开发者。
+  <!-- Bio -->
+  <div class="resume-section">
+    <div class="about-bio">
+      <p>
+        我是 <strong>Thatgfsj</strong>，一名热爱编程的全栈开发者。
+        从底层系统到上层应用，从爬虫脚本到 AI 工程，我享受把想法变成可靠工具的过程。
+      </p>
+      <p>
+        技术栈覆盖 Python、Rust、Java/Kotlin、Go 等多种语言，
+        擅长自动化工具、Android 应用开发、CLI 工具链和 AI 系统集成。
+        我相信好的工具应该简洁、高效、开箱即用。
+      </p>
+    </div>
+  </div>
 
-### 技术栈
+  <!-- Core Skills -->
+  <div class="resume-section">
+    <h2><span class="icon">🎯</span> 核心技术领域</h2>
 
-| 领域 | 技术 |
-|------|------|
-| 脚本与小工具 | Python |
-| 大型程序 | Rust |
-| Android 应用 | Gradle + Kotlin |
-| 数据库 | MySQL |
-| 其他 | Go, C++, C#, Java |
+    <div class="resume-item">
+      <h3>🐍 Python 生态</h3>
+      <div class="resume-meta">爬虫 · 自动化 · 数据处理 · AI 集成</div>
+      <ul>
+        <li>Playwright/Scrapy 爬虫开发，网络抓包分析</li>
+        <li>Excel/CSV 批量数据处理工具（如 excelfind、Excel-Date-Error-Fixer）</li>
+        <li>AI Agent 系统与 RAG 流水线</li>
+        <li>CLI 工具与自动化脚本</li>
+      </ul>
+    </div>
 
-### 联系我
+    <div class="resume-item">
+      <h3>🦀 Rust 系统编程</h3>
+      <div class="resume-meta">CLI 工具 · 性能敏感模块 · Python-Rust 互操作</div>
+      <ul>
+        <li>跨平台命令行工具开发</li>
+        <li>Python 调用 Rust 扩展模块（PyO3）</li>
+        <li>高性能数据处理组件</li>
+      </ul>
+    </div>
 
-- GitHub: [Thatgfsj](https://github.com/Thatgfsj)
+    <div class="resume-item">
+      <h3>📱 Android 开发</h3>
+      <div class="resume-meta">Gradle 构建 · Jetpack Compose · 原生应用</div>
+      <ul>
+        <li>基于 Gradle 的 Android 项目配置与构建优化</li>
+        <li>版本目录（Version Catalog）管理依赖</li>
+        <li>构建变体（Build Variants）与多渠道打包</li>
+      </ul>
+    </div>
 
----
+    <div class="resume-item">
+      <h3>🤖 AI 工程与自动化</h3>
+      <div class="resume-meta">RAG · Agent · 本地部署</div>
+      <ul>
+        <li>Self-hosted AI 平台（Ollama 本地部署）</li>
+        <li>神经记忆系统（neuroweave-cortex）</li>
+        <li>AI 音频工具与多媒体生成</li>
+      </ul>
+    </div>
 
-这个博客使用 [Jekyll](https://jekyllrb.com) 搭建，部署在 [GitHub Pages](https://pages.github.com) 上。
+    <div class="resume-item">
+      <h3>🔧 其他技能</h3>
+      <div class="resume-meta">数据库 · DevOps · 工具链</div>
+      <ul>
+        <li><strong>数据库</strong>：MySQL 设计、查询优化、数据迁移</li>
+        <li><strong>CI/CD</strong>：GitHub Actions、自动化部署流水线</li>
+        <li><strong>容器</strong>：Docker 容器化部署</li>
+        <li><strong>版本控制</strong>：Git 工作流、PR 审查、GitHub API</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Languages -->
+  <div class="resume-section">
+    <h2><span class="icon">📊</span> 编程语言熟练度</h2>
+
+    <div class="skills-grid" style="grid-template-columns: 1fr;">
+      <div class="skill-category">
+        <div class="skill-items">
+          {% for cat in site.data.skills %}
+            {% for skill in cat.items %}
+            <div class="skill-item">
+              <div class="skill-name-row">
+                <span class="skill-name">{{ skill.name }}</span>
+                <span class="skill-level">{{ skill.level }}%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-bar-fill" style="width: {{ skill.level }}%"></div>
+              </div>
+              <div class="skill-desc">{{ skill.desc }}</div>
+            </div>
+            {% endfor %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GitHub -->
+  <div class="resume-section">
+    <h2><span class="icon">🌐</span> 开源贡献</h2>
+
+    <div class="github-stats" style="margin-top: 0;">
+      <div class="stat-card">
+        <div class="stat-icon"><i class="fas fa-code-branch"></i></div>
+        <div class="stat-number">34</div>
+        <div class="stat-label">公开仓库</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon"><i class="fas fa-users"></i></div>
+        <div class="stat-number">5</div>
+        <div class="stat-label">关注者</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon"><i class="fas fa-code"></i></div>
+        <div class="stat-number">19k+</div>
+        <div class="stat-label">代码行数</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon"><i class="fas fa-map-pin"></i></div>
+        <div class="stat-number">中国</div>
+        <div class="stat-label">所在地</div>
+      </div>
+    </div>
+
+    <p style="text-align: center; margin-top: 16px;">
+      <a href="https://github.com/Thatgfsj" target="_blank" rel="noopener" class="btn btn-primary">
+        <i class="fab fa-github"></i> 访问 GitHub 主页
+      </a>
+    </p>
+  </div>
+
+  <!-- Contact -->
+  <div class="resume-section">
+    <h2><span class="icon">📬</span> 联系我</h2>
+    <div class="about-bio">
+      <p>欢迎通过 GitHub 与我联系，讨论技术问题或开源合作。</p>
+      <ul>
+        <li>GitHub: <a href="https://github.com/Thatgfsj" target="_blank">github.com/Thatgfsj</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <hr style="border: none; border-top: 1px solid var(--border); margin: 40px 0;">
+
+  <p style="text-align: center; color: var(--text-muted); font-size: 0.85rem;">
+    这个站点使用 <a href="https://jekyllrb.com">Jekyll</a> 构建，部署在 <a href="https://pages.github.com">GitHub Pages</a> 上。
+    源码可在 <a href="https://github.com/Thatgfsj/thatgfsj.github.io">thatgfsj.github.io</a> 仓库查看。
+  </p>
+</div>
