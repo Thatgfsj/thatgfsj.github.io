@@ -56,6 +56,12 @@
   var FADE_SPEED = 0.025;
   var COLOR = [147, 197, 253]; // 淡蓝色 tailwind blue-300
 
+  /* ── 点击扩散 ── */
+  var EXPLOSION_RADIUS = 320;
+  var EXPLOSION_FORCE = 5;
+  var EXPLOSION_DURATION = 700; // ms
+  var explosions = [];
+
   /* ========================
      鼠标
      ======================== */
@@ -85,6 +91,32 @@
     'touchend',
     function () {
       mouse.active = false;
+    },
+    { passive: true }
+  );
+
+  /* ========================
+     点击 → 爆散发散
+     ======================== */
+  canvas.addEventListener('click', function (e) {
+    explosions.push({
+      x: e.clientX,
+      y: e.clientY,
+      startTime: performance.now(),
+    });
+  });
+
+  canvas.addEventListener(
+    'touchstart',
+    function (e) {
+      var t = e.touches[0];
+      if (t) {
+        explosions.push({
+          x: t.clientX,
+          y: t.clientY,
+          startTime: performance.now(),
+        });
+      }
     },
     { passive: true }
   );
@@ -200,6 +232,24 @@
         }
       }
 
+      // 点击爆散
+      var now = performance.now();
+      for (var ei = 0; ei < explosions.length; ei++) {
+        var exp = explosions[ei];
+        var elapsed = now - exp.startTime;
+        if (elapsed > EXPLOSION_DURATION) continue;
+        var dx = p.x - exp.x;
+        var dy = p.y - exp.y;
+        var dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist < EXPLOSION_RADIUS && dist > 1) {
+          var strength = (1 - elapsed / EXPLOSION_DURATION) *
+                         (1 - dist / EXPLOSION_RADIUS) *
+                         EXPLOSION_FORCE;
+          p.vx += (dx / dist) * strength;
+          p.vy += (dy / dist) * strength;
+        }
+      }
+
       // 弹性回归锚点
       p.vx += (p.anchorX - p.x) * 0.018;
       p.vy += (p.anchorY - p.y) * 0.018;
@@ -290,6 +340,26 @@
         0.65 * p.alpha +
         ')';
       ctx.fill();
+    }
+
+    // ── 点击波纹 ──
+    var now = performance.now();
+    for (var ei = explosions.length - 1; ei >= 0; ei--) {
+      var exp = explosions[ei];
+      var elapsed = now - exp.startTime;
+      if (elapsed > EXPLOSION_DURATION) {
+        explosions.splice(ei, 1);
+        continue;
+      }
+      var progress = elapsed / EXPLOSION_DURATION;
+      var radius = EXPLOSION_RADIUS * progress;
+      var alpha = (1 - progress) * 0.5;
+      ctx.beginPath();
+      ctx.arc(exp.x, exp.y, radius, 0, Math.PI * 2);
+      ctx.strokeStyle =
+        'rgba(' + COLOR[0] + ',' + COLOR[1] + ',' + COLOR[2] + ',' + alpha + ')';
+      ctx.lineWidth = 2 * (1 - progress) + 0.5;
+      ctx.stroke();
     }
 
     requestAnimationFrame(animate);
