@@ -84,7 +84,7 @@ layout: default
       </div>
       <div class="stat-card">
         <div class="stat-icon"><i class="fas fa-star"></i></div>
-        <div class="stat-number" id="gh-stars">…</div>
+        <div class="stat-number" id="gh-stars">16</div>
         <div class="stat-label">Stars 总数</div>
       </div>
       <div class="stat-card">
@@ -126,7 +126,7 @@ layout: default
             <i class="fas fa-folder"></i> {{ repo.name }}
           </div>
           <div class="project-desc">
-            {{ repo.description | default: '暂无描述' | truncate: 120 }}
+            {{ repo.description | default: '暂无描述' | truncate: 150 }}
           </div>
           <div class="project-meta">
             <span class="lang">
@@ -140,7 +140,6 @@ layout: default
         </a>
         {% endfor %}
       {% else %}
-        {% comment %}Fallback: display hardcoded projects{% endcomment %}
         <a href="https://github.com/Thatgfsj/neuroweave-cortex" target="_blank" rel="noopener" class="project-card" style="text-decoration: none; color: inherit;">
           <div class="project-name"><i class="fas fa-folder"></i> neuroweave-cortex</div>
           <div class="project-desc">海马体启发的星图记忆系统，带睡眠巩固。AI 长期记忆——锚点、扩散激活、夜间回放/合并/修剪/桥接。</div>
@@ -158,7 +157,7 @@ layout: default
         </a>
         <a href="https://github.com/Thatgfsj/guaardvark" target="_blank" rel="noopener" class="project-card" style="text-decoration: none; color: inherit;">
           <div class="project-name"><i class="fas fa-folder"></i> guaardvark</div>
-          <div class="project-desc">Self-hosted AI platform — RAG chat, image/video generation, voice, self-improving agents. Runs locally via Ollama.</div>
+          <div class="project-desc">Self-hosted AI platform — RAG chat, image/video generation, voice, self-improving agents.</div>
           <div class="project-meta"><span class="lang"><span class="lang-dot" style="background: #888"></span> 多语言</span><span class="stars"><i class="far fa-star"></i> 2</span></div>
         </a>
         <a href="https://github.com/Thatgfsj/rsklls" target="_blank" rel="noopener" class="project-card" style="text-decoration: none; color: inherit;">
@@ -198,7 +197,7 @@ layout: default
         </div>
         <div class="bp-content">
           <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-          <p>{{ post.excerpt | strip_html | truncate: 120 }}</p>
+          <p>{{ post.excerpt | strip_html | truncate: 140 }}</p>
         </div>
       </div>
       {% endfor %}
