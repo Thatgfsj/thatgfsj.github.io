@@ -1,31 +1,33 @@
 /**
- * 粒子连线交互效果
- * - 鼠标附近 15 个粒子，缓慢漂移
- * - 每个粒子与最近的 5 个连线
- * - 线条透明度随距离衰减
+ * 粒子连线动画 v2
+ * - 全站 20-30 个淡蓝色粒子
+ * - 鼠标靠近时连最近的 5 个，并吸引（不超过锚点 10%）
+ * - 每 30 秒刷新一轮
+ * - 生成方式：先 10 个，之后每秒 +5 个直到 50 个
+ * - 旧点淡出，新点淡入
  */
-(function() {
+(function () {
   'use strict';
 
+  /* ========================
+     Canvas 挂载
+     ======================== */
   var canvas = document.createElement('canvas');
   canvas.id = 'particle-canvas';
   var ctx = canvas.getContext('2d');
-
-  // --- 样式 & 挂载 ---
   canvas.style.cssText =
     'position:fixed;top:0;left:0;width:100%;height:100%;' +
     'pointer-events:none;z-index:9999;';
 
-  // 等 body 加载完再挂载
-  if (document.body) {
+  function mount() {
     document.body.appendChild(canvas);
-  } else {
-    document.addEventListener('DOMContentLoaded', function() {
-      document.body.appendChild(canvas);
-    });
   }
+  if (document.body) mount();
+  else document.addEventListener('DOMContentLoaded', mount);
 
-  // --- 尺寸 ---
+  /* ========================
+     尺寸
+     ======================== */
   var W, H;
 
   function resize() {
@@ -35,165 +37,258 @@
   window.addEventListener('resize', resize);
   resize();
 
-  // --- 配置 ---
-  var PARTICLE_COUNT = 15;
-  var CONNECT_LIMIT = 5;       // 每个粒子最多连几个
-  var CONNECT_RADIUS = 250;    // 连线最大距离 (px)
-  var LINE_OPACITY_MAX = 0.35; // 线条最大透明度
-  var LINE_WIDTH = 1.2;
-  var PARTICLE_RADIUS = 2.5;
-  var DRIFT_SPEED = 0.25;      // 漂移速度
+  /* ========================
+     配置
+     ======================== */
+  var CYCLE_MS = 30000; // 30 秒一轮
+  var SPAWN_INTERVAL = 1000; // 每秒一批
+  var INITIAL_BATCH = 10;
+  var BATCH_SIZE = 5;
+  var MAX_PARTICLES = 50;
 
-  // --- 鼠标位置 ---
+  var CONNECT_LIMIT = 5;
+  var CONNECT_RADIUS = 300;
+  var ATTRACT_RADIUS = 220;
+  var MAX_OFFSET_RATIO = 0.10; // 锚点偏移上限（相对于视口短边）
+  var LINE_OPACITY_MAX = 0.25;
+  var LINE_WIDTH = 1.2;
+  var PARTICLE_RADIUS = 2.8;
+  var FADE_SPEED = 0.025;
+  var COLOR = [147, 197, 253]; // 淡蓝色 tailwind blue-300
+
+  /* ========================
+     鼠标
+     ======================== */
   var mouse = { x: W / 2, y: H / 2, active: false };
 
-  document.addEventListener('mousemove', function(e) {
+  document.addEventListener('mousemove', function (e) {
     mouse.x = e.clientX;
     mouse.y = e.clientY;
     mouse.active = true;
   });
-
-  document.addEventListener('mouseleave', function() {
+  document.addEventListener('mouseleave', function () {
     mouse.active = false;
   });
+  document.addEventListener(
+    'touchmove',
+    function (e) {
+      var t = e.touches[0];
+      if (t) {
+        mouse.x = t.clientX;
+        mouse.y = t.clientY;
+        mouse.active = true;
+      }
+    },
+    { passive: true }
+  );
+  document.addEventListener(
+    'touchend',
+    function () {
+      mouse.active = false;
+    },
+    { passive: true }
+  );
 
-  // 触摸设备支持
-  document.addEventListener('touchmove', function(e) {
-    var t = e.touches[0];
-    if (t) {
-      mouse.x = t.clientX;
-      mouse.y = t.clientY;
-      mouse.active = true;
-    }
-  }, { passive: true });
-
-  document.addEventListener('touchend', function() {
-    mouse.active = false;
-  }, { passive: true });
-
-  // --- 粒子 ---
-  var particles = [];
-
-  function randomAroundMouse(range) {
-    range = range || 180;
+  /* ========================
+     粒子
+     ======================== */
+  function createParticle() {
+    var ax = Math.random() * W;
+    var ay = Math.random() * H;
     return {
-      x: mouse.x + (Math.random() - 0.5) * range * 2,
-      y: mouse.y + (Math.random() - 0.5) * range * 2
+      x: ax,
+      y: ay,
+      anchorX: ax,
+      anchorY: ay,
+      vx: (Math.random() - 0.5) * 0.4,
+      vy: (Math.random() - 0.5) * 0.4,
+      alpha: 0,
+      alive: true,
     };
   }
 
-  function initParticles() {
-    particles = [];
-    var cx = mouse.x;
-    var cy = mouse.y;
-    for (var i = 0; i < PARTICLE_COUNT; i++) {
-      var pos = randomAroundMouse(200);
-      particles.push({
-        x: pos.x,
-        y: pos.y,
-        vx: (Math.random() - 0.5) * 0.6,
-        vy: (Math.random() - 0.5) * 0.6,
-        // 每个粒子独立小偏移，让它围绕鼠标有不同的"轨道"
-        ox: (Math.random() - 0.5) * 120,
-        oy: (Math.random() - 0.5) * 120
-      });
+  var particles = [];
+  var cycleTimer = 0;
+  var spawnTimer = 0;
+  var spawnPhase = true;
+
+  function resetCycle() {
+    // 标记现有粒子为"消亡中"
+    for (var i = 0; i < particles.length; i++) {
+      particles[i].alive = false;
+    }
+    // 重置生成状态
+    spawnPhase = true;
+    spawnTimer = 0;
+    // 第一批
+    for (var i = 0; i < INITIAL_BATCH; i++) {
+      particles.push(createParticle());
     }
   }
-  initParticles();
 
-  // --- 工具函数：距离平方（避免 sqrt） ---
+  resetCycle();
+
+  /* ========================
+     工具
+     ======================== */
   function distSq(a, b) {
-    var dx = a.x - b.x;
-    var dy = a.y - b.y;
+    var dx = a.x - b.x,
+      dy = a.y - b.y;
     return dx * dx + dy * dy;
   }
 
-  // --- 动画循环 ---
+  /* ========================
+     主循环
+     ======================== */
   function animate() {
     ctx.clearRect(0, 0, W, H);
 
-    // 1. 更新粒子位置
-    for (var i = 0; i < PARTICLE_COUNT; i++) {
+    // ── 时间驱动 ──
+    cycleTimer += 16;
+
+    // 生成阶段
+    if (spawnPhase) {
+      spawnTimer += 16;
+      if (spawnTimer >= SPAWN_INTERVAL) {
+        spawnTimer -= SPAWN_INTERVAL;
+        var aliveCount = 0;
+        for (var i = 0; i < particles.length; i++) {
+          if (particles[i].alive) aliveCount++;
+        }
+        var toSpawn = Math.min(BATCH_SIZE, MAX_PARTICLES - aliveCount);
+        for (var i = 0; i < toSpawn; i++) {
+          particles.push(createParticle());
+        }
+        if (aliveCount + toSpawn >= MAX_PARTICLES) {
+          spawnPhase = false;
+        }
+      }
+    }
+
+    // 30 秒刷新
+    if (cycleTimer >= CYCLE_MS) {
+      cycleTimer = 0;
+      resetCycle();
+    }
+
+    // ── 更新粒子 ──
+    var maxOffset = Math.min(W, H) * MAX_OFFSET_RATIO;
+
+    for (var i = particles.length - 1; i >= 0; i--) {
       var p = particles[i];
 
-      // 目标位置：围绕鼠标 + 个体偏移
-      var tx = mouse.x + p.ox;
-      var ty = mouse.y + p.oy;
+      // 透明度
+      if (p.alive) {
+        p.alpha = Math.min(1, p.alpha + FADE_SPEED);
+      } else {
+        p.alpha -= FADE_SPEED;
+        if (p.alpha <= 0.005) {
+          particles.splice(i, 1);
+          continue;
+        }
+      }
 
-      // 缓动回到鼠标附近
-      var dx = tx - p.x;
-      var dy = ty - p.y;
-      p.vx += dx * 0.008;
-      p.vy += dy * 0.008;
+      // 鼠标吸引（仅 alive 粒子受吸引）
+      if (p.alive && mouse.active) {
+        var dx = mouse.x - p.x;
+        var dy = mouse.y - p.y;
+        var dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist < ATTRACT_RADIUS && dist > 0.5) {
+          var force = (1 - dist / ATTRACT_RADIUS) * 0.06;
+          p.vx += (dx / dist) * force;
+          p.vy += (dy / dist) * force;
+        }
+      }
 
-      // 随机漂移（布朗运动）
-      p.vx += (Math.random() - 0.5) * DRIFT_SPEED * 0.1;
-      p.vy += (Math.random() - 0.5) * DRIFT_SPEED * 0.1;
+      // 弹性回归锚点
+      p.vx += (p.anchorX - p.x) * 0.018;
+      p.vy += (p.anchorY - p.y) * 0.018;
 
       // 阻尼
-      p.vx *= 0.92;
-      p.vy *= 0.92;
+      p.vx *= 0.88;
+      p.vy *= 0.88;
 
       // 限速
       var spd = Math.sqrt(p.vx * p.vx + p.vy * p.vy);
-      if (spd > 2.5) {
-        p.vx = (p.vx / spd) * 2.5;
-        p.vy = (p.vy / spd) * 2.5;
+      if (spd > 3) {
+        p.vx = (p.vx / spd) * 3;
+        p.vy = (p.vy / spd) * 3;
       }
 
       p.x += p.vx;
       p.y += p.vy;
 
-      // 边界约束（飘太远就拉回）
-      var margin = 500;
-      if (p.x < -margin) p.x = -margin;
-      if (p.x > W + margin) p.x = W + margin;
-      if (p.y < -margin) p.y = -margin;
-      if (p.y > H + margin) p.y = H + margin;
+      // 钳位：不超过锚点 maxOffset
+      var dxa = p.x - p.anchorX;
+      var dya = p.y - p.anchorY;
+      var da = Math.sqrt(dxa * dxa + dya * dya);
+      if (da > maxOffset) {
+        p.x = p.anchorX + (dxa / da) * maxOffset;
+        p.y = p.anchorY + (dya / da) * maxOffset;
+        p.vx *= -0.4;
+        p.vy *= -0.4;
+      }
     }
 
-    // 2. 画连线（每个粒子连最近的 CONNECT_LIMIT 个）
-    var lineColor = '67, 97, 238';
+    // ── 画线 ──
+    var visible = [];
+    for (var i = 0; i < particles.length; i++) {
+      if (particles[i].alpha > 0.02) visible.push(i);
+    }
 
-    for (var i = 0; i < PARTICLE_COUNT; i++) {
+    for (var vi = 0; vi < visible.length; vi++) {
+      var i = visible[vi];
       var p = particles[i];
+      if (p.alpha <= 0.02) continue;
 
-      // 计算到所有其他粒子的距离
       var neighbors = [];
-      for (var j = 0; j < PARTICLE_COUNT; j++) {
-        if (i === j) continue;
+      for (var vj = 0; vj < visible.length; vj++) {
+        if (vi === vj) continue;
+        var j = visible[vj];
         var d2 = distSq(p, particles[j]);
         if (d2 < CONNECT_RADIUS * CONNECT_RADIUS) {
           neighbors.push({ idx: j, d2: d2 });
         }
       }
+      neighbors.sort(function (a, b) { return a.d2 - b.d2; });
 
-      // 按距离排序，取最近的 CONNECT_LIMIT 个
-      neighbors.sort(function(a, b) { return a.d2 - b.d2; });
-      var count = Math.min(neighbors.length, CONNECT_LIMIT);
-
-      for (var k = 0; k < count; k++) {
-        var n = particles[neighbors[k].idx];
-        var dist = Math.sqrt(neighbors[k].d2);
-        var alpha = (1 - dist / CONNECT_RADIUS) * LINE_OPACITY_MAX;
-        // 只画一次（i < j 避免重复）
+      var limit = Math.min(neighbors.length, CONNECT_LIMIT);
+      for (var k = 0; k < limit; k++) {
+        // 只画一次 (i < neighbor.idx 避免重复)
         if (i < neighbors[k].idx) {
+          var n = particles[neighbors[k].idx];
+          var dist = Math.sqrt(neighbors[k].d2);
+          var alpha =
+            (1 - dist / CONNECT_RADIUS) *
+            LINE_OPACITY_MAX *
+            Math.min(p.alpha, n.alpha);
           ctx.beginPath();
           ctx.moveTo(p.x, p.y);
           ctx.lineTo(n.x, n.y);
-          ctx.strokeStyle = 'rgba(' + lineColor + ', ' + alpha + ')';
+          ctx.strokeStyle =
+            'rgba(' + COLOR[0] + ',' + COLOR[1] + ',' + COLOR[2] + ',' + alpha + ')';
           ctx.lineWidth = LINE_WIDTH;
           ctx.stroke();
         }
       }
     }
 
-    // 3. 画粒子
-    for (var i = 0; i < PARTICLE_COUNT; i++) {
+    // ── 画粒子 ──
+    for (var i = 0; i < particles.length; i++) {
       var p = particles[i];
+      if (p.alpha <= 0.02) continue;
       ctx.beginPath();
       ctx.arc(p.x, p.y, PARTICLE_RADIUS, 0, Math.PI * 2);
-      ctx.fillStyle = 'rgba(67, 97, 238, 0.55)';
+      ctx.fillStyle =
+        'rgba(' +
+        COLOR[0] +
+        ',' +
+        COLOR[1] +
+        ',' +
+        COLOR[2] +
+        ',' +
+        0.65 * p.alpha +
+        ')';
       ctx.fill();
     }
 
