@@ -83,9 +83,9 @@ layout: default
         <div class="stat-label">关注者</div>
       </div>
       <div class="stat-card">
-        <div class="stat-icon"><i class="fab fa-python"></i></div>
-        <div class="stat-number">407.8k</div>
-        <div class="stat-label">Python 代码行</div>
+        <div class="stat-icon"><i class="fas fa-code"></i></div>
+        <div class="stat-number">1.5M</div>
+        <div class="stat-label">代码行数</div>
       </div>
     </div>
 
