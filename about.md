@@ -120,7 +120,7 @@ title: 关于
     <div class="github-stats" style="margin-top: 20px;">
       <div class="stat-card">
         <div class="stat-icon"><i class="fas fa-code-branch"></i></div>
-        <div class="stat-number">34</div>
+        <div class="stat-number">42</div>
         <div class="stat-label">公开仓库</div>
       </div>
       <div class="stat-card">
@@ -130,7 +130,7 @@ title: 关于
       </div>
       <div class="stat-card">
         <div class="stat-icon"><i class="fas fa-code"></i></div>
-        <div class="stat-number">19k+</div>
+        <div class="stat-number">1.5M+</div>
         <div class="stat-label">代码行数</div>
       </div>
       <div class="stat-card">

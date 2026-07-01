@@ -1,0 +1,58 @@
+# ============================
+# 精选项目数据 — index / projects 共用
+# ============================
+# 各字段说明：
+#   name        : 项目名（卡片标题）
+#   url         : GitHub 仓库地址
+#   lang        : 主要语言（显示标签）
+#   lang_color  : GitHub 语言色（hex）
+#   stars       : star 数（手动维护，构建期嵌入）
+#   desc        : 简介（首页用精简版，projects 页用详细版；用同一字段也行）
+
+- name: neuroweave-cortex
+  url: https://github.com/Thatgfsj/neuroweave-cortex
+  lang: Python
+  lang_color: "#3572A5"
+  stars: 2
+  desc: 海马体启发的星图记忆系统，带睡眠巩固。AI 长期记忆通过锚点、扩散激活和夜间回放/合并/修剪/桥接循环实现自我整合。
+  desc_full: 海马体启发的星图记忆系统，带睡眠巩固。AI 长期记忆通过锚点、扩散激活和夜间回放/合并/修剪/桥接循环实现自我整合。基于 Python 实现。
+
+- name: claude-email-cli
+  url: https://github.com/Thatgfsj/claude-email-cli
+  lang: Python
+  lang_color: "#3572A5"
+  stars: 1
+  desc: 通过邮件控制 Claude AI 的 CLI 工具。无需打开浏览器，发一封邮件就能与 AI 交互，适合自动化工作流。
+  desc_full: 通过邮件控制 Claude AI 的 CLI 工具。无需打开浏览器，发一封邮件就能与 AI 交互，适合自动化工作流。Python 实现。
+
+- name: rsklls
+  url: https://github.com/Thatgfsj/rsklls
+  lang: Shell / Rust
+  lang_color: "#89E051"
+  stars: 1
+  desc: Rust Skills 技能包 — 为 OpenClaw 提供 Rust 编程能力，涵盖 Rust 核心编程和 Python-Rust 互操作（PyO3）。
+  desc_full: Rust Skills 技能包 — 为 OpenClaw 提供 Rust 编程能力。涵盖 Rust 核心编程、Python-Rust 互操作（PyO3），以及跨平台 CLI 工具开发。
+
+- name: android-gradle-skills
+  url: https://github.com/Thatgfsj/android-gradle-skills
+  lang: Python
+  lang_color: "#3572A5"
+  stars: 0
+  desc: OpenClaw Android 开发技能包 — AGP/Gradle 版本兼容、项目模板、构建自动化脚本，让 AI Agent 理解 Android 构建体系。
+  desc_full: OpenClaw Android 开发技能包 — AGP/Gradle 版本兼容、项目模板、构建自动化脚本，让 AI Agent 理解 Android 构建体系。Python 实现。
+
+- name: playwright-crawler-helper
+  url: https://github.com/Thatgfsj/playwright-crawler-helper
+  lang: Python
+  lang_color: "#3572A5"
+  stars: 2
+  desc: Playwright 爬虫辅助工具 — 通过分析浏览器网络请求（Network Panel）来辅助编写爬虫脚本，让抓包过程半自动化。
+  desc_full: Playwright 爬虫辅助工具 — 通过分析浏览器网络请求（Network Panel）来辅助编写爬虫脚本，让抓包过程半自动化。Python 实现。
+
+- name: thatgfsj-code
+  url: https://github.com/Thatgfsj/thatgfsj-code
+  lang: TypeScript
+  lang_color: "#3178C6"
+  stars: 0
+  desc: 个人代码片段库与工具集合。TypeScript 实现，累积日常开发中提炼的实用代码和组件。
+  desc_full: 个人代码片段库与工具集合。TypeScript 实现，累积日常开发中提炼的实用代码、组件和工具函数。
