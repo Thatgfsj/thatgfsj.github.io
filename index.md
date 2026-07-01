@@ -46,18 +46,9 @@ layout: default
           <span class="cat-icon">{{ cat.icon }}</span>
           <h3>{{ cat.category }}</h3>
         </div>
-        <div class="skill-items">
+        <div class="skill-chips">
           {% for skill in cat.items %}
-          <div class="skill-item">
-            <div class="skill-name-row">
-              <span class="skill-name">{{ skill.name }}</span>
-              <span class="skill-level">{{ skill.level }}%</span>
-            </div>
-            <div class="skill-bar">
-              <div class="skill-bar-fill" style="width: {{ skill.level }}%"></div>
-            </div>
-            <div class="skill-desc">{{ skill.desc }}</div>
-          </div>
+          <span class="skill-chip" title="{{ skill.desc }}">{{ skill.name }}</span>
           {% endfor %}
         </div>
       </div>

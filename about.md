@@ -89,19 +89,10 @@ title: 关于
 
     <div class="skills-grid" style="grid-template-columns: 1fr;">
       <div class="skill-category">
-        <div class="skill-items">
+        <div class="skill-chips">
           {% for cat in site.data.skills %}
             {% for skill in cat.items %}
-            <div class="skill-item">
-              <div class="skill-name-row">
-                <span class="skill-name">{{ skill.name }}</span>
-                <span class="skill-level">{{ skill.level }}%</span>
-              </div>
-              <div class="skill-bar">
-                <div class="skill-bar-fill" style="width: {{ skill.level }}%"></div>
-              </div>
-              <div class="skill-desc">{{ skill.desc }}</div>
-            </div>
+            <span class="skill-chip" title="{{ skill.desc }}">{{ skill.name }}</span>
             {% endfor %}
           {% endfor %}
         </div>
