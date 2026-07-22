@@ -13,7 +13,7 @@ layout: default
       <p class="hero-tagline">{{ site.tagline }}</p>
       <p class="hero-bio">
         {{ site.description }}
-        AI前沿探索者，OpenClaw等热门仓库贡献者。
+        AI前沿探索者，OpenClaw，hermes等仓库贡献者。
       </p>
       <div class="hero-actions">
         <a href="{{ '/projects' | relative_url }}" class="btn btn-primary">
@@ -36,7 +36,6 @@ layout: default
     <div class="section-header">
       <div class="section-icon">🛠</div>
       <h2 class="section-title">技术栈</h2>
-      <p class="section-subtitle">多年积累，持续精进</p>
     </div>
 
     <div class="skills-grid">
@@ -63,13 +62,12 @@ layout: default
     <div class="section-header">
       <div class="section-icon">📊</div>
       <h2 class="section-title">开源数据</h2>
-      <p class="section-subtitle">GitHub 上的足迹</p>
     </div>
 
     <div class="github-stats">
       <div class="stat-card">
         <div class="stat-icon"><i class="fas fa-code-branch"></i></div>
-        <div class="stat-number">42</div>
+        <div class="stat-number">47</div>
         <div class="stat-label">公开仓库</div>
       </div>
       <div class="stat-card">
@@ -79,13 +77,13 @@ layout: default
       </div>
       <div class="stat-card">
         <div class="stat-icon"><i class="fas fa-users"></i></div>
-        <div class="stat-number">5</div>
+        <div class="stat-number">6</div>
         <div class="stat-label">关注者</div>
       </div>
       <div class="stat-card">
         <div class="stat-icon"><i class="fas fa-code"></i></div>
-        <div class="stat-number">1.5M</div>
-        <div class="stat-label">代码行数</div>
+        <div class="stat-number">186 MiB</div>
+        <div class="stat-label">代码规模</div>
       </div>
     </div>
 
