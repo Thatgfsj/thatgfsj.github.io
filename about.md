@@ -109,19 +109,28 @@ title: 关于
 
     <div class="about-bio" style="margin-bottom: 24px;">
       <p>
-        业余时间主要给 <strong style="color: var(--primary-2);">OpenClaw / Hermes-Agent / DeepSeek-Reasonix</strong> 等热门 AI Agent 仓库写技能包与生态适配，
-        也自己维护一些「解决某个具体问题」的小工具。下面这几个是近期比较有代表性的原创仓库：
+        业余时间主要给常用仓库根据自己体验到的问题进行精准维护适配。下面这几个是近期比较有代表性的：
       </p>
-      <ul style="margin-top: 12px; padding-left: 22px; color: var(--text-light);">
-        <li><strong>neuroweave-cortex</strong> — 海马体启发的 AI 长期记忆系统，带睡眠巩固循环</li>
-        <li><strong>playwright-crawler-helper</strong> — 浏览器 Network Panel 半自动化抓包，辅助写爬虫</li>
-        <li><strong>claude-email-cli</strong> — 发邮件就能调 Claude，适合自动化工作流</li>
-        <li><strong>rsklls</strong> — 给 OpenClaw 用的 Rust 技能包，含 PyO3 互操作</li>
-        <li><strong>android-gradle-skills</strong> — OpenClaw Android Gradle 构建技能包</li>
-      </ul>
-      <p style="margin-top: 14px; color: var(--text-light);">
-        给外部仓库的近期 PR 收录在首页 <strong style="color: var(--primary-2);">05 — 近期贡献</strong> section。
-      </p>
+    </div>
+
+    <div class="pr-buttons">
+      <a href="https://github.com/openclaw/openclaw/pull/69056" target="_blank" rel="noopener" class="pr-btn">
+        <span class="pr-repo">openclaw / openclaw</span>
+        <span class="pr-title">fix(gateway): handle SIGUSR1 gracefully on Windows</span>
+        <span class="pr-meta">#69056 · 2026-04 · merged</span>
+      </a>
+
+      <a href="https://github.com/esengine/DeepSeek-Reasonix/pull/3380" target="_blank" rel="noopener" class="pr-btn">
+        <span class="pr-repo">esengine / DeepSeek-Reasonix</span>
+        <span class="pr-title">feat(serve): add i18n, stats dashboard, and session management</span>
+        <span class="pr-meta">#3380 · 2026-06 · merged</span>
+      </a>
+
+      <a href="https://github.com/NousResearch/hermes-agent/pull/19137" target="_blank" rel="noopener" class="pr-btn">
+        <span class="pr-repo">NousResearch / hermes-agent</span>
+        <span class="pr-title">fix(title): prevent stale background title generation from reloading unloaded Ollama models</span>
+        <span class="pr-meta">#19137 · merged via #66078</span>
+      </a>
     </div>
 
     <div class="github-stats reveal-stagger" style="margin-top: 24px;">

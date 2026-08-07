@@ -939,6 +939,77 @@ body::before {
 }
 
 /* ========================
+   PR buttons (about page)
+   ======================== */
+.pr-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 760px;
+  margin-top: 8px;
+}
+.pr-btn {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 18px 22px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  backdrop-filter: blur(8px);
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+}
+.pr-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, var(--primary), var(--primary-2));
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.4s var(--ease-out);
+}
+.pr-btn:hover {
+  border-color: var(--border-strong);
+  background: var(--bg-card-hover);
+  transform: translateY(-2px) translateX(2px);
+  box-shadow: var(--shadow-md);
+  text-decoration: none;
+  color: inherit;
+}
+.pr-btn:hover::before { transform: scaleY(1); }
+.pr-btn .pr-repo {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--primary-2);
+  letter-spacing: 0.2px;
+}
+.pr-btn .pr-title {
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text);
+  line-height: 1.5;
+}
+.pr-btn .pr-meta {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  letter-spacing: 0.2px;
+}
+
+@media (max-width: 768px) {
+  .pr-btn { padding: 16px; }
+  .pr-btn .pr-title { font-size: 0.9rem; }
+}
+
+/* ========================
    Blog Preview (Homepage)
    ======================== */
 .blog-preview-list {
