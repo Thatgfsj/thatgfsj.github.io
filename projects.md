@@ -5,13 +5,13 @@ title: 项目
 
 <section class="section-block" style="padding-top: 32px;">
   <div class="wrapper">
-    <div class="section-header">
-      <div class="section-icon">🚀</div>
+    <div class="section-header reveal">
+      <span class="section-kicker">PROJECTS</span>
       <h2 class="section-title">开源项目</h2>
-      <p class="section-subtitle">精选开源项目 · 点击卡片查看源码</p>
+      <p class="section-subtitle">开源项目 · 点击卡片进入仓库</p>
     </div>
 
-    <div class="project-grid">
+    <div class="project-grid reveal-stagger">
       {% for p in site.data.projects %}
       <a href="{{ p.url }}" target="_blank" rel="noopener" class="project-card" style="text-decoration: none; color: inherit;">
         <div class="project-name"><i class="fas fa-folder"></i> {{ p.name }}</div>

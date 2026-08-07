@@ -4,12 +4,12 @@ title: 博客
 ---
 
 <div class="wrapper">
-  <div class="blog-page-header">
+  <div class="blog-page-header reveal">
     <h1><i class="fas fa-pen-fancy" style="color: var(--primary); margin-right: 10px;"></i> 博客</h1>
-    <p style="color: var(--text-light);">记录思考，分享知识，留下足迹</p>
+    <p>记录思考，分享知识，留下足迹</p>
   </div>
 
-  <div class="blog-list">
+  <div class="blog-list reveal-stagger">
     {% for post in site.posts %}
     <div class="blog-list-item">
       <div class="blog-list-meta">
