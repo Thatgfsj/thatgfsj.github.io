@@ -12,12 +12,17 @@ layout: default
       </div>
     </div>
     <div class="hero-info">
-      <span class="hero-kicker reveal"><span class="pulse-dot"></span> Available for collaboration</span>
       <h1 class="reveal">{{ site.author }}</h1>
       <p class="hero-tagline reveal">{{ site.tagline }}</p>
       <p class="hero-bio reveal">
-        {{ site.description }}
-        AI前沿探索者，OpenClaw，hermes等仓库贡献者。
+        折腾代码的第七个年头，写过爬虫、写过 Android、写过路由器监控、写过 AI Agent。
+        喜欢把一个想法从抓包逆向开始，一路做成能跑的工具。
+      </p>
+      <p class="hero-bio reveal" style="margin-top: 4px;">
+        目前主要在 <strong style="color: var(--text);">Python / Rust / TypeScript</strong> 三个生态里来回跳，
+        折腾工具链、自动化流程和 AI 工程化。
+        业余时间给 <strong style="color: var(--primary-2);">OpenClaw / hermes</strong> 等开源仓库提 PR，
+        写一些让 AI Agent 真正能干活的技能包。
       </p>
       <div class="hero-actions reveal">
         <a href="{{ '/projects' | relative_url }}" class="btn btn-primary">
@@ -44,7 +49,7 @@ layout: default
     <div class="section-header reveal">
       <span class="section-kicker">01 — TECH STACK</span>
       <h2 class="section-title">技术栈</h2>
-      <p class="section-subtitle">在工程实践中打磨的工具与语言集合</p>
+      <p class="section-subtitle">不只是「会用」，是写过大大小小工具后沉淀下来的偏好组合。</p>
     </div>
 
     <div class="skills-grid reveal-stagger">
@@ -71,7 +76,7 @@ layout: default
     <div class="section-header reveal">
       <span class="section-kicker">02 — OPEN SOURCE</span>
       <h2 class="section-title">开源数据</h2>
-      <p class="section-subtitle">在 GitHub 上留下的足迹</p>
+      <p class="section-subtitle">在 GitHub 上留下的足迹——谈不上高产，但每个仓库都尽量做到能直接用。</p>
     </div>
 
     <div class="github-stats reveal-stagger">
@@ -112,7 +117,7 @@ layout: default
     <div class="section-header reveal">
       <span class="section-kicker">03 — FEATURED WORK</span>
       <h2 class="section-title">精选项目</h2>
-      <p class="section-subtitle">最近在折腾的一些东西</p>
+      <p class="section-subtitle">最近在折腾的一些东西——从 AI 长期记忆、Agent 技能包到日常效率工具。</p>
     </div>
 
     <div class="project-grid reveal-stagger">
@@ -142,7 +147,7 @@ layout: default
     <div class="section-header reveal">
       <span class="section-kicker">04 — WRITING</span>
       <h2 class="section-title">最新文章</h2>
-      <p class="section-subtitle">记录思考，分享知识</p>
+      <p class="section-subtitle">把踩过的坑、抓过的包、写过的工具——尽量写成别人也能复用的笔记。</p>
     </div>
 
     <div class="blog-preview-list reveal-stagger">

@@ -7,22 +7,22 @@
   items:
     - name: "Python"
       level: 95
-      desc: "爬虫、自动化、数据工具、AI 集成"
+      desc: "主力语言：爬虫、CLI、AI Agent、数据处理工具"
     - name: "Rust"
       level: 80
-      desc: "系统编程、CLI 工具、性能敏感模块"
+      desc: "CLI 工具与 PyO3 扩展，性能敏感模块首选"
     - name: "Java / Kotlin"
       level: 75
-      desc: "Android 应用、Gradle 构建、后端服务"
+      desc: "Android 应用、Gradle 构建脚本、后端服务"
+    - name: "TypeScript"
+      level: 70
+      desc: "静态站点、前端脚本、CLI 工具"
     - name: "Go"
       level: 65
       desc: "后端微服务、并发处理"
-    - name: "C#"
-      level: 60
-      desc: ".NET 应用、PowerShell 扩展"
     - name: "C / C++"
-      level: 55
-      desc: "底层编程、算法实现"
+      level: 60
+      desc: "Win32、原生 GUI、性能关键模块"
 
 - category: "移动 & 前端"
   icon: "📱"
