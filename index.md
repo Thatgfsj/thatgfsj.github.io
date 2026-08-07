@@ -15,14 +15,8 @@ layout: default
       <h1 class="reveal">{{ site.author }}</h1>
       <p class="hero-tagline reveal">{{ site.tagline }}</p>
       <p class="hero-bio reveal">
-        折腾代码的第七个年头，写过爬虫、写过 Android、写过路由器监控、写过 AI Agent。
-        喜欢把一个想法从抓包逆向开始，一路做成能跑的工具。
-      </p>
-      <p class="hero-bio reveal" style="margin-top: 4px;">
-        目前主要在 <strong style="color: var(--text);">Python / Rust / TypeScript</strong> 三个生态里来回跳，
-        折腾工具链、自动化流程和 AI 工程化。
-        业余时间给 <strong style="color: var(--primary-2);">OpenClaw / hermes</strong> 等开源仓库提 PR，
-        写一些让 AI Agent 真正能干活的技能包。
+        {{ site.description }}
+        AI前沿探索者，OpenClaw，hermes等仓库贡献者。
       </p>
       <div class="hero-actions reveal">
         <a href="{{ '/projects' | relative_url }}" class="btn btn-primary">
