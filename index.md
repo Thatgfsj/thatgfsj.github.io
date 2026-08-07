@@ -134,6 +134,55 @@ layout: default
   </div>
 </section>
 
+<!-- ==================== Recent Contributions ==================== -->
+<section class="section-block">
+  <div class="wrapper">
+    <div class="section-header reveal">
+      <span class="section-kicker">05 — RECENT CONTRIBUTIONS</span>
+      <h2 class="section-title">近期贡献</h2>
+      <p class="section-subtitle">在 OpenClaw / Hermes-Agent / DeepSeek-Reasonix 等热门仓库留下的小修补。</p>
+    </div>
+
+    <div class="contrib-list reveal-stagger">
+      <a href="https://github.com/openclaw/openclaw/pull/69056" target="_blank" rel="noopener" class="contrib-item">
+        <span class="contrib-repo"><i class="fas fa-code-branch"></i> openclaw/openclaw</span>
+        <div class="contrib-body">
+          <div class="contrib-title">fix(gateway): handle SIGUSR1 gracefully on Windows</div>
+          <div class="contrib-meta">
+            <span class="pr-num">#69056</span>
+            <span class="pr-time">2026-04 · merged</span>
+          </div>
+        </div>
+        <span class="contrib-status merged"><span class="dot"></span> Merged</span>
+      </a>
+
+      <a href="https://github.com/esengine/DeepSeek-Reasonix/pull/3380" target="_blank" rel="noopener" class="contrib-item">
+        <span class="contrib-repo"><i class="fas fa-code-branch"></i> esengine/DeepSeek-Reasonix</span>
+        <div class="contrib-body">
+          <div class="contrib-title">feat(serve): add i18n, stats dashboard, and session management</div>
+          <div class="contrib-meta">
+            <span class="pr-num">#3380</span>
+            <span class="pr-time">2026-06 · merged</span>
+          </div>
+        </div>
+        <span class="contrib-status merged"><span class="dot"></span> Merged</span>
+      </a>
+
+      <a href="https://github.com/NousResearch/hermes-agent/pull/19137" target="_blank" rel="noopener" class="contrib-item">
+        <span class="contrib-repo"><i class="fas fa-code-branch"></i> NousResearch/hermes-agent</span>
+        <div class="contrib-body">
+          <div class="contrib-title">fix(title): prevent stale background title generation from reloading unloaded Ollama models</div>
+          <div class="contrib-meta">
+            <span class="pr-num">#19137</span>
+            <span class="pr-time">2026-07 · merged via #66078</span>
+          </div>
+        </div>
+        <span class="contrib-status salvaged"><span class="dot"></span> Merged via salvage</span>
+      </a>
+    </div>
+  </div>
+</section>
+
 <!-- ==================== Latest Blog Posts ==================== -->
 <section class="section-block section-block-alt">
   <div class="wrapper">

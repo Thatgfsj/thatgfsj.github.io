@@ -114,8 +114,8 @@ title: 关于
 
     <div class="about-bio" style="margin-bottom: 24px;">
       <p>
-        业余时间主要给 <strong style="color: var(--primary-2);">OpenClaw / hermes</strong> 等热门 AI Agent 仓库写技能包与生态适配，
-        也自己维护一些「解决某个具体问题」的小工具。下面这几个是近期比较有代表性的：
+        业余时间主要给 <strong style="color: var(--primary-2);">OpenClaw / Hermes-Agent / DeepSeek-Reasonix</strong> 等热门 AI Agent 仓库写技能包与生态适配，
+        也自己维护一些「解决某个具体问题」的小工具。下面这几个是近期比较有代表性的原创仓库：
       </p>
       <ul style="margin-top: 12px; padding-left: 22px; color: var(--text-light);">
         <li><strong>neuroweave-cortex</strong> — 海马体启发的 AI 长期记忆系统，带睡眠巩固循环</li>
@@ -124,6 +124,9 @@ title: 关于
         <li><strong>rsklls</strong> — 给 OpenClaw 用的 Rust 技能包，含 PyO3 互操作</li>
         <li><strong>android-gradle-skills</strong> — OpenClaw Android Gradle 构建技能包</li>
       </ul>
+      <p style="margin-top: 14px; color: var(--text-light);">
+        给外部仓库的近期 PR 收录在首页 <strong style="color: var(--primary-2);">05 — 近期贡献</strong> section。
+      </p>
     </div>
 
     <div class="github-stats reveal-stagger" style="margin-top: 24px;">
