@@ -10,21 +10,16 @@ title: 关于
     <p class="section-subtitle">全栈开发者 · 开源贡献者</p>
   </div>
 
-  <!-- Bio -->
+<!-- Bio -->
   <div class="resume-section reveal">
     <div class="about-bio">
       <p>
-        我是 <strong>Thatgfsj</strong>（孙政），一名热衷于把想法变成可运行工具的全栈开发者。
-        从底层网络协议到上层 AI 应用，从浏览器抓包到编译型 GUI 工具，都在我的折腾范围之内。
-      </p>
-      <p>
-        折腾代码的第七个年头，写过 Playwright 爬虫辅助、写过 1.5 MB 的 Win32 单文件网速监控、
-        写过海马体启发的 AI 长期记忆系统、也给 <strong style="color: var(--primary-2);">OpenClaw</strong> 写过 Rust / Android Gradle 技能包。
+        我是 <strong>Thatgfsj</strong>（孙政），一名把想法变成可运行工具的，借助AI的全栈开发能力与个人系统理解的全栈开发者。
       </p>
       <p>
         目前主用 <strong style="color: var(--text);">Python / Rust / TypeScript</strong>，
-        业余时间给 OpenClaw / hermes 等开源仓库提 PR、做贡献。
-        相信好的工具应该简洁、高效、开箱即用——最好一行命令就能跑起来。
+        业余时间给常用开源仓库提 PR。
+        相信好的工具应该简洁、高效。
       </p>
     </div>
   </div>
