@@ -43,7 +43,6 @@ layout: default
     <div class="section-header reveal">
       <span class="section-kicker">01 — TECH STACK</span>
       <h2 class="section-title">技术栈</h2>
-      <p class="section-subtitle">不只是「会用」，是写过大大小小工具后沉淀下来的偏好组合。</p>
     </div>
 
     <div class="skills-grid reveal-stagger">

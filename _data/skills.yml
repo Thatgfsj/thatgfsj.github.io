@@ -1,64 +1,81 @@
 # ============================
-# 技能分类 — 用于简历/作品集展示
+# 技术栈 — 按应用领域维度分类
 # ============================
 
-- category: "编程语言"
-  icon: "⚡"
+- category: "AI Agent 与提示工程"
+  icon: "🧠"
   items:
-    - name: "Python"
-      level: 95
-      desc: "主力语言：爬虫、CLI、AI Agent、数据处理工具"
-    - name: "Rust"
-      level: 80
-      desc: "CLI 工具与 PyO3 扩展，性能敏感模块首选"
-    - name: "Java / Kotlin"
-      level: 75
-      desc: "Android 应用、Gradle 构建脚本、后端服务"
-    - name: "TypeScript"
-      level: 70
-      desc: "静态站点、前端脚本、CLI 工具"
-    - name: "Go"
-      level: 65
-      desc: "后端微服务、并发处理"
-    - name: "C / C++"
-      level: 60
-      desc: "Win32、原生 GUI、性能关键模块"
+    - name: "NeuroWeave Cortex（自研）"
+      desc: "海马体启发的星型图长期记忆引擎，带睡眠巩固循环"
+    - name: "NeuroWeave Timeline（自研）"
+      desc: "项目演进过程记忆，git hook 自动落库，MCP Server 对接 Agent"
+    - name: "Flowntier（自研）"
+      desc: "多 Agent 软件公司 OS，Tauri+Rust 跑 Chief/Planner/Worker 协作"
+    - name: "claude-email-cli（自研）"
+      desc: "IMAP/SMTP 邮件通道调用本地 Claude CLI，Flask Web 兜底"
+    - name: "rsklls（自研）"
+      desc: "面向 OpenClaw 的 Rust 开发指南，覆盖 PyO3/cxx/JNI/WASM 桥"
+    - name: "android-gradle-skills（自研）"
+      desc: "AGP/Gradle/Kotlin DSL/Version Catalog 知识与脚手架"
+    - name: "wangwenwrite-skill（自研）"
+      desc: "男频系统流网文全流程创作助手，三行开头/五步单章法"
 
-- category: "移动 & 前端"
+- category: "桌面与 GUI"
+  icon: "🪟"
+  items:
+    - name: "RouterMonitor"
+      desc: "ZTE 路由器 Win32 监控，HUD 浮窗 + 趋势图 + 系统托盘"
+    - name: "LiveSub（C++20）"
+      desc: "Qwen3-ASR + llama.cpp 直播实时字幕，Direct2D 透明窗"
+    - name: "Crosshair-Overlay"
+      desc: "FPS 准心覆盖，gdi32 + shell32，单文件 ~80KB"
+    - name: "YU-Oracle-Desktop（Tauri+Rust）"
+      desc: "塔罗 + 易经卜卦桌面版，卡牌动画 + 离线 JSON 数据"
+    - name: "VibeCopy（C++/PS1）"
+      desc: "Win32 速复贴板，PowerShell 配置 + VBScript 静默启动"
+
+- category: "Android 与 Gradle"
   icon: "📱"
   items:
-    - name: "Android (Gradle)"
-      level: 80
-      desc: "原生应用开发、Jetpack Compose、构建配置"
-    - name: "HTML / CSS / JS"
-      level: 70
-      desc: "响应式设计、静态站点、前端脚本"
+    - name: "Tarot-Oracle（Kotlin）"
+      desc: "78 张韦特塔罗，Compose Material3 + 一键跳 DeepSeek"
+    - name: "IChing-Oracle（Kotlin）"
+      desc: "六十四卦随机抽签，Kotlinx Serialization + Coroutines"
+    - name: "TVLive（Kotlin）"
+      desc: "老人友好直播客户端，Media3 ExoPlayer + Hilt + 多源测速"
+    - name: "AGP 8.7 + Gradle 8.10"
+      desc: "Kotlin DSL + Version Catalog + Convention Plugin 工程化"
 
-- category: "数据库 & 工具"
+- category: "网络协议与爬虫"
+  icon: "🕸"
+  items:
+    - name: "Playwright-Crawler-Helper（自研）"
+      desc: "反检测浏览器爬虫，注入 webdriver 隐藏 + 网络抓包"
+    - name: "XXGCXY-CampusNet-AutoLogin"
+      desc: "校园网 Portal 协议逆向 + Tauri 桌面壳 + PowerShell 认证"
+    - name: "ZTE Middleware 私有协议"
+      desc: "middleware.cgi JSON POST + base64 sessionId 轮询设备"
+    - name: "AI-Website-Detector"
+      desc: "正则 + BeautifulSoup 指纹识别 Durable/Framer/v0 等站点"
+
+- category: "CLI 与工具链"
   icon: "🛠"
   items:
-    - name: "MySQL"
-      level: 75
-      desc: "数据库设计、查询优化、数据迁移"
-    - name: "Git / GitHub"
-      level: 85
-      desc: "版本控制、CI/CD、GitHub Actions、API"
-    - name: "Docker"
-      level: 60
-      desc: "容器化部署、开发环境"
+    - name: "thatgfsj-code（gfcode）"
+      desc: "Node/TS CLI 编程助手，SiliconFlow 多家 Provider 接入"
+    - name: "VoiceInput（Rust）"
+      desc: "中键+右键唤醒，cpal/rdev/enigo + whisper.cpp 实时语音"
+    - name: "AutoEnterScheduler"
+      desc: "Win32 PostMessageW 定时回车，tkinter + PyInstaller 打包"
+    - name: "Excel-Date-Error-Fixer / excelfind"
+      desc: "openpyxl/pandas 批量改日期、跨表模糊搜表格"
 
-- category: "AI & 创新"
-  icon: "🤖"
+- category: "高并发与后端"
+  icon: "🚀"
   items:
-    - name: "AI 工程"
-      level: 75
-      desc: "RAG、Agent 系统、Ollama 本地部署"
-    - name: "OpenClaw"
-      level: 80
-      desc: "AI前沿探索者、热门仓库贡献者"
-    - name: "爬虫与自动化"
-      level: 90
-      desc: "Playwright、Scrapy、网络抓包分析"
-    - name: "CLI 工具开发"
-      level: 85
-      desc: "跨平台命令行工具、实用脚本"
+    - name: "seckill-system（Java）"
+      desc: "10w QPS 秒杀，Redis+Lua + Kafka + Seata TCC + Sentinel"
+    - name: "Spring Cloud Gateway + Nacos"
+      desc: "网关/配置中心/服务发现三件套搭建"
+    - name: "Prometheus + Grafana + SkyWalking"
+      desc: "指标 + 链路追踪 + 热点参数限流全套可观测"
