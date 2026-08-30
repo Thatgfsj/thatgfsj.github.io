@@ -10,6 +10,10 @@ _site/
 *.swp
 *.swo
 
+# 工具/内部
+.mimosa/
+.zcode/
+
 # OS
 Thumbs.db
 .DS_Store
