@@ -75,22 +75,22 @@ layout: default
     <div class="github-stats reveal-stagger">
       <div class="stat-card">
         <div class="stat-icon"><i class="fas fa-code-branch"></i></div>
-        <div class="stat-number">47</div>
+        <div class="stat-number">37</div>
         <div class="stat-label">公开仓库</div>
       </div>
       <div class="stat-card">
         <div class="stat-icon"><i class="fas fa-star"></i></div>
-        <div class="stat-number" id="gh-stars">40</div>
+        <div class="stat-number" id="gh-stars">35</div>
         <div class="stat-label">Stars 总数</div>
       </div>
       <div class="stat-card">
         <div class="stat-icon"><i class="fas fa-users"></i></div>
-        <div class="stat-number">6</div>
+        <div class="stat-number">7</div>
         <div class="stat-label">关注者</div>
       </div>
       <div class="stat-card">
         <div class="stat-icon"><i class="fas fa-code"></i></div>
-        <div class="stat-number">186 MiB</div>
+        <div class="stat-number">281 MiB</div>
         <div class="stat-label">代码规模</div>
       </div>
     </div>
