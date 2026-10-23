@@ -7,7 +7,7 @@ prose: false
 permalink: /games/minecraft/
 ---
 
-<p class="page-note">只收录自研仓库，不展示本机安装的模组 · 数据截至 2026-10-23</p>
+<p class="page-note">只收录自研仓库 · 数据截至 2026-10-23</p>
 
 <div class="game-readouts">
   <div>
@@ -49,5 +49,5 @@ permalink: /games/minecraft/
   {% endfor %}
 </div>
 
-<p class="game-note">组织：<a href="https://github.com/Thatgfsj-minecraft" target="_blank" rel="noopener">Thatgfsj-minecraft</a> · 全部仓库开源，未收录本机整合包中的第三方模组。</p>
+<p class="game-note">组织：<a href="https://github.com/Thatgfsj-minecraft" target="_blank" rel="noopener">Thatgfsj-minecraft</a> · 全部仓库开源 · 数据按 GitHub 当前状态整理。</p>
 <p class="post-back"><a href="{{ '/games/' | relative_url }}">← 返回游戏</a></p>
