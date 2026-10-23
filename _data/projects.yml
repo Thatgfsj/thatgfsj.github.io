@@ -266,6 +266,34 @@
   desc: "Win32 速复贴板：PowerShell 配置 + VBScript 静默启动。"
   desc_full: "Win32 快速复制 / 粘贴小工具：PowerShell 配置，VBScript 静默启动，适合 vibe coding 时快速搬运文本。"
 
+- name: "handy-shulkers"
+  url: "https://github.com/Thatgfsj-minecraft/handy-shulkers"
+  lang: "Java"
+  stars: 0
+  desc: "「拿着就用」的潜影盒：不用放置，直接右键使用。"
+  desc_full: "「拿着就用」的 Minecraft 潜影盒模组：不用先放置再打开，拿着即可直接使用。"
+
+- name: "sky-islands"
+  url: "https://github.com/Thatgfsj-minecraft/sky-islands"
+  lang: "Java"
+  stars: 0
+  desc: "创建世界时可选的内置空岛类型：经典 / 小岛 / 单方块。"
+  desc_full: "Sky Islands 空岛世界：创建新世界时可选的内置空岛类型（经典 / 小岛 / 单方块），生物群系正常、种子照常。"
+
+- name: "compressed-blocks"
+  url: "https://github.com/Thatgfsj-minecraft/compressed-blocks"
+  lang: "Java"
+  stars: 0
+  desc: "压缩方块：3×3 合成 1～9 重，压缩工具耐久按 9ⁿ 增长。"
+  desc_full: "Compressed Blocks：把常见方块 3×3 压成 1～9 重方便携带；压缩工具耐久 9ⁿ 指数上升（六重起不可破坏），挖掘速度与伤害逐重成长。"
+
+- name: "mc-mod-dev-skill"
+  url: "https://github.com/Thatgfsj-minecraft/mc-mod-dev-skill"
+  lang: "Skill"
+  stars: 0
+  desc: "通用 Minecraft 模组开发技能包：先识别版本 / Loader / 映射，再按实际环境开发。"
+  desc_full: "Thatgfsj-minecraft 的通用 Minecraft 模组开发技能包：要求 AI agent 先侦察 MC 版本、Mod Loader、映射体系、Java 版本与构建系统，再按项目实际环境开发、构建、测试与调试；已验证 Fabric / NeoForge 1.21.x。"
+
 - name: "AutoEnterScheduler"
   url: "https://github.com/Thatgfsj-easyRep/AutoEnterScheduler"
   lang: "Python"
