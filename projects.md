@@ -22,7 +22,7 @@ permalink: /projects/
     </span>
     <span class="file-row__meta">
       <span class="file-row__lang">{{ p.lang }}</span>
-      <span class="file-row__stars">{% if p.stars > 0 %}★ {{ p.stars }}{% else %}—{% endif %}</span>
+      <span class="file-row__stars">{% if p.stars > 0 %}★ {{ p.stars_label | default: p.stars }}{% else %}—{% endif %}</span>
     </span>
     <span class="file-row__arrow" aria-hidden="true">↗</span>
   </a>

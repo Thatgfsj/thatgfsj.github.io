@@ -4,6 +4,15 @@
 #   featured: true 的项目会出现在首页；projects 页展示全量
 # ============================
 
+- name: dsh-ops
+  url: https://github.com/T-Auto/dsh-ops
+  lang: TypeScript / Rust
+  stars: 3887
+  stars_label: "3,887"
+  featured: true
+  desc: DSH 底层操作工具插件：有界文件 / 文档工具，减少 Token 消耗与任务耗时。
+  desc_full: DSH（DeepSeek Harness）底层操作工具插件：为 Agent 提供有界文件与文档工具，Native / PTC 双模式，核心用 TypeScript + Rust worker 实现，目标是在更少 Token 与更短时间内完成任务。
+
 - name: neuroweave-cortex
   url: https://github.com/Thatgfsj/neuroweave-cortex
   lang: Python

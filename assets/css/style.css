@@ -1,7 +1,7 @@
 /* ============================================================
    Thatgfsj · personal workstation
    设计语言：90s workstation / 工程手册 / 暖灰与琥珀
-   v2.0 重写，替换蓝紫渐变模板
+   重写，替换蓝紫渐变模板
    ============================================================ */
 
 /* ---------- 1. 字体（自托管） ---------- */
@@ -303,16 +303,6 @@ main:focus {
   font-size: 15px;
   font-weight: 600;
   letter-spacing: 0.01em;
-}
-
-.brand__tag {
-  font-family: var(--font-mono);
-  font-size: 9px;
-  letter-spacing: 0.06em;
-  color: var(--ink-3);
-  border: 1px solid var(--line-soft);
-  padding: 1px 4px;
-  line-height: 1.4;
 }
 
 .nav {
@@ -2060,9 +2050,6 @@ main:focus {
     gap: 12px;
   }
 
-  .brand__tag {
-    display: none;
-  }
 }
 
 @media (max-width: 760px) {
