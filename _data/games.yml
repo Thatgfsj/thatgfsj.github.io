@@ -1,0 +1,75 @@
+# ============================
+# 游戏板块 — /games/ 大板块数据
+# 新增板块：追加一项即可（覆盖图可选；poster: true 时用纯排版封面）
+# ============================
+
+- id: minecraft
+  title: 我的世界
+  en: MINECRAFT
+  kicker: SANDBOX / MODDED
+  status: ACTIVE
+  platform: PC · FABRIC 1.21.11
+  updated: 2026-10-12
+  summary: 1.21.11 + Fabulously Optimized，本机 86 个模组 jar、去重后 85 个模组。这里按用途把它们摊开：性能优化、画面、界面、存储、探索与建造。
+  href: /games/minecraft/
+  link_label: 查看 85 个模组
+  cover: /assets/img/games/minecraft-cover.png
+  cover_alt: 我的世界模组图标拼贴
+  stats:
+    - label: MODS
+      value: "85"
+      note: 有效模组 · 86 jar
+    - label: VERSION
+      value: "1.21.11"
+      note: Minecraft
+    - label: LOADER
+      value: FABRIC
+      note: 模组加载器
+
+- id: subnautica
+  title: 深海迷航
+  en: SUBNAUTICA (2018)
+  kicker: SURVIVAL / OCEAN
+  status: ACTIVE
+  platform: PC · STEAM
+  updated: 2026-10-09
+  summary: 4546B 的海洋生存。这里放了一张 1:1 的社区地图，以及本机 5 个存档的进度记录。
+  href: /games/subnautica/
+  link_label: 查看地图与存档
+  cover: /assets/img/games/subnautica/map-cover.jpg
+  cover_alt: 深海迷航 4546B 社区地图（KT411 2024）
+  cover_credit: "MAP · KT411 2024"
+  fit: contain
+  stats:
+    - label: SAVES
+      value: "5"
+      note: 本地存档
+    - label: PLAYTIME
+      value: "17.4"
+      note: 小时
+    - label: MAP
+      value: "4546B"
+      note: KT411 2024
+
+- id: original
+  title: 自创作品
+  en: ORIGINAL WORKS
+  kicker: MADE BY THATGFSJ
+  status: WIP
+  platform: MINECRAFT MODS / TOOLS
+  updated: 2026-10-23
+  summary: 自己写的东西：Minecraft 模组、工具与实验。先以文字索引呈现，截图稍后补。
+  href: /games/original/
+  link_label: 查看作品索引
+  poster: true
+  cover_alt: 自创作品排版封面
+  stats:
+    - label: WORKS
+      value: "4"
+      note: 已收录
+    - label: STATUS
+      value: WIP
+      note: 持续更新
+    - label: IMAGES
+      value: "0"
+      note: 暂不放图

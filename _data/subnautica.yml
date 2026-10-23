@@ -1,0 +1,13 @@
+# ============================
+# 深海迷航素材与地图出处
+# map_credit 会在页面标注；地图文件就位后替换 map 路径
+# ============================
+map: "/assets/img/games/subnautica/map.jpg"
+map_alt: "深海迷航 4546B 地图"
+map_credit: "地图：KT411 2024 中文全标注图；经 Thatgfsj/subnautica-snmap v2.7 收录。版权归原作者所有，非商业使用。"
+map_source_url: "https://github.com/Thatgfsj/subnautica-snmap"
+hero: "/assets/img/games/subnautica/library_hero.jpg"
+playtime: "17.4"
+modes: "2"
+cover: "/assets/img/games/subnautica/library_600x900_schinese.jpg"
+logo: "/assets/img/games/subnautica/logo_schinese.png"
