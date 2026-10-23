@@ -1,31 +1,26 @@
 # ============================
-# Jekyll 配置 — 个人简历 / 作品集
+# Jekyll 配置 — 个人主页 / 工作站
 # ============================
 title: "Thatgfsj 个人主页"
-tagline: "全栈开发 · 开源贡献者"
-description: >-
-  全栈开发者，熟练vibe coding工作模式。
-  折腾工具链、自动化流程和 AI 工程化。
+tagline: "全栈开发者 · 工具链 · AI 工程"
+title_separator: "·"
+description: "Thatgfsj（孙政）的个人主页。全栈开发者，折腾工具链、自动化流程与 AI 工程，业余给常用开源仓库提 PR。"
 author: "Thatgfsj (孙政)"
-avatar: "https://github.com/Thatgfsj.png"
+avatar: "/assets/img/avatar.png"
 repository: "Thatgfsj/thatgfsj.github.io"
 
-# 社交链接
+# 社交
 github_username: "Thatgfsj"
-# twitter_username: ""
 url: "https://www.thatgfsj.xyz"
 baseurl: ""
 
 # 页面永久链接
 permalink: /blog/:year/:month/:title/
 
-# 主题配置
-theme: minima
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
-  - jekyll-github-metadata
-  - jekyll-paginate
+  - jekyll-sitemap
 
 # 排除无关文件
 exclude:
@@ -44,12 +39,9 @@ exclude:
 markdown: kramdown
 highlighter: rouge
 
-# 分页
-paginate: 5
-paginate_path: "/blog/page:num/"
-
-# 语言
+# 语言与时区
 lang: zh-CN
+timezone: Asia/Shanghai
 
 # 默认 front matter
 defaults:
@@ -59,8 +51,10 @@ defaults:
     values:
       layout: post
       permalink: /blog/:year/:month/:title/
+      image: /assets/img/og.png
   - scope:
       path: ""
       type: pages
     values:
       layout: page
+      image: /assets/img/og.png

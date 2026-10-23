@@ -1,0 +1,12 @@
+<div class="pr-list">
+  {% for c in site.data.contributions %}
+  <a class="pr-item" href="{{ c.url }}" target="_blank" rel="noopener">
+    <span class="pr-item__top">
+      <span class="pr-item__repo">{{ c.repo }}</span>
+      <span class="badge badge--ok">{{ c.state }}</span>
+    </span>
+    <span class="pr-item__title">{{ c.title }}</span>
+    <span class="pr-item__meta">#{{ c.pr }} · {{ c.date }}{% if c.note %} · {{ c.note }}{% endif %}</span>
+  </a>
+  {% endfor %}
+</div>

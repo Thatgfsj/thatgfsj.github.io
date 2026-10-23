@@ -1,183 +1,115 @@
 ---
-layout: default
+layout: page
 title: 关于
+description: Thatgfsj（孙政），全栈开发者。写代码、折腾工具链、给开源仓库提 PR。
+kicker: README.MD
+hide_lede: true
+permalink: /about/
 ---
 
-<div class="wrapper" style="padding-top: 32px;">
-  <div class="section-header reveal">
-    <span class="section-kicker">ABOUT</span>
-    <h2 class="section-title">关于我</h2>
-    <p class="section-subtitle">全栈开发者 · 开源贡献者</p>
+<div class="about-intro">
+  <img class="about-intro__avatar" src="{{ '/assets/img/avatar.png' | relative_url }}" alt="Thatgfsj 的头像" width="96" height="96" loading="lazy">
+  <div>
+    <p class="about-intro__lead">我是 <strong>Thatgfsj</strong>（孙政），一个把想法做成能跑的工具的全栈开发者。</p>
+    <p>日常借助 AI 直接开工，也坚持把系统底层弄明白。目前主用 Python / Rust / TypeScript，业余时间给常用开源仓库提 PR。相信好的工具应该简洁、高效，并且能直接解决问题。</p>
   </div>
-
-<!-- Bio -->
-  <div class="resume-section reveal">
-    <div class="about-bio">
-      <p>
-        我是 <strong>Thatgfsj</strong>（孙政），一名把想法变成可运行工具的，借助AI的全栈开发能力与个人系统理解的全栈开发者。
-      </p>
-      <p>
-        目前主用 <strong style="color: var(--text);">Python / Rust / TypeScript</strong>，
-        业余时间给常用开源仓库提 PR。
-        相信好的工具应该简洁、高效。
-      </p>
-    </div>
-  </div>
-
-  <!-- Core Skills -->
-  <div class="resume-section reveal">
-    <h2><span class="icon">🎯</span> 核心技术领域</h2>
-
-    <div class="reveal-stagger">
-      <div class="resume-item">
-        <h3>🐍 Python 生态</h3>
-        <div class="resume-meta">爬虫 · 自动化 · 数据处理 · AI 集成</div>
-        <ul>
-          <li>Playwright / Scrapy 爬虫开发，熟悉浏览器抓包与协议逆向</li>
-          <li>做过 excelfind、Excel-Date-Error-Fixer 等 Excel/CSV 数据处理工具</li>
-          <li>AI Agent 系统与 RAG 流水线（neuroweave-cortex 海马体启发的长期记忆）</li>
-          <li>CLI 工具与自动化脚本（claude-email-cli 等邮件驱动 AI 工具）</li>
-        </ul>
-      </div>
-
-      <div class="resume-item">
-        <h3>🦀 Rust 系统编程</h3>
-        <div class="resume-meta">CLI 工具 · 性能敏感模块 · Python-Rust 互操作</div>
-        <ul>
-          <li>跨平台命令行工具开发（rsklls 等 OpenClaw 技能包）</li>
-          <li>Python ↔ Rust 互操作（PyO3），把关键路径下沉到原生</li>
-          <li>高性能数据处理组件与流式计算</li>
-        </ul>
-      </div>
-
-      <div class="resume-item">
-        <h3>📱 Android 开发</h3>
-        <div class="resume-meta">Gradle 构建 · Jetpack Compose · 原生应用</div>
-        <ul>
-          <li>基于 Gradle 的 Android 项目配置与构建优化</li>
-          <li>版本目录（Version Catalog）管理依赖</li>
-          <li>构建变体（Build Variants）与多渠道打包</li>
-          <li>为 OpenClaw 维护 android-gradle-skills 技能包</li>
-        </ul>
-      </div>
-
-      <div class="resume-item">
-        <h3>🤖 AI 工程与自动化</h3>
-        <div class="resume-meta">RAG · Agent · 开源生态</div>
-        <ul>
-          <li>Self-hosted AI 平台（Ollama 本地部署、私有模型推理）</li>
-          <li>神经记忆系统：neuroweave-cortex（锚点 + 扩散激活 + 睡眠巩固循环）</li>
-          <li>OpenClaw / hermes 等热门仓库贡献者（技能包与生态适配）</li>
-          <li>AI 音频工具与多媒体生成 pipeline</li>
-        </ul>
-      </div>
-
-      <div class="resume-item">
-        <h3>🔧 其他技能</h3>
-        <div class="resume-meta">数据库 · DevOps · 工具链</div>
-        <ul>
-          <li><strong>数据库</strong>：MySQL 设计、查询优化、数据迁移</li>
-          <li><strong>CI/CD</strong>：GitHub Actions、自动化部署流水线</li>
-          <li><strong>容器</strong>：Docker 容器化部署、开发环境</li>
-          <li><strong>版本控制</strong>：Git 工作流、PR 审查、GitHub API</li>
-          <li><strong>嵌入式 / 桌面</strong>：Win32 + WinHTTP 单文件工具、GDI+ 自绘 UI</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <!-- Languages -->
-  <div class="resume-section reveal">
-    <h2><span class="icon">📊</span> 编程语言熟练度</h2>
-
-    <div class="skills-grid" style="grid-template-columns: 1fr;">
-      <div class="skill-category">
-        <div class="skill-chips">
-          {% for cat in site.data.skills %}
-            {% for skill in cat.items %}
-            <span class="skill-chip" title="{{ skill.desc }}">{{ skill.name }}</span>
-            {% endfor %}
-          {% endfor %}
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- GitHub -->
-  <div class="resume-section reveal">
-    <h2><span class="icon">🌐</span> 开源贡献</h2>
-
-    <div class="about-bio" style="margin-bottom: 24px;">
-      <p>
-        业余时间主要给常用仓库根据自己体验到的问题进行精准维护适配。下面这几个是近期比较有代表性的：
-      </p>
-    </div>
-
-    <div class="pr-buttons">
-      <a href="https://github.com/openclaw/openclaw/pull/69056" target="_blank" rel="noopener" class="pr-btn">
-        <span class="pr-repo">openclaw / openclaw</span>
-        <span class="pr-title">fix(gateway): handle SIGUSR1 gracefully on Windows</span>
-        <span class="pr-meta">#69056 · 2026-04 · merged</span>
-      </a>
-
-      <a href="https://github.com/esengine/DeepSeek-Reasonix/pull/3380" target="_blank" rel="noopener" class="pr-btn">
-        <span class="pr-repo">esengine / DeepSeek-Reasonix</span>
-        <span class="pr-title">feat(serve): add i18n, stats dashboard, and session management</span>
-        <span class="pr-meta">#3380 · 2026-06 · merged</span>
-      </a>
-
-      <a href="https://github.com/NousResearch/hermes-agent/pull/19137" target="_blank" rel="noopener" class="pr-btn">
-        <span class="pr-repo">NousResearch / hermes-agent</span>
-        <span class="pr-title">fix(title): prevent stale background title generation from reloading unloaded Ollama models</span>
-        <span class="pr-meta">#19137 · merged via #66078</span>
-      </a>
-    </div>
-
-    <div class="github-stats reveal-stagger" style="margin-top: 24px;">
-      <div class="stat-card">
-        <div class="stat-icon"><i class="fas fa-code-branch"></i></div>
-        <div class="stat-number">37</div>
-        <div class="stat-label">公开仓库</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-icon"><i class="fas fa-users"></i></div>
-        <div class="stat-number">7</div>
-        <div class="stat-label">关注者</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-icon"><i class="fas fa-code"></i></div>
-        <div class="stat-number">281 MiB</div>
-        <div class="stat-label">代码规模</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-icon"><i class="fas fa-map-pin"></i></div>
-        <div class="stat-number">中国</div>
-        <div class="stat-label">所在地</div>
-      </div>
-    </div>
-
-    <p style="text-align: center; margin-top: 24px;">
-      <a href="https://github.com/Thatgfsj" target="_blank" rel="noopener" class="btn btn-primary">
-        <i class="fab fa-github"></i> 访问 GitHub 主页
-      </a>
-    </p>
-  </div>
-
-  <!-- Contact -->
-  <div class="resume-section reveal">
-    <h2><span class="icon">📬</span> 联系我</h2>
-    <div class="about-bio">
-      <p>欢迎通过 GitHub 与我联系，讨论技术问题或开源合作。</p>
-      <ul>
-        <li>GitHub: <a href="https://github.com/Thatgfsj" target="_blank">github.com/Thatgfsj</a></li>
-      </ul>
-    </div>
-  </div>
-
-  <hr style="border: none; border-top: 1px solid var(--border); margin: 40px 0;">
-
-  <p style="text-align: center; color: var(--text-muted); font-size: 0.85rem;">
-    这个站点使用 <a href="https://jekyllrb.com">Jekyll</a> 构建，部署在 <a href="https://pages.github.com">GitHub Pages</a> 上。
-    源码可在 <a href="https://github.com/Thatgfsj/thatgfsj.github.io">thatgfsj.github.io</a> 仓库查看。
-  </p>
 </div>
+
+## 核心技术领域
+
+<div class="about-grid">
+  <section class="about-card">
+    <h3><span>01</span>Python 生态</h3>
+    <p class="about-card__meta">爬虫 · 自动化 · 数据处理 · AI 集成</p>
+    <ul>
+      <li>Playwright / Scrapy 爬虫开发，熟悉浏览器抓包与协议逆向</li>
+      <li>Excel / CSV 数据处理工具（excelfind、Excel-Date-Error-Fixer）</li>
+      <li>AI Agent 长期记忆系统（neuroweave-cortex，非 RAG 的星图 / 激活扩散架构）</li>
+      <li>CLI 工具与自动化脚本（claude-email-cli 等）</li>
+    </ul>
+  </section>
+
+  <section class="about-card">
+    <h3><span>02</span>Rust 系统编程</h3>
+    <p class="about-card__meta">CLI 工具 · 性能敏感模块 · Python-Rust 互操作</p>
+    <ul>
+      <li>Rust / FFI 技能包与跨平台 CLI 工具（rsklls 等）</li>
+      <li>Python ↔ Rust 互操作（PyO3），把关键路径下沉到原生</li>
+      <li>高性能数据处理组件与流式计算</li>
+    </ul>
+  </section>
+
+  <section class="about-card">
+    <h3><span>03</span>Android 开发</h3>
+    <p class="about-card__meta">Gradle 构建 · Jetpack Compose · 原生应用</p>
+    <ul>
+      <li>基于 Gradle 的 Android 项目配置与构建优化</li>
+      <li>版本目录（Version Catalog）管理依赖</li>
+      <li>构建变体（Build Variants）与多渠道打包</li>
+      <li>为 OpenClaw 维护 android-gradle-skills 技能包</li>
+    </ul>
+  </section>
+
+  <section class="about-card">
+    <h3><span>04</span>AI 工程与自动化</h3>
+    <p class="about-card__meta">Agent · 长期记忆 · 开源生态</p>
+    <ul>
+      <li>Self-hosted AI 平台（Ollama 本地部署、私有模型推理）</li>
+      <li>神经记忆系统：neuroweave-cortex（锚点 + 扩散激活 + 睡眠巩固）</li>
+      <li>OpenClaw / hermes-agent 等大型仓库贡献者（技能包与生态适配）</li>
+      <li>AI 音频工具与多媒体生成 pipeline</li>
+    </ul>
+  </section>
+</div>
+
+## 其他技能
+
+<div class="about-grid">
+  <section class="about-card">
+    <h3><span>05</span>数据库与后端</h3>
+    <p class="about-card__meta">MySQL · Redis · 消息队列</p>
+    <ul>
+      <li><strong>数据库</strong>：MySQL 设计、查询优化、数据迁移</li>
+      <li><strong>缓存与队列</strong>：Redis、Kafka 在秒杀 / 高并发场景的实践</li>
+      <li><strong>可观测性</strong>：Prometheus + Grafana + SkyWalking</li>
+    </ul>
+  </section>
+
+  <section class="about-card">
+    <h3><span>06</span>DevOps 与工具链</h3>
+    <p class="about-card__meta">CI/CD · 容器 · 版本控制</p>
+    <ul>
+      <li><strong>CI/CD</strong>：GitHub Actions、自动化部署流水线</li>
+      <li><strong>容器</strong>：Docker 容器化部署、开发环境</li>
+      <li><strong>版本控制</strong>：Git 工作流、PR 审查、GitHub API</li>
+      <li><strong>桌面 / 嵌入式</strong>：Win32 + WinHTTP 单文件工具、GDI+ 自绘 UI</li>
+    </ul>
+  </section>
+</div>
+
+## 开源贡献
+
+<p>业余时间主要给常用仓库做精准维护与适配。下面这几个是近期比较有代表性的：</p>
+
+{% include pr-list.html %}
+
+<p class="section-more"><a href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener">访问 GitHub 主页 ↗</a></p>
+
+## 联系方式
+
+<p>欢迎通过 GitHub 联系我，讨论技术问题或开源合作。没有公开邮箱，站内也没有留言板——直接开 issue 或 PR 是最快的方式。</p>
+
+<ul>
+  <li>GitHub：<a href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener">github.com/Thatgfsj</a></li>
+  <li>本站：<a href="{{ '/feed.xml' | relative_url }}">RSS 订阅</a></li>
+</ul>
+
+## 关于本站
+
+<p>这个站点用 <a href="https://jekyllrb.com" target="_blank" rel="noopener">Jekyll</a> 构建，部署在 <a href="https://pages.github.com" target="_blank" rel="noopener">GitHub Pages</a> 上，源码在 <a href="https://github.com/{{ site.repository }}" target="_blank" rel="noopener">thatgfsj.github.io</a>。</p>
+
+<p class="colophon">
+  设计：90s workstation 风格 · 暖灰纸面 + 琥珀色终端<br>
+  字体：IBM Plex Mono / IBM Plex Sans（自托管）· 中文使用系统字体<br>
+  无追踪、无广告、无第三方脚本。
+</p>

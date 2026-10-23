@@ -1,0 +1,15 @@
+<div class="stack-grid">
+  {% for cat in site.data.skills %}
+  <section class="stack-group">
+    <h3 class="stack-group__title">
+      <span class="stack-group__code">{{ forloop.index | prepend: '0' | slice: -2, 2 }}</span>
+      <span>{{ cat.category }}</span>
+    </h3>
+    <ul class="chips">
+      {% for skill in cat.items %}
+      <li class="chip" title="{{ skill.desc | escape }}">{{ skill.name }}</li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endfor %}
+</div>

@@ -1,27 +1,32 @@
 ---
-layout: default
+layout: page
 title: 项目
+description: 全部开源项目，按最近折腾的顺序排列。点击任意条目进入 GitHub 仓库。
+kicker: PROJECTS.DIR
+prose: false
+permalink: /projects/
 ---
 
-<section class="section-block" style="padding-top: 32px;">
-  <div class="wrapper">
-    <div class="section-header reveal">
-      <span class="section-kicker">PROJECTS</span>
-      <h2 class="section-title">开源项目</h2>
-      <p class="section-subtitle">开源项目 · 点击卡片进入仓库</p>
-    </div>
+<p class="page-note">{{ site.data.projects.size }} 个公开项目 · 数据截至 {{ site.data.stats.updated }}</p>
 
-    <div class="project-grid reveal-stagger">
-      {% for p in site.data.projects %}
-      <a href="{{ p.url }}" target="_blank" rel="noopener" class="project-card" style="text-decoration: none; color: inherit;">
-        <div class="project-name"><i class="fas fa-folder"></i> {{ p.name }}</div>
-        <div class="project-desc">{{ p.desc_full }}</div>
-        <div class="project-meta">
-          <span class="lang"><span class="lang-dot" style="background:{{ p.lang_color }}"></span> {{ p.lang }}</span>
-          <span class="stars"><i class="far fa-star"></i> {{ p.stars }}</span>
-        </div>
-      </a>
-      {% endfor %}
-    </div>
+<div class="file-list">
+  <div class="file-list__head" aria-hidden="true">
+    <span>#</span><span>名称 / 描述</span><span>语言</span><span>★</span><span></span>
   </div>
-</section>
+  {% for p in site.data.projects %}
+  <a class="file-row" href="{{ p.url }}" target="_blank" rel="noopener">
+    <span class="file-row__idx">{{ forloop.index | prepend: '0' | slice: -2, 2 }}</span>
+    <span class="file-row__main">
+      <span class="file-row__name">{{ p.name }}</span>
+      <span class="file-row__desc">{{ p.desc_full | default: p.desc }}</span>
+    </span>
+    <span class="file-row__meta">
+      <span class="file-row__lang">{{ p.lang }}</span>
+      <span class="file-row__stars">{% if p.stars > 0 %}★ {{ p.stars }}{% else %}—{% endif %}</span>
+    </span>
+    <span class="file-row__arrow" aria-hidden="true">↗</span>
+  </a>
+  {% endfor %}
+</div>
+
+<p class="section-more"><a href="https://github.com/{{ site.github_username }}?tab=repositories" target="_blank" rel="noopener">在 GitHub 查看全部仓库 ↗</a></p>

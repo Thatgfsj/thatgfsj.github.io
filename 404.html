@@ -1,0 +1,30 @@
+---
+layout: default
+title: 页面不存在
+description: 这个路径不存在，或者文件已经被移走了。返回首页或去博客看看。
+noindex: true
+sitemap: false
+permalink: /404.html
+---
+
+<div class="shell shell--page">
+  <div class="panel">
+    <div class="panel__bar">
+      <span class="panel__path">~/error/404</span>
+      <span class="panel__meta">FILE NOT FOUND</span>
+    </div>
+    <div class="panel__body error-panel">
+      <p class="eyebrow"><span class="eyebrow__mark" aria-hidden="true"></span>SEGMENTATION FAULT (CORE DUMPED)</p>
+      <h1 class="error-panel__code">404</h1>
+      <p class="error-panel__text">这个路径不存在，或者文件已经被移走了。</p>
+      <pre class="error-log" aria-hidden="true">$ ls /requested/path
+ls: cannot access '/requested/path': No such file or directory
+$ echo $?
+1</pre>
+      <div class="error-panel__actions">
+        <a class="btn btn--primary" href="{{ '/' | relative_url }}">返回首页 <span class="btn__arrow" aria-hidden="true">→</span></a>
+        <a class="btn" href="{{ '/blog/' | relative_url }}">去看博客</a>
+      </div>
+    </div>
+  </div>
+</div>

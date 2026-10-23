@@ -1,11 +1,23 @@
 ---
 layout: default
 ---
-<article class="page">
-  <div class="wrapper">
-    <h1 class="page-title">{{ page.title }}</h1>
-    <div class="page-content">
-      {{ content }}
+{% assign path = page.url | remove_first: '/' | remove: '.html' | split: '/' | first %}
+<div class="shell shell--page">
+  <article class="panel page-panel">
+    <div class="panel__bar">
+      <span class="panel__path">~/{{ path | default: 'index' }}</span>
+      <span class="panel__meta">{{ page.kicker | default: 'UTF-8' }}</span>
     </div>
-  </div>
-</article>
+    <div class="panel__body">
+      <header class="page-head">
+        <h1 class="page-head__title">{{ page.title }}</h1>
+        {% if page.description and page.hide_lede != true %}
+        <p class="page-head__lede">{{ page.description }}</p>
+        {% endif %}
+      </header>
+      <div class="{% if page.prose == false %}page-body{% else %}prose{% endif %}">
+        {{ content }}
+      </div>
+    </div>
+  </article>
+</div>

@@ -1,58 +1,102 @@
 # ============================
-# 精选项目数据 — index / projects 共用
+# 项目数据 — index / projects 共用
+# 数据核对：2026-10-23（gh api）
+#   featured: true 的项目会出现在首页；projects 页展示全量
 # ============================
-# 各字段说明：
-#   name        : 项目名（卡片标题）
-#   url         : GitHub 仓库地址
-#   lang        : 主要语言（显示标签）
-#   lang_color  : GitHub 语言色（hex）
-#   stars       : star 数（手动维护，构建期嵌入）
-#   desc        : 简介（首页用精简版，projects 页用详细版；用同一字段也行）
 
 - name: neuroweave-cortex
   url: https://github.com/Thatgfsj/neuroweave-cortex
   lang: Python
-  lang_color: "#3572A5"
+  stars: 3
+  featured: true
+  desc: 海马体启发的星图长期记忆系统：锚点、扩散激活与夜间回放 / 合并 / 修剪 / 桥接。
+  desc_full: 海马体启发的星图长期记忆系统，带睡眠巩固。AI 长期记忆通过锚点、扩散激活和夜间回放 / 合并 / 修剪 / 桥接循环实现自我整合；不是向量库，也不是 RAG。Python 实现。
+
+- name: webctl
+  url: https://github.com/Thatgfsj/webctl
+  lang: Rust
   stars: 2
-  desc: 海马体启发的星图记忆系统，带睡眠巩固。AI 长期记忆通过锚点、扩散激活和夜间回放/合并/修剪/桥接循环实现自我整合。
-  desc_full: 海马体启发的星图记忆系统，带睡眠巩固。AI 长期记忆通过锚点、扩散激活和夜间回放/合并/修剪/桥接循环实现自我整合。基于 Python 实现。
-
-- name: claude-email-cli
-  url: https://github.com/Thatgfsj/claude-email-cli
-  lang: Python
-  lang_color: "#3572A5"
-  stars: 1
-  desc: 通过邮件控制 Claude AI 的 CLI 工具。无需打开浏览器，发一封邮件就能与 AI 交互，适合自动化工作流。
-  desc_full: 通过邮件控制 Claude AI 的 CLI 工具。无需打开浏览器，发一封邮件就能与 AI 交互，适合自动化工作流。Python 实现。
-
-- name: rsklls
-  url: https://github.com/Thatgfsj/rsklls
-  lang: Shell / Rust
-  lang_color: "#89E051"
-  stars: 1
-  desc: Rust Skills 技能包 — 为 OpenClaw 提供 Rust 编程能力，涵盖 Rust 核心编程和 Python-Rust 互操作（PyO3）。
-  desc_full: Rust Skills 技能包 — 为 OpenClaw 提供 Rust 编程能力。涵盖 Rust 核心编程、Python-Rust 互操作（PyO3），以及跨平台 CLI 工具开发。
-
-- name: android-gradle-skills
-  url: https://github.com/Thatgfsj/android-gradle-skills
-  lang: Python
-  lang_color: "#3572A5"
-  stars: 0
-  desc: OpenClaw Android 开发技能包 — AGP/Gradle 版本兼容、项目模板、构建自动化脚本，让 AI Agent 理解 Android 构建体系。
-  desc_full: OpenClaw Android 开发技能包 — AGP/Gradle 版本兼容、项目模板、构建自动化脚本，让 AI Agent 理解 Android 构建体系。Python 实现。
-
-- name: playwright-crawler-helper
-  url: https://github.com/Thatgfsj/playwright-crawler-helper
-  lang: Python
-  lang_color: "#3572A5"
-  stars: 1
-  desc: Playwright 爬虫辅助工具 — 通过分析浏览器网络请求（Network Panel）来辅助编写爬虫脚本，让抓包过程半自动化。
-  desc_full: Playwright 爬虫辅助工具 — 通过分析浏览器网络请求（Network Panel）来辅助编写爬虫脚本，让抓包过程半自动化。Python 实现。
+  featured: true
+  desc: 给 AI agent 用的网页控制层：纯 Rust 单静态二进制，零外部进程、零外部浏览器。
+  desc_full: 给 AI agent 用的网页控制层：纯 Rust 自包含二进制，零外部进程、零外部浏览器，内置取回 / 解析 / 会话 / 文档能力，提供 CLI 与 MCP server。
 
 - name: thatgfsj-code
   url: https://github.com/Thatgfsj/thatgfsj-code
   lang: TypeScript
-  lang_color: "#3178C6"
+  stars: 2
+  featured: true
+  desc: 终端里的 AI 编程助手（gfcode）：Ink TUI、Agent 工具调用、多 Provider 接入。
+  desc_full: 终端 AI 编程助手（gfcode）。TypeScript + Ink TUI，支持 Agent 工具调用与多家 Provider（SiliconFlow 等）接入，把日常编码流程收进一个 CLI。
+
+- name: wangwenwrite-skill
+  url: https://github.com/Thatgfsj-easyRep/wangwenwrite-skill
+  lang: Skill
+  stars: 11
+  featured: true
+  desc: 男频系统流网文全流程创作助手：选题、设定、大纲、章节、润色与发布适配。
+  desc_full: 面向 2024–2026 男频系统流网文的全流程创作助手：选题研判、系统设定、大纲撰写、章节创作、润色优化、平台发布适配，支持情绪值 / 躺平变强等新型系统。
+
+- name: XXGCXY-CampusNet-AutoLogin
+  url: https://github.com/Thatgfsj/XXGCXY-CampusNet-AutoLogin
+  lang: Rust
+  stars: 3
+  featured: true
+  desc: 校园网 Portal 认证自动登录：协议逆向 + Tauri 桌面壳 + 保活。
+  desc_full: 新乡工程学院校园网自动登录工具，防止断线并保持在线。协议逆向 + Tauri 桌面壳，配套 PowerShell 脚本；博客里有完整的 Portal 认证协议分析。
+
+- name: RouterMonitor
+  url: https://github.com/Thatgfsj-easyRep/RouterMonitor
+  lang: C++
+  stars: 0
+  featured: true
+  desc: ZTE 路由器 Windows 实时网速监控：HUD 浮窗 + 趋势图 + 系统托盘。
+  desc_full: 轻量 Windows 桌面监控工具，读取 ZTE RAX3000Ze 路由器私有 API，展示每个接入设备的实时上下行速率、HUD 浮窗与趋势图。纯 Win32 + WinHTTP 单文件实现。
+
+- name: claude-email-cli
+  url: https://github.com/Thatgfsj/claude-email-cli
+  lang: Python
   stars: 1
-  desc: 个人代码片段库与工具集合。TypeScript 实现，累积日常开发中提炼的实用代码和组件。
-  desc_full: 个人代码片段库与工具集合。TypeScript 实现，累积日常开发中提炼的实用代码、组件和工具函数。
+  desc: 通过邮件控制 Claude 的 CLI：不用打开浏览器，发一封邮件就能和 AI 交互。
+  desc_full: 通过邮件控制 Claude AI 的 CLI 工具。无需打开浏览器，发一封邮件就能与 AI 交互，适合自动化工作流；Python 实现。
+
+- name: rsklls
+  url: https://github.com/Thatgfsj-easyRep/rsklls
+  lang: Shell
+  stars: 1
+  desc: Rust 技能包：Rust 编程、Python–Rust 互操作（PyO3），支持 Claude Code / Cline / OpenClaw / OpenCode。
+  desc_full: Rust Skills 技能包，覆盖 Rust 核心编程、Python–Rust 互操作（PyO3）以及跨平台 CLI 工具开发；支持 Claude Code / Cline / OpenClaw / OpenCode 等多个宿主。
+
+- name: android-gradle-skills
+  url: https://github.com/Thatgfsj/android-gradle-skills
+  lang: Python
+  stars: 0
+  desc: OpenClaw Android 开发技能包：AGP/Gradle 版本兼容、项目模板、构建自动化。
+  desc_full: OpenClaw Android 开发技能包 — AGP/Gradle 版本兼容、项目模板、构建自动化脚本，让 AI Agent 理解 Android 构建体系。Python 实现。
+
+- name: Flowntier
+  url: https://github.com/Thatgfsj/Flowntier
+  lang: Rust
+  stars: 2
+  desc: 多 Agent 软件公司 OS：Tauri + Rust，Chief / Planner / Worker 协作。
+  desc_full: 一家由多 Agent 组成的「软件公司」：Tauri + Rust 实现 Chief / Planner / Worker 的协作流程，把需求拆解、规划与执行串起来。
+
+- name: neuroweave-timeline
+  url: https://github.com/Thatgfsj/neuroweave-timeline
+  lang: Python
+  stars: 1
+  desc: 给 AI 与人的项目过程记忆：记录项目如何变成现在这样，git hook 自动落库。
+  desc_full: NeuroWeave Timeline — 项目演进过程记忆，记录一个项目如何变成现在这样；git hook 自动落库，并提供 MCP Server 对接 Agent。
+
+- name: TVLive
+  url: https://github.com/Thatgfsj/TVLive
+  lang: Kotlin
+  stars: 1
+  desc: 适老化的 Android 电视直播客户端：Media3 ExoPlayer + Hilt + 多源测速。
+  desc_full: 免费开源的 Android 电视直播客户端，默认播放 CCTV-8，支持 Android TV 与手机。Media3 ExoPlayer + Hilt + 多源测速。
+
+- name: seckill-system
+  url: https://github.com/Thatgfsj-easyRep/seckill-system
+  lang: Java
+  stars: 1
+  desc: 高并发秒杀系统：Redis + Lua 原子扣减、Kafka 异步下单、Sentinel 限流、Seata TCC。
+  desc_full: 高并发秒杀系统实践：Redis + Lua 原子扣减、Kafka 异步下单、Sentinel 限流降级、Seata TCC 分布式事务。

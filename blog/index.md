@@ -1,34 +1,28 @@
 ---
-layout: default
+layout: page
 title: 博客
+description: 技术笔记与踩坑记录。抓过的包、修过的 bug、写过的工具，尽量整理成别人也能复用的样子。
+kicker: NOTES.DIR
+prose: false
+permalink: /blog/
 ---
 
-<div class="wrapper">
-  <div class="blog-page-header reveal">
-    <h1><i class="fas fa-pen-fancy" style="color: var(--primary); margin-right: 10px;"></i> 博客</h1>
-    <p>记录思考，分享知识，留下足迹</p>
-  </div>
+<p class="page-note">{{ site.posts.size }} 篇文章 · 按时间倒序 · 更新于 {{ site.time | date: '%Y.%m' }}</p>
 
-  <div class="blog-list reveal-stagger">
-    {% for post in site.posts %}
-    <div class="blog-list-item">
-      <div class="blog-list-meta">
-        <i class="far fa-calendar-alt"></i> {{ post.date | date: "%Y 年 %m 月 %d 日" }}
-        {% if post.tags %}
-          <span style="margin-left: 12px;">
-            {% for tag in post.tags %}
-              <span class="tag">{{ tag }}</span>
-            {% endfor %}
-          </span>
-        {% endif %}
-      </div>
-      <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
-      {% if post.description %}
-      <p class="blog-list-excerpt">{{ post.description }}</p>
-      {% else %}
-      <p class="blog-list-excerpt">{{ post.excerpt | strip_html | truncate: 200 }}</p>
+<div class="post-list">
+  {% for post in site.posts %}
+  <a class="post-row" href="{{ post.url | relative_url }}">
+    <time class="post-row__date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%Y.%m.%d' }}</time>
+    <span class="post-row__body">
+      <span class="post-row__title">{{ post.title }}</span>
+      <span class="post-row__desc">{{ post.description | default: post.excerpt | strip_html | truncate: 130 }}</span>
+      {% if post.tags %}
+      <span class="post-row__tags">
+        {% for tag in post.tags %}<span class="tag">{{ tag }}</span>{% endfor %}
+      </span>
       {% endif %}
-    </div>
-    {% endfor %}
-  </div>
+    </span>
+    <span class="post-row__arrow" aria-hidden="true">→</span>
+  </a>
+  {% endfor %}
 </div>

@@ -1,47 +1,50 @@
 ---
 layout: default
 ---
-<article class="post">
-  <header class="post-header">
-    <div class="wrapper">
-      <div class="post-meta-bar">
-        <span class="post-date">
-          <i class="far fa-calendar-alt"></i> {{ page.date | date: "%Y-%m-%d" }}
-        </span>
-        {% if page.tags %}
-          <span class="post-tags">
-            {% for tag in page.tags %}
-              <span class="tag">{{ tag }}</span>
-            {% endfor %}
-          </span>
-        {% endif %}
-        <span class="post-reading-time">
-          <i class="far fa-clock"></i>
-          {% assign words = content | number_of_words %}
-          {% if words < 300 %} 1 分钟阅读
-          {% else %}{{ words | divided_by: 200 }} 分钟阅读
-          {% endif %}
-        </span>
-      </div>
-      <h1 class="post-title">{{ page.title }}</h1>
-      <p class="post-desc">{{ page.description }}</p>
+{% assign chars = content | strip_html | strip_newlines | size %}
+{% assign minutes = chars | divided_by: 350.0 | ceil %}
+<div class="shell shell--page">
+  <article class="panel post-panel">
+    <div class="panel__bar">
+      <span class="panel__path">~/notes/{{ page.slug | default: 'post' }}.md</span>
+      <span class="panel__meta">{{ page.date | date: '%Y.%m.%d' }} · <span data-reading-min>{{ minutes }}</span> MIN</span>
     </div>
-  </header>
+    <div class="panel__body">
+      <header class="post-head">
+        <p class="eyebrow">NOTE{% if page.tags %} · {{ page.tags | join: ' / ' }}{% endif %}</p>
+        <h1 class="post-head__title">{{ page.title }}</h1>
+        {% if page.description %}
+        <p class="post-head__lede">{{ page.description }}</p>
+        {% endif %}
+        <div class="post-meta">
+          <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%Y-%m-%d' }}</time>
+          <span class="post-meta__sep" aria-hidden="true">/</span>
+          <span data-reading-time>{{ minutes }} 分钟阅读</span>
+          <span class="post-meta__sep" aria-hidden="true">/</span>
+          <span>{{ chars }} 字符</span>
+        </div>
+      </header>
 
-  <div class="wrapper post-content">
-    {{ content }}
-  </div>
+      <div class="prose post-content">
+        {{ content }}
+      </div>
 
-  <div class="wrapper post-nav">
-    {% if page.previous %}
-      <a class="prev" href="{{ page.previous.url | relative_url }}">
-        <i class="fas fa-arrow-left"></i> {{ page.previous.title }}
-      </a>
-    {% endif %}
-    {% if page.next %}
-      <a class="next" href="{{ page.next.url | relative_url }}">
-        {{ page.next.title }} <i class="fas fa-arrow-right"></i>
-      </a>
-    {% endif %}
-  </div>
-</article>
+      <nav class="post-nav{% unless page.previous and page.next %} post-nav--single{% endunless %}" aria-label="相邻文章">
+        {% if page.previous %}
+        <a class="post-nav__item" href="{{ page.previous.url | relative_url }}" rel="prev">
+          <span class="post-nav__label">← 上一篇</span>
+          <span class="post-nav__title">{{ page.previous.title }}</span>
+        </a>
+        {% endif %}
+        {% if page.next %}
+        <a class="post-nav__item post-nav__item--next" href="{{ page.next.url | relative_url }}" rel="next">
+          <span class="post-nav__label">下一篇 →</span>
+          <span class="post-nav__title">{{ page.next.title }}</span>
+        </a>
+        {% endif %}
+      </nav>
+
+      <p class="post-back"><a href="{{ '/blog/' | relative_url }}">← 返回博客列表</a></p>
+    </div>
+  </article>
+</div>

@@ -2,219 +2,202 @@
 layout: default
 ---
 
-<!-- ==================== Hero Section ==================== -->
-<section class="hero-section">
-  <div class="wrapper">
-    <div class="hero-avatar-wrap reveal">
-      <div class="hero-avatar-ring"></div>
-      <div class="hero-avatar">
-        <img src="https://github.com/{{ site.github_username }}.png" alt="{{ site.author }}">
+<!-- ==================== Hero ==================== -->
+<section class="hero">
+  <div class="shell">
+    <div class="hero__grid">
+      <div class="hero__main">
+        <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span>PERSONAL WORKSTATION · ONLINE</p>
+        <h1 class="hero__title">Thatgfsj</h1>
+        <p class="hero__tagline">孙政<span class="sep" aria-hidden="true">/</span>全栈开发者<span class="sep" aria-hidden="true">/</span>工具链与 AI 工程</p>
+        <p class="hero__bio">
+          把想法变成能跑的东西。日常借助 AI 直接开工，也坚持把系统底层弄明白；折腾工具链、自动化流程和 AI 工程化，业余给常用开源仓库提 PR。
+        </p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="{{ '/projects/' | relative_url }}">查看项目 <span class="btn__arrow" aria-hidden="true">→</span></a>
+          <a class="btn" href="{{ '/about/' | relative_url }}">关于我</a>
+          <a class="btn" href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+
+      <aside class="terminal" aria-label="系统信息">
+        <div class="terminal__bar"><span>USER.TXT</span><span>READ ONLY</span></div>
+        <div class="terminal__body">
+          <div class="terminal__user">
+            <img class="terminal__avatar" src="{{ '/assets/img/avatar.png' | relative_url }}" alt="Thatgfsj 的头像" width="64" height="64">
+            <div>
+              <p class="terminal__id">Thatgfsj</p>
+              <p class="terminal__sub">孙政 · 全栈开发者</p>
+            </div>
+          </div>
+          <dl class="specs">
+            <dt>ROLE</dt><dd>Full-stack Developer</dd>
+            <dt>STACK</dt><dd>Python · Rust · TypeScript</dd>
+            <dt>FOCUS</dt><dd>AI Agent / 工具链 / 自动化</dd>
+            <dt>LOC</dt><dd>{{ site.data.stats.location }}</dd>
+            <dt>STATUS</dt><dd><span class="status-dot" aria-hidden="true"></span>在线 · 开放交流</dd>
+          </dl>
+          <p class="terminal__prompt">thatgfsj@workstation:~$ <span class="cursor" aria-hidden="true"></span></p>
+        </div>
+      </aside>
+    </div>
+
+    <div class="readouts" role="list" aria-label="GitHub 数据概览">
+      <div class="readout" role="listitem">
+        <span class="readout__value">{{ site.data.stats.repos }}</span>
+        <span class="readout__label">公开仓库 / REPOS</span>
+      </div>
+      <div class="readout" role="listitem">
+        <span class="readout__value">{{ site.data.stats.stars }}</span>
+        <span class="readout__label">Stars 总数 / STARS</span>
+      </div>
+      <div class="readout" role="listitem">
+        <span class="readout__value">{{ site.data.stats.followers }}</span>
+        <span class="readout__label">关注者 / FOLLOWERS</span>
+      </div>
+      <div class="readout" role="listitem">
+        <span class="readout__value">{{ site.data.stats.code_size }}<small>{{ site.data.stats.code_unit }}</small></span>
+        <span class="readout__label">源码体积 / SOURCE</span>
       </div>
     </div>
-    <div class="hero-info">
-      <h1 class="reveal">{{ site.author }}</h1>
-      <p class="hero-tagline reveal">{{ site.tagline }}</p>
-      <p class="hero-bio reveal">
-        {{ site.description }}
-        AI前沿探索者，OpenClaw，hermes等仓库贡献者。
-      </p>
-      <div class="hero-actions reveal">
-        <a href="{{ '/projects' | relative_url }}" class="btn btn-primary">
-          <i class="fas fa-code"></i> 查看项目
-        </a>
-        <a href="{{ '/about' | relative_url }}" class="btn btn-outline">
-          <i class="fas fa-user"></i> 关于我
-        </a>
-        <a href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener" class="btn btn-outline">
-          <i class="fab fa-github"></i> GitHub
-        </a>
-      </div>
-    </div>
-  </div>
-  <div class="hero-scroll-cue">
-    <span>向下滚动</span>
-    <div class="arrow"></div>
+    <p class="readouts-note" title="源码体积按 GitHub Languages 统计">数据截至 {{ site.data.stats.updated }} · {{ site.data.stats.scope_note }}</p>
   </div>
 </section>
 
-<!-- ==================== Skills ==================== -->
-<section class="section-block">
-  <div class="wrapper">
-    <div class="section-header reveal">
-      <span class="section-kicker">01 — TECH STACK</span>
-      <h2 class="section-title">技术栈</h2>
-    </div>
+<!-- ==================== 精选项目 ==================== -->
+<section class="section" id="projects">
+  <div class="shell">
+    <div class="panel">
+      {% assign featured_projects = site.data.projects | where: 'featured', true %}
+      <div class="panel__bar">
+        <span class="panel__path">~/projects</span>
+        <span class="panel__meta">{{ featured_projects.size }} / {{ site.data.projects.size }} FEATURED</span>
+      </div>
+      <div class="panel__body">
+        <header class="section-head">
+          <h2>精选项目</h2>
+          <p>从 AI 长期记忆、Agent 网页控制层到桌面小工具——都在实际使用中打磨。</p>
+        </header>
 
-    <div class="skills-grid reveal-stagger">
-      {% for cat in site.data.skills %}
-      <div class="skill-category">
-        <div class="skill-category-header">
-          <span class="cat-icon">{{ cat.icon }}</span>
-          <h3>{{ cat.category }}</h3>
-        </div>
-        <div class="skill-chips">
-          {% for skill in cat.items %}
-          <span class="skill-chip" title="{{ skill.desc }}">{{ skill.name }}</span>
+        <div class="file-list">
+          <div class="file-list__head" aria-hidden="true">
+            <span>#</span><span>名称 / 描述</span><span>语言</span><span>★</span><span></span>
+          </div>
+          {% for p in featured_projects %}
+          <a class="file-row" href="{{ p.url }}" target="_blank" rel="noopener">
+            <span class="file-row__idx">{{ forloop.index | prepend: '0' | slice: -2, 2 }}</span>
+            <span class="file-row__main">
+              <span class="file-row__name">{{ p.name }}</span>
+              <span class="file-row__desc">{{ p.desc }}</span>
+            </span>
+            <span class="file-row__meta">
+              <span class="file-row__lang">{{ p.lang }}</span>
+              <span class="file-row__stars">{% if p.stars > 0 %}★ {{ p.stars }}{% else %}—{% endif %}</span>
+            </span>
+            <span class="file-row__arrow" aria-hidden="true">↗</span>
+          </a>
           {% endfor %}
         </div>
+
+        <p class="section-more"><a href="{{ '/projects/' | relative_url }}">查看全部 {{ site.data.projects.size }} 个项目 →</a></p>
       </div>
-      {% endfor %}
     </div>
   </div>
 </section>
 
-<!-- ==================== GitHub Stats ==================== -->
-<section class="section-block section-block-alt">
-  <div class="wrapper">
-    <div class="section-header reveal">
-      <span class="section-kicker">02 — OPEN SOURCE</span>
-      <h2 class="section-title">开源数据</h2>
-      <p class="section-subtitle">在 GitHub 上留下的足迹——谈不上高产，但每个仓库都尽量做到能直接用。</p>
-    </div>
-
-    <div class="github-stats reveal-stagger">
-      <div class="stat-card">
-        <div class="stat-icon"><i class="fas fa-code-branch"></i></div>
-        <div class="stat-number">37</div>
-        <div class="stat-label">公开仓库</div>
+<!-- ==================== 技术栈 ==================== -->
+<section class="section" id="stack">
+  <div class="shell">
+    <div class="panel">
+      <div class="panel__bar">
+        <span class="panel__path">~/stack</span>
+        <span class="panel__meta">{{ site.data.skills.size }} GROUPS</span>
       </div>
-      <div class="stat-card">
-        <div class="stat-icon"><i class="fas fa-star"></i></div>
-        <div class="stat-number" id="gh-stars">35</div>
-        <div class="stat-label">Stars 总数</div>
+      <div class="panel__body">
+        <header class="section-head">
+          <h2>技术栈</h2>
+          <p>按应用领域整理的工具箱，不按熟练度打星级。</p>
+        </header>
+        {% include stack.html %}
       </div>
-      <div class="stat-card">
-        <div class="stat-icon"><i class="fas fa-users"></i></div>
-        <div class="stat-number">7</div>
-        <div class="stat-label">关注者</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-icon"><i class="fas fa-code"></i></div>
-        <div class="stat-number">281 MiB</div>
-        <div class="stat-label">代码规模</div>
-      </div>
-    </div>
-
-    <div class="gh-contrib-img reveal">
-      <picture>
-        <source srcset="https://ghchart.rshah.org/{{ site.github_username }}" media="(min-width: 600px)">
-        <img src="https://ghchart.rshah.org/{{ site.github_username }}" alt="{{ site.github_username }}'s GitHub contribution chart">
-      </picture>
     </div>
   </div>
 </section>
 
-<!-- ==================== Featured Projects ==================== -->
-<section class="section-block">
-  <div class="wrapper">
-    <div class="section-header reveal">
-      <span class="section-kicker">03 — FEATURED WORK</span>
-      <h2 class="section-title">精选项目</h2>
-      <p class="section-subtitle">最近在折腾的一些东西——从 AI 长期记忆、Agent 技能包到日常效率工具。</p>
-    </div>
+<!-- ==================== 开源 ==================== -->
+<section class="section" id="opensource">
+  <div class="shell">
+    <div class="panel">
+      <div class="panel__bar">
+        <span class="panel__path">~/github</span>
+        <span class="panel__meta">LAST 12 MONTHS</span>
+      </div>
+      <div class="panel__body">
+        <header class="section-head">
+          <h2>开源足迹</h2>
+          <p>过去一年的提交记录，以及给常用仓库提的几个 PR。</p>
+        </header>
 
-    <div class="project-grid reveal-stagger">
-      {% for p in site.data.projects %}
-      <a href="{{ p.url }}" target="_blank" rel="noopener" class="project-card" style="text-decoration: none; color: inherit;">
-        <div class="project-name"><i class="fas fa-folder"></i> {{ p.name }}</div>
-        <div class="project-desc">{{ p.desc }}</div>
-        <div class="project-meta">
-          <span class="lang"><span class="lang-dot" style="background:{{ p.lang_color }}"></span> {{ p.lang }}</span>
-          <span class="stars"><i class="far fa-star"></i> {{ p.stars }}</span>
-        </div>
-      </a>
-      {% endfor %}
-    </div>
+        <div class="opensource-grid">
+          <div class="contrib">
+            <div class="contrib__head">
+              <span>CONTRIBUTIONS · {{ site.data.stats.contrib_window }}</span>
+              <span class="contrib__count">{{ site.data.stats.contributions }}</span>
+            </div>
+            <div class="contrib__scroll" tabindex="0" role="region" aria-label="GitHub 贡献热力图，可横向滚动">
+              {% include contributions.svg %}
+            </div>
+            <div class="contrib__legend" aria-hidden="true">
+              <span>LESS</span>
+              <span class="legend__cell lv0"></span>
+              <span class="legend__cell lv1"></span>
+              <span class="legend__cell lv2"></span>
+              <span class="legend__cell lv3"></span>
+              <span class="legend__cell lv4"></span>
+              <span>MORE</span>
+            </div>
+          </div>
 
-    <div class="section-more-wrap reveal">
-      <a href="{{ '/projects' | relative_url }}" class="section-more-link">
-        查看全部项目 <i class="fas fa-arrow-right"></i>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- ==================== Recent Contributions ==================== -->
-<section class="section-block">
-  <div class="wrapper">
-    <div class="section-header reveal">
-      <span class="section-kicker">05 — RECENT CONTRIBUTIONS</span>
-      <h2 class="section-title">近期贡献</h2>
-      <p class="section-subtitle">在 OpenClaw / Hermes-Agent / DeepSeek-Reasonix 等热门仓库留下的小修补。</p>
-    </div>
-
-    <div class="contrib-list reveal-stagger">
-      <a href="https://github.com/openclaw/openclaw/pull/69056" target="_blank" rel="noopener" class="contrib-item">
-        <span class="contrib-repo"><i class="fas fa-code-branch"></i> openclaw/openclaw</span>
-        <div class="contrib-body">
-          <div class="contrib-title">fix(gateway): handle SIGUSR1 gracefully on Windows</div>
-          <div class="contrib-meta">
-            <span class="pr-num">#69056</span>
-            <span class="pr-time">2026-04 · merged</span>
+          <div class="prs">
+            <h3 class="prs__title">RECENT PULL REQUESTS</h3>
+            {% include pr-list.html %}
+            <p class="section-more"><a href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener">在 GitHub 查看完整记录 ↗</a></p>
           </div>
         </div>
-        <span class="contrib-status merged"><span class="dot"></span> Merged</span>
-      </a>
-
-      <a href="https://github.com/esengine/DeepSeek-Reasonix/pull/3380" target="_blank" rel="noopener" class="contrib-item">
-        <span class="contrib-repo"><i class="fas fa-code-branch"></i> esengine/DeepSeek-Reasonix</span>
-        <div class="contrib-body">
-          <div class="contrib-title">feat(serve): add i18n, stats dashboard, and session management</div>
-          <div class="contrib-meta">
-            <span class="pr-num">#3380</span>
-            <span class="pr-time">2026-06 · merged</span>
-          </div>
-        </div>
-        <span class="contrib-status merged"><span class="dot"></span> Merged</span>
-      </a>
-
-      <a href="https://github.com/NousResearch/hermes-agent/pull/19137" target="_blank" rel="noopener" class="contrib-item">
-        <span class="contrib-repo"><i class="fas fa-code-branch"></i> NousResearch/hermes-agent</span>
-        <div class="contrib-body">
-          <div class="contrib-title">fix(title): prevent stale background title generation from reloading unloaded Ollama models</div>
-          <div class="contrib-meta">
-            <span class="pr-num">#19137</span>
-            <span class="pr-time">2026-07 · merged via #66078</span>
-          </div>
-        </div>
-        <span class="contrib-status salvaged"><span class="dot"></span> Merged via salvage</span>
-      </a>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ==================== Latest Blog Posts ==================== -->
-<section class="section-block section-block-alt">
-  <div class="wrapper">
-    <div class="section-header reveal">
-      <span class="section-kicker">04 — WRITING</span>
-      <h2 class="section-title">最新文章</h2>
-      <p class="section-subtitle">把踩过的坑、抓过的包、写过的工具——尽量写成别人也能复用的笔记。</p>
-    </div>
-
-    <div class="blog-preview-list reveal-stagger">
-      {% for post in site.posts limit: 4 %}
-      <div class="blog-preview-item">
-        <div class="bp-date">
-          <span class="day">{{ post.date | date: "%d" }}</span>
-          <span class="month">{{ post.date | date: "%b" }}</span>
-        </div>
-        <div class="bp-content">
-          <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-          {% if post.description %}
-          <p>{{ post.description }}</p>
-          {% else %}
-          <p>{{ post.excerpt | strip_html | truncate: 140 }}</p>
-          {% endif %}
-        </div>
+<!-- ==================== 文章 ==================== -->
+<section class="section" id="writing">
+  <div class="shell">
+    <div class="panel">
+      <div class="panel__bar">
+        <span class="panel__path">~/notes</span>
+        <span class="panel__meta">{{ site.posts.size }} POSTS</span>
       </div>
-      {% endfor %}
-    </div>
+      <div class="panel__body">
+        <header class="section-head">
+          <h2>最新文章</h2>
+          <p>把踩过的坑、抓过的包、写过的工具，尽量写成别人也能复用的笔记。</p>
+        </header>
 
-    <div class="section-more-wrap reveal">
-      <a href="{{ '/blog' | relative_url }}" class="section-more-link">
-        阅读更多 <i class="fas fa-arrow-right"></i>
-      </a>
+        <div class="post-list">
+          {% for post in site.posts limit: 4 %}
+          <a class="post-row" href="{{ post.url | relative_url }}">
+            <time class="post-row__date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%Y.%m.%d' }}</time>
+            <span class="post-row__body">
+              <span class="post-row__title">{{ post.title }}</span>
+              <span class="post-row__desc">{{ post.description | default: post.excerpt | strip_html | truncate: 110 }}</span>
+            </span>
+            <span class="post-row__arrow" aria-hidden="true">→</span>
+          </a>
+          {% endfor %}
+        </div>
+
+        <p class="section-more"><a href="{{ '/blog/' | relative_url }}">阅读全部文章 →</a></p>
+      </div>
     </div>
   </div>
 </section>

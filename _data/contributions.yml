@@ -1,0 +1,26 @@
+# ============================
+# 近期 PR / 贡献记录（index 与 about 共用）
+# ============================
+- repo: openclaw/openclaw
+  pr: "69056"
+  title: "fix(gateway): handle SIGUSR1 gracefully on Windows"
+  date: "2026-04"
+  state: merged
+  note: ""
+  url: https://github.com/openclaw/openclaw/pull/69056
+
+- repo: esengine/DeepSeek-Reasonix
+  pr: "3380"
+  title: "feat(serve): add i18n, stats dashboard, and session management"
+  date: "2026-06"
+  state: merged
+  note: ""
+  url: https://github.com/esengine/DeepSeek-Reasonix/pull/3380
+
+- repo: NousResearch/hermes-agent
+  pr: "66078"
+  title: "fix(title): runtime validator stops stale background titling from reloading unloaded models"
+  date: "2026-07"
+  state: merged
+  note: "salvage #19137 · 保留作者"
+  url: https://github.com/NousResearch/hermes-agent/pull/66078
