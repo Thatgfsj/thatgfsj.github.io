@@ -1,0 +1,82 @@
+---
+layout: default
+---
+{% assign per = 10 %}
+{% assign total = site.data.projects | size %}
+{% assign pages = total | plus: per | minus: 1 | divided_by: per %}
+{% assign pn = page.pagination_page | default: 1 %}
+{% assign start = pn | minus: 1 | times: per %}
+{% assign items = site.data.projects | slice: start, per %}
+<div class="shell shell--page">
+  <article class="panel page-panel">
+    <div class="panel__bar">
+      <span class="panel__path">~/projects{% if pn > 1 %}/page/{{ pn }}{% endif %}</span>
+      <span class="panel__meta">{{ total }} ITEMS · PAGE {{ pn }} / {{ pages }}</span>
+    </div>
+    <div class="panel__body">
+      <header class="page-head">
+        <h1 class="page-head__title">项目</h1>
+        <p class="page-head__lede">{{ page.description }}</p>
+      </header>
+
+      <p class="page-note">共 {{ total }} 个公开项目 · 第 {{ pn }} / {{ pages }} 页 · 数据截至 {{ site.data.stats.updated }}</p>
+
+      <div class="file-list">
+        <div class="file-list__head" aria-hidden="true">
+          <span>#</span><span>名称 / 描述</span><span>语言</span><span>★</span><span></span>
+        </div>
+        {% for p in items %}
+        {% assign idx = start | plus: forloop.index %}
+        <a class="file-row" href="{{ p.url }}" target="_blank" rel="noopener">
+          <span class="file-row__idx">{{ idx | prepend: '0' | slice: -2, 2 }}</span>
+          <span class="file-row__main">
+            <span class="file-row__name">
+              {{ p.name }}
+              {% if p.featured %}<span class="file-row__badge file-row__badge--featured">精选</span>{% endif %}
+              {% if p.badge %}<span class="file-row__badge">{{ p.badge }}</span>{% endif %}
+            </span>
+            <span class="file-row__desc">{{ p.desc_full | default: p.desc }}</span>
+          </span>
+          <span class="file-row__meta">
+            <span class="file-row__lang">{{ p.lang }}</span>
+            <span class="file-row__stars">{% if p.stars > 0 %}★ {{ p.stars_label | default: p.stars }}{% else %}—{% endif %}</span>
+          </span>
+          <span class="file-row__arrow" aria-hidden="true">↗</span>
+        </a>
+        {% endfor %}
+      </div>
+
+      {% if pages > 1 %}
+      {% assign prev = pn | minus: 1 %}
+      {% assign next = pn | plus: 1 %}
+      <nav class="pager" aria-label="项目分页">
+        {% if pn > 1 %}
+        <a class="pager__step" href="{% if prev == 1 %}{{ '/projects/' | relative_url }}{% else %}{{ '/projects/page/' | append: prev | append: '/' | relative_url }}{% endif %}">← 上一页</a>
+        {% else %}
+        <span class="pager__step is-disabled" aria-disabled="true">← 上一页</span>
+        {% endif %}
+
+        <ol class="pager__pages">
+          {% for i in (1..pages) %}
+          <li>
+            {% if i == pn %}
+            <span class="pager__num is-current" aria-current="page">{{ i }}</span>
+            {% elsif i == 1 %}
+            <a class="pager__num" href="{{ '/projects/' | relative_url }}">{{ i }}</a>
+            {% else %}
+            <a class="pager__num" href="{{ '/projects/page/' | append: i | append: '/' | relative_url }}">{{ i }}</a>
+            {% endif %}
+          </li>
+          {% endfor %}
+        </ol>
+
+        {% if pn < pages %}
+        <a class="pager__step" href="{{ '/projects/page/' | append: next | append: '/' | relative_url }}">下一页 →</a>
+        {% else %}
+        <span class="pager__step is-disabled" aria-disabled="true">下一页 →</span>
+        {% endif %}
+      </nav>
+      {% endif %}
+    </div>
+  </article>
+</div>

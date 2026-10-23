@@ -1,111 +1,316 @@
 # ============================
 # 项目数据 — index / projects 共用
 # 数据核对：2026-10-23（gh api）
-#   featured: true 的项目会出现在首页；projects 页展示全量
+#   featured: true 的项目会出现在首页；projects 页展示全量并分页
+#   badge: 可选标记（旧版 / 已归档）
 # ============================
 
-- name: neuroweave-cortex
-  url: https://github.com/Thatgfsj/neuroweave-cortex
-  lang: Python
+- name: "neuroweave-cortex"
+  url: "https://github.com/Thatgfsj/neuroweave-cortex"
+  lang: "Python"
   stars: 3
   featured: true
-  desc: 海马体启发的星图长期记忆系统：锚点、扩散激活与夜间回放 / 合并 / 修剪 / 桥接。
-  desc_full: 海马体启发的星图长期记忆系统，带睡眠巩固。AI 长期记忆通过锚点、扩散激活和夜间回放 / 合并 / 修剪 / 桥接循环实现自我整合；不是向量库，也不是 RAG。Python 实现。
+  desc: "海马体启发的星图长期记忆系统：锚点、扩散激活与夜间回放 / 合并 / 修剪 / 桥接。"
+  desc_full: "海马体启发的星图长期记忆系统，带睡眠巩固。AI 长期记忆通过锚点、扩散激活和夜间回放 / 合并 / 修剪 / 桥接循环实现自我整合；不是向量库，也不是 RAG。Python 实现。"
 
-- name: webctl
-  url: https://github.com/Thatgfsj/webctl
-  lang: Rust
+- name: "webctl"
+  url: "https://github.com/Thatgfsj/webctl"
+  lang: "Rust"
   stars: 2
   featured: true
-  desc: 给 AI agent 用的网页控制层：纯 Rust 单静态二进制，零外部进程、零外部浏览器。
-  desc_full: 给 AI agent 用的网页控制层：纯 Rust 自包含二进制，零外部进程、零外部浏览器，内置取回 / 解析 / 会话 / 文档能力，提供 CLI 与 MCP server。
+  desc: "给 AI agent 用的网页控制层：纯 Rust 单静态二进制，零外部进程、零外部浏览器。"
+  desc_full: "给 AI agent 用的网页控制层：纯 Rust 自包含二进制，零外部进程、零外部浏览器，内置取回 / 解析 / 会话 / 文档能力，提供 CLI 与 MCP server。"
 
-- name: dsh-ops
-  url: https://github.com/T-Auto/dsh-ops
-  lang: TypeScript / Rust
-  stars: 3887
-  stars_label: "3,887"
+- name: "dsh-ops"
+  url: "https://github.com/T-Auto/dsh-ops"
+  lang: "TypeScript / Rust"
+  stars: 3888
+  stars_label: "3,888"
   featured: true
-  desc: DSH 底层操作工具插件：有界文件 / 文档工具，减少 Token 消耗与任务耗时。
-  desc_full: DSH（DeepSeek Harness）底层操作工具插件：为 Agent 提供有界文件与文档工具，Native / PTC 双模式，核心用 TypeScript + Rust worker 实现，目标是在更少 Token 与更短时间内完成任务。
+  desc: "DSH 底层操作工具插件：有界文件 / 文档工具，减少 Token 消耗与任务耗时。"
+  desc_full: "DSH（DeepSeek Harness）底层操作工具插件：为 Agent 提供有界文件与文档工具，Native / PTC 双模式，核心用 TypeScript + Rust worker 实现，目标是在更少 Token 与更短时间内完成任务。"
 
-- name: thatgfsj-code
-  url: https://github.com/Thatgfsj/thatgfsj-code
-  lang: TypeScript
+- name: "thatgfsj-code"
+  url: "https://github.com/Thatgfsj/thatgfsj-code"
+  lang: "TypeScript"
   stars: 2
   featured: true
-  desc: 终端里的 AI 编程助手（gfcode）：Ink TUI、Agent 工具调用、多 Provider 接入。
-  desc_full: 终端 AI 编程助手（gfcode）。TypeScript + Ink TUI，支持 Agent 工具调用与多家 Provider（SiliconFlow 等）接入，把日常编码流程收进一个 CLI。
+  desc: "终端里的 AI 编程助手（gfcode）：Ink TUI、Agent 工具调用、多 Provider 接入。"
+  desc_full: "终端 AI 编程助手（gfcode）。TypeScript + Ink TUI，支持 Agent 工具调用与多家 Provider（SiliconFlow 等）接入，把日常编码流程收进一个 CLI。"
 
-- name: wangwenwrite-skill
-  url: https://github.com/Thatgfsj-easyRep/wangwenwrite-skill
-  lang: Skill
+- name: "wangwenwrite-skill"
+  url: "https://github.com/Thatgfsj-easyRep/wangwenwrite-skill"
+  lang: "Markdown / Prompt"
   stars: 11
   featured: true
-  desc: 男频系统流网文全流程创作助手：选题、设定、大纲、章节、润色与发布适配。
-  desc_full: 面向 2024–2026 男频系统流网文的全流程创作助手：选题研判、系统设定、大纲撰写、章节创作、润色优化、平台发布适配，支持情绪值 / 躺平变强等新型系统。
+  desc: "男频系统流网文全流程创作助手：选题、设定、大纲、章节、润色与发布适配。"
+  desc_full: "面向 2024–2026 男频系统流网文的全流程创作助手：选题研判、系统设定、大纲撰写、章节创作、润色优化、平台发布适配，支持情绪值 / 躺平变强等新型系统。"
 
-- name: XXGCXY-CampusNet-AutoLogin
-  url: https://github.com/Thatgfsj/XXGCXY-CampusNet-AutoLogin
-  lang: Rust
+- name: "XXGCXY-CampusNet-AutoLogin"
+  url: "https://github.com/Thatgfsj/XXGCXY-CampusNet-AutoLogin"
+  lang: "Rust"
   stars: 3
   featured: true
-  desc: 校园网 Portal 认证自动登录：协议逆向 + Tauri 桌面壳 + 保活。
-  desc_full: 新乡工程学院校园网自动登录工具，防止断线并保持在线。协议逆向 + Tauri 桌面壳，配套 PowerShell 脚本；博客里有完整的 Portal 认证协议分析。
+  desc: "校园网 Portal 认证自动登录：协议逆向 + Tauri 桌面壳 + 保活。"
+  desc_full: "新乡工程学院校园网自动登录工具，防止断线并保持在线。协议逆向 + Tauri 桌面壳，配套 PowerShell 脚本；博客里有完整的 Portal 认证协议分析。"
 
-- name: RouterMonitor
-  url: https://github.com/Thatgfsj-easyRep/RouterMonitor
-  lang: C++
+- name: "RouterMonitor"
+  url: "https://github.com/Thatgfsj-easyRep/RouterMonitor"
+  lang: "C++"
   stars: 0
-  featured: true
-  desc: ZTE 路由器 Windows 实时网速监控：HUD 浮窗 + 趋势图 + 系统托盘。
-  desc_full: 轻量 Windows 桌面监控工具，读取 ZTE RAX3000Ze 路由器私有 API，展示每个接入设备的实时上下行速率、HUD 浮窗与趋势图。纯 Win32 + WinHTTP 单文件实现。
+  desc: "ZTE 路由器 Windows 实时网速监控：HUD 浮窗 + 趋势图 + 系统托盘。"
+  desc_full: "轻量 Windows 桌面监控工具，读取 ZTE RAX3000Ze 路由器私有 API，展示每个接入设备的实时上下行速率、HUD 浮窗与趋势图。纯 Win32 + WinHTTP 单文件实现。"
 
-- name: claude-email-cli
-  url: https://github.com/Thatgfsj/claude-email-cli
-  lang: Python
-  stars: 1
-  desc: 通过邮件控制 Claude 的 CLI：不用打开浏览器，发一封邮件就能和 AI 交互。
-  desc_full: 通过邮件控制 Claude AI 的 CLI 工具。无需打开浏览器，发一封邮件就能与 AI 交互，适合自动化工作流；Python 实现。
-
-- name: rsklls
-  url: https://github.com/Thatgfsj-easyRep/rsklls
-  lang: Shell
-  stars: 1
-  desc: Rust 技能包：Rust 编程、Python–Rust 互操作（PyO3），支持 Claude Code / Cline / OpenClaw / OpenCode。
-  desc_full: Rust Skills 技能包，覆盖 Rust 核心编程、Python–Rust 互操作（PyO3）以及跨平台 CLI 工具开发；支持 Claude Code / Cline / OpenClaw / OpenCode 等多个宿主。
-
-- name: android-gradle-skills
-  url: https://github.com/Thatgfsj/android-gradle-skills
-  lang: Python
-  stars: 0
-  desc: OpenClaw Android 开发技能包：AGP/Gradle 版本兼容、项目模板、构建自动化。
-  desc_full: OpenClaw Android 开发技能包 — AGP/Gradle 版本兼容、项目模板、构建自动化脚本，让 AI Agent 理解 Android 构建体系。Python 实现。
-
-- name: Flowntier
-  url: https://github.com/Thatgfsj/Flowntier
-  lang: Rust
+- name: "Flowntier"
+  url: "https://github.com/Thatgfsj/Flowntier"
+  lang: "Rust"
   stars: 2
-  desc: 多 Agent 软件公司 OS：Tauri + Rust，Chief / Planner / Worker 协作。
-  desc_full: 一家由多 Agent 组成的「软件公司」：Tauri + Rust 实现 Chief / Planner / Worker 的协作流程，把需求拆解、规划与执行串起来。
+  desc: "多 Agent 软件公司 OS：Tauri + Rust，Chief / Planner / Worker 协作。"
+  desc_full: "一家由多 Agent 组成的「软件公司」：Tauri + Rust 实现 Chief / Planner / Worker 的协作流程，把需求拆解、规划与执行串起来。"
 
-- name: neuroweave-timeline
-  url: https://github.com/Thatgfsj/neuroweave-timeline
-  lang: Python
+- name: "claude-email-cli"
+  url: "https://github.com/Thatgfsj/claude-email-cli"
+  lang: "Python"
   stars: 1
-  desc: 给 AI 与人的项目过程记忆：记录项目如何变成现在这样，git hook 自动落库。
-  desc_full: NeuroWeave Timeline — 项目演进过程记忆，记录一个项目如何变成现在这样；git hook 自动落库，并提供 MCP Server 对接 Agent。
+  desc: "通过邮件控制 Claude 的 CLI：不用打开浏览器，发一封邮件就能和 AI 交互。"
+  desc_full: "通过邮件控制 Claude AI 的 CLI 工具。无需打开浏览器，发一封邮件就能与 AI 交互，适合自动化工作流；Python 实现。"
 
-- name: TVLive
-  url: https://github.com/Thatgfsj/TVLive
-  lang: Kotlin
+- name: "neuroweave-timeline"
+  url: "https://github.com/Thatgfsj/neuroweave-timeline"
+  lang: "Python"
   stars: 1
-  desc: 适老化的 Android 电视直播客户端：Media3 ExoPlayer + Hilt + 多源测速。
-  desc_full: 免费开源的 Android 电视直播客户端，默认播放 CCTV-8，支持 Android TV 与手机。Media3 ExoPlayer + Hilt + 多源测速。
+  desc: "给 AI 与人的项目过程记忆：记录项目如何变成现在这样，git hook 自动落库。"
+  desc_full: "NeuroWeave Timeline — 项目演进过程记忆，记录一个项目如何变成现在这样；git hook 自动落库，并提供 MCP Server 对接 Agent。"
 
-- name: seckill-system
-  url: https://github.com/Thatgfsj-easyRep/seckill-system
-  lang: Java
+- name: "rsklls"
+  url: "https://github.com/Thatgfsj-easyRep/rsklls"
+  lang: "Shell"
   stars: 1
-  desc: 高并发秒杀系统：Redis + Lua 原子扣减、Kafka 异步下单、Sentinel 限流、Seata TCC。
-  desc_full: 高并发秒杀系统实践：Redis + Lua 原子扣减、Kafka 异步下单、Sentinel 限流降级、Seata TCC 分布式事务。
+  desc: "Rust 技能包：Rust 编程、Python–Rust 互操作（PyO3），支持 Claude Code / Cline / OpenClaw / OpenCode。"
+  desc_full: "Rust Skills 技能包，覆盖 Rust 核心编程、Python–Rust 互操作（PyO3）以及跨平台 CLI 工具开发；支持 Claude Code / Cline / OpenClaw / OpenCode 等多个宿主。"
+
+- name: "dsh-Compress-codex"
+  url: "https://github.com/Thatgfsj/dsh-Compress-codex"
+  lang: "JavaScript"
+  stars: 1
+  desc: "DSH 插件：Codex 风格上下文压缩后端，替代原生 compaction-basic 策略层。"
+  desc_full: "DSH 插件：Codex 风格的上下文压缩后端，用来替换原生的 compaction-basic 策略层，降低长上下文任务的 Token 成本。"
+
+- name: "dsh-migrate"
+  url: "https://github.com/Thatgfsj/dsh-migrate"
+  lang: "JavaScript"
+  stars: 1
+  desc: "DSH 插件：把 DeepSeek Harness 安装打包成 zip，迁移到另一台电脑再释放。"
+  desc_full: "DSH 插件：打包大肥鱼（export）/ 释放大肥鱼（import），把一份 DeepSeek Harness 安装迁移到另一台电脑。"
+
+- name: "dsh-plugin-skills"
+  url: "https://github.com/Thatgfsj/dsh-plugin-skills"
+  lang: "JavaScript"
+  stars: 1
+  desc: "DSH Agent Skills：如何构建 DSH 插件、如何编写 DSH 技能（对照 dsh 0.2.0-rc.2 验证）。"
+  desc_full: "DSH（DeepSeek Harness）agent skills：讲解如何构建 DSH 插件、如何编写 DSH 技能，已对照 dsh 0.2.0-rc.2 验证。"
+
+- name: "android-gradle-skills"
+  url: "https://github.com/Thatgfsj/android-gradle-skills"
+  lang: "Python"
+  stars: 0
+  desc: "OpenClaw Android 开发技能包：AGP/Gradle 版本兼容、项目模板、构建自动化。"
+  desc_full: "OpenClaw Android 开发技能包 — AGP/Gradle 版本兼容、项目模板、构建自动化脚本，让 AI Agent 理解 Android 构建体系。Python 实现。"
+
+- name: "ios-gradle-skills"
+  url: "https://github.com/Thatgfsj/ios-gradle-skills"
+  lang: "Python"
+  stars: 0
+  desc: "OpenClaw iOS 构建技能包：MobAI ios-builder 远程 xcodebuild、签名与 IPA 打包。"
+  desc_full: "OpenClaw iOS 构建技能包：通过 MobAI ios-builder 远程执行 xcodebuild、签名与 IPA 打包，支持 Flutter / React Native 热重载与项目模板。"
+
+- name: "large-task-scheduler"
+  url: "https://github.com/Thatgfsj-easyRep/large-task-scheduler"
+  lang: "Skill"
+  stars: 1
+  desc: "OpenClaw 技能：自动识别 ≥100 字任务，拆分任务清单并定时执行。"
+  desc_full: "OpenClaw 技能：大型任务调度器，自动识别 ≥100 字任务，拆分成任务清单并定时执行。"
+
+- name: "readme-header-design"
+  url: "https://github.com/Thatgfsj/readme-header-design"
+  lang: "JavaScript"
+  stars: 0
+  desc: "为项目设计、生成并校验 README 表头的 DSH 技能。"
+  desc_full: "为项目设计、生成并校验一个优秀 README 表头的 DeepSeek Harness agent skill，覆盖多平台渲染约束与暗色模式。"
+
+- name: "AntigravityAutoApprove"
+  url: "https://github.com/Thatgfsj/AntigravityAutoApprove"
+  lang: "C#"
+  stars: 1
+  desc: "Antigravity IDE 权限弹窗静默自动批准工具：零依赖 C#，后台点击 + 开机自启。"
+  desc_full: "Antigravity（反重力 IDE）权限弹窗静默自动批准工具：零依赖 C#，后台安全点击，支持开机自启。"
+
+- name: "opencode-chinese"
+  url: "https://github.com/Thatgfsj/opencode-chinese"
+  lang: "JavaScript"
+  stars: 0
+  desc: "opencode.ai 中文化油猴脚本：词典式人工翻译，覆盖营销站与文档站。"
+  desc_full: "opencode.ai 中文化油猴脚本：词典式人工翻译，覆盖营销站、文档站外壳与 /console 管理后台，仿 GitHub 中文化插件。"
+
+- name: "ai-website-detector"
+  url: "https://github.com/Thatgfsj/ai-website-detector"
+  lang: "Python"
+  stars: 0
+  desc: "用正则 + BeautifulSoup 指纹识别网站是否由 Durable / Framer / v0 等 AI 工具生成。"
+  desc_full: "AI Website Detector：用正则与 BeautifulSoup 指纹识别网站是否由 Durable / Framer / v0 等 AI 建站工具生成。"
+
+- name: "LiveSub"
+  url: "https://github.com/Thatgfsj/LiveSub"
+  lang: "C++"
+  stars: 0
+  desc: "直播实时语音字幕：本地 Qwen3-ASR + llama.cpp，麦克风实时转写，支持 OBS 窗口捕获。"
+  desc_full: "直播实时语音字幕工具：本地 Qwen3-ASR + llama.cpp 推理，麦克风实时转字幕，Direct2D 透明窗，支持 OBS 窗口捕获。"
+
+- name: "YU-Oracle-Desktop"
+  url: "https://github.com/Thatgfsj-easyRep/YU-Oracle-Desktop"
+  lang: "Tauri / JS"
+  stars: 0
+  desc: "塔罗 + 易经卜卦桌面版：Tauri + Rust，卡牌动画与离线 JSON 数据。"
+  desc_full: "塔罗 + 易经卜卦桌面应用，Tauri + Rust 构建，包含卡牌动画与离线 JSON 数据。"
+
+- name: "TVLive"
+  url: "https://github.com/Thatgfsj/TVLive"
+  lang: "Kotlin"
+  stars: 1
+  desc: "适老化的 Android 电视直播客户端，默认 CCTV-8，支持 Android TV 与手机。"
+  desc_full: "免费开源的 Android 电视直播客户端，默认播放 CCTV-8，支持 Android TV 与手机；Media3 ExoPlayer + Hilt + 多源测速。"
+
+- name: "tarot-oracle"
+  url: "https://github.com/Thatgfsj/tarot-oracle"
+  lang: "Kotlin"
+  stars: 0
+  desc: "塔罗镜：78 张韦特塔罗 Android 应用，完全离线，可一键跳 DeepSeek。"
+  desc_full: "塔罗镜：单屏 Android 塔罗抽牌应用，内置 78 张韦特塔罗，完全离线，手动翻牌，可分享到 DeepSeek 求解读。"
+
+- name: "iching-oracle"
+  url: "https://github.com/Thatgfsj-easyRep/iching-oracle"
+  lang: "Kotlin"
+  stars: 0
+  desc: "易经卜卦 Android 应用：六十四卦随机抽签，Kotlinx Serialization + Coroutines。"
+  desc_full: "易经卜卦 Android 应用：从周易六十四卦随机抽签，可一键分享到 DeepSeek 求解读。"
+
+- name: "xiangqi"
+  url: "https://github.com/Thatgfsj/xiangqi"
+  lang: "Kotlin"
+  stars: 0
+  desc: "中国象棋 Android 版：人机 / 人人 / 摆阵四模式，alpha-beta 迭代加深引擎。"
+  desc_full: "中国象棋 Android 版：人机、人人、摆阵等四种模式，内置 alpha-beta 迭代加深搜索的象棋引擎。"
+
+- name: "MyPackage"
+  url: "https://github.com/Thatgfsj/MyPackage"
+  lang: "Kotlin"
+  stars: 0
+  desc: "我的快递：本地快递驿站管理 Android 应用（Jetpack Compose），取件码直达 + 二维码迁移。"
+  desc_full: "我的快递：本地快递驿站管理 Android 应用，Jetpack Compose 实现，支持一键直达取件码与动态二维码分享迁移。"
+
+- name: "seckill-system"
+  url: "https://github.com/Thatgfsj-easyRep/seckill-system"
+  lang: "Java"
+  stars: 1
+  desc: "高并发秒杀系统实践：Redis + Lua 原子扣减、Kafka 异步下单、Sentinel 限流、Seata TCC。"
+  desc_full: "高并发秒杀系统实践：Redis + Lua 原子扣减、Kafka 异步下单、Sentinel 限流降级、Seata TCC 分布式事务。"
+
+- name: "Excel-Date-Error-Fixer"
+  url: "https://github.com/Thatgfsj-easyRep/Excel-Date-Error-Fixer"
+  lang: "Python"
+  stars: 2
+  desc: "批量纠正 Excel 日期格式：把不规则日期转换为标准格式的 Python 工具。"
+  desc_full: "批量纠正 Excel 表格中的日期格式：把 xxxx.xx.xx、xxxx-xx-xx、xxxx.xx 等不规则日期转换为标准格式。"
+
+- name: "excelfind"
+  url: "https://github.com/Thatgfsj-easyRep/excelfind"
+  lang: "Python"
+  stars: 1
+  desc: "在文件夹中批量搜索 Excel/CSV 内容，自动复制匹配文件并生成汇总报告。"
+  desc_full: "轻量级桌面工具：在文件夹中批量搜索 Excel/CSV 表格内容，自动复制匹配文件并生成汇总报告。"
+
+- name: "XXGC-CampusNet-AutoLogin"
+  url: "https://github.com/Thatgfsj-easyRep/XXGC-CampusNet-AutoLogin"
+  lang: "PowerShell"
+  stars: 4
+  badge: "旧版"
+  desc: "新乡工程学院校园网自动登录脚本（旧版），README 指向接替项目 XXGCXY。"
+  desc_full: "新乡工程学院校园网自动登录脚本与工具，很久未更新；README 中指向接替项目 XXGCXY-CampusNet-AutoLogin。保留作为早期版本记录。"
+
+- name: "playwright-crawler-helper"
+  url: "https://github.com/Thatgfsj-easyRep/playwright-crawler-helper"
+  lang: "Python"
+  stars: 1
+  badge: "已归档"
+  desc: "反检测浏览器爬虫辅助：网络请求分析 + webdriver 隐藏；已归档，后继 webctl。"
+  desc_full: "Playwright 爬虫辅助工具：通过分析浏览器网络请求（Network Panel）辅助编写爬虫脚本，带反检测注入与 webdriver 隐藏。仓库已归档，后继项目为 webctl。"
+
+- name: "Thatgfsj.web.sky"
+  url: "https://github.com/Thatgfsj-easyRep/Thatgfsj.web.sky"
+  lang: "CSS"
+  stars: 1
+  desc: "早期个人网页 / 站点样式实验。"
+  desc_full: "早期个人网页与站点样式实验，CSS 实现。"
+
+- name: "crosshair-overlay"
+  url: "https://github.com/Thatgfsj-easyRep/crosshair-overlay"
+  lang: "C++"
+  stars: 0
+  desc: "轻量级 FPS 屏幕准心覆盖工具（C++ / gdi32 + shell32）。"
+  desc_full: "轻量级屏幕准心覆盖工具，适合 FPS 游戏；C++ 实现，仅依赖 gdi32 + shell32，单文件体积很小。"
+
+- name: "VibeCopy"
+  url: "https://github.com/Thatgfsj-easyRep/VibeCopy"
+  lang: "C++"
+  stars: 0
+  desc: "Win32 速复贴板：PowerShell 配置 + VBScript 静默启动。"
+  desc_full: "Win32 快速复制 / 粘贴小工具：PowerShell 配置，VBScript 静默启动，适合 vibe coding 时快速搬运文本。"
+
+- name: "AutoEnterScheduler"
+  url: "https://github.com/Thatgfsj-easyRep/AutoEnterScheduler"
+  lang: "Python"
+  stars: 0
+  desc: "定时回车工具（Python 版）：向指定窗口发送回车。"
+  desc_full: "定时回车工具 Python 版：向任意窗口按计划发送 Enter 键，tkinter 界面 + PyInstaller 打包。"
+
+- name: "AutoEnterScheduler-cpp"
+  url: "https://github.com/Thatgfsj-easyRep/AutoEnterScheduler-cpp"
+  lang: "C++"
+  stars: 0
+  desc: "定时回车工具 v2.0：C++ 重写版。"
+  desc_full: "AutoEnterScheduler v2.0：用 C++ 重写的定时回车工具，Win32 PostMessageW 实现。"
+
+- name: "MinecraftTeleportTool"
+  url: "https://github.com/Thatgfsj-easyRep/MinecraftTeleportTool"
+  lang: "Python"
+  stars: 0
+  desc: "Minecraft 坐标传送点管理工具。"
+  desc_full: "Minecraft 坐标传送点管理工具：记录、整理并复制常用传送坐标。"
+
+- name: "TypingTutor"
+  url: "https://github.com/Thatgfsj-easyRep/TypingTutor"
+  lang: "Python"
+  stars: 0
+  desc: "打字通：PySide6（Qt6）桌面打字练习软件，自定义 QSS 界面。"
+  desc_full: "打字通：类似金山打字通的桌面打字练习软件，使用 PySide6（Python + Qt6）开发，QSS 定制界面。"
+
+- name: "python-little-tool"
+  url: "https://github.com/Thatgfsj-easyRep/python-little-tool"
+  lang: "Python"
+  stars: 0
+  desc: "早期 Python 小工具合集，按需在 Releases 自提。"
+  desc_full: "早期 Python 小工具合集，按需在 Releases 页面下载。"
+
+- name: "female-oriented-wangwen"
+  url: "https://github.com/Thatgfsj-easyRep/female-oriented-wangwen"
+  lang: "Markdown / Prompt"
+  stars: 0
+  desc: "女频系统流网文全流程创作助手：18 个模块覆盖选题到发布适配。"
+  desc_full: "女频系统流网文全流程创作助手，覆盖选题研判、系统设定、大纲撰写、章节创作、润色优化、发布适配六大环节；18 个技能模块。"
+
+- name: "scaffolding-recommender-for-kids"
+  url: "https://github.com/Thatgfsj-easyRep/scaffolding-recommender-for-kids"
+  lang: "Python"
+  stars: 0
+  desc: "脚手架算法：为儿童设计的短视频推荐系统，对抗成瘾式推荐。"
+  desc_full: "脚手架算法：专为儿童设计的短视频推荐系统，尝试对抗成瘾性设计、信息茧房与价值观侵蚀。"
