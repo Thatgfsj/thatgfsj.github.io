@@ -1,13 +1,30 @@
 # ============================
-# 深海迷航素材与地图出处
-# map_credit 会在页面标注；地图文件就位后替换 map 路径
+# 深海迷航 — 只收录自研仓库与从仓库 maps/ 提取的地图
 # ============================
+repo: "https://github.com/Thatgfsj/subnautica-snmap"
+repo_name: "subnautica-snmap"
+version: "v2.7.1"
+language: "C#"
+license: "MIT"
+updated: "2026-10-08"
 map: "/assets/img/games/subnautica/map.jpg"
-map_alt: "深海迷航 4546B 地图"
-map_credit: "地图：KT411 2024 中文全标注图；经 Thatgfsj/subnautica-snmap v2.7 收录。版权归原作者所有，非商业使用。"
+map_alt: "深海迷航 4546B 地图（KT411 2024 中文全标注版）"
+map_credit: "地图：KT411 2024 中文全标注图；经 Thatgfsj/subnautica-snmap v2.7.1 收录。版权归原作者所有，非商业使用。"
 map_source_url: "https://github.com/Thatgfsj/subnautica-snmap"
-hero: "/assets/img/games/subnautica/library_hero.jpg"
-playtime: "17.4"
-modes: "2"
-cover: "/assets/img/games/subnautica/library_600x900_schinese.jpg"
-logo: "/assets/img/games/subnautica/logo_schinese.png"
+features:
+  - 修改器式注入：不随游戏启动，不依赖 BepInEx / QMods 等模组框架
+  - F7 圆形小地图：200 / 300 / 500 / 1000 米循环，带玩家朝向、信标、生命舱与扫描目标
+  - F9 独立大地图：滚轮缩放（最高 16x）、拖拽平移、图层切换、跟随玩家
+  - 内置 474 个从游戏资源提取的 UI 图标（物品 / 矿石 / 生物头像）
+  - 多图层地图：主地图、失落之河、蛇菇洞、熔岩堡、海皇监狱、利维坦分布等
+  - 读取游戏对象坐标，不依赖内存偏移，游戏小版本更新一般无需重做
+layers:
+  - 主地图（2024 浅色）
+  - 主地图（2024 暗色）
+  - 失落之河
+  - 蛇菇洞
+  - 熔岩堡
+  - 海皇监狱
+  - 利维坦分布
+  - 极光号残骸
+  - 生物分布

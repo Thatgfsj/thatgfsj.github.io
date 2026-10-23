@@ -11,7 +11,7 @@ permalink: /games/
     <h1 class="games-hero__title">游戏</h1>
     <p class="games-hero__lede">玩过的、改过的、自己做的东西。每个板块点进去，是一份可以翻的记录。</p>
     <p class="games-hero__meta">
-      <span>MODDED MINECRAFT</span>
+      <span>MINECRAFT MODS</span>
       <span aria-hidden="true">/</span>
       <span>SUBNautICA 4546B</span>
       <span aria-hidden="true">/</span>
@@ -32,11 +32,11 @@ permalink: /games/
         <div class="game-cover{% if g.poster %} game-cover--poster{% endif %}{% if g.fit == 'contain' %} game-cover--contain{% endif %}">
           {% if g.poster %}
           <div class="game-poster" aria-hidden="true">
-            <span class="game-poster__stamp">NO IMAGES YET</span>
-            <span class="game-poster__cn">自创</span>
-            <span class="game-poster__en">ORIGINAL<br>WORKS</span>
+            <span class="game-poster__stamp">{{ g.poster_stamp | default: 'NO IMAGES YET' }}</span>
+            <span class="game-poster__cn">{{ g.poster_cn | default: '自创' }}</span>
+            <span class="game-poster__en">{{ g.poster_en | default: 'ORIGINAL<br>WORKS' }}</span>
             <span class="game-poster__rule"></span>
-            <span class="game-poster__note">排版预览 · 截图稍后补</span>
+            <span class="game-poster__note">{{ g.poster_note | default: '排版预览' }}</span>
           </div>
           {% else %}
           <img src="{{ g.cover | relative_url }}" alt="{{ g.cover_alt }}" loading="lazy">

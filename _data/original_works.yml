@@ -1,34 +1,41 @@
 # ============================
-# 自创作品 — /games/original/
+# 自创作品 — 只收录自研游戏 / 应用仓库（无图版本）
 # ============================
 
-- title: handy-shulkers
-  type: Minecraft Mod / Java
+- title: xiangqi
+  type: Android / Kotlin
   status: RELEASED
-  desc: 从物品栏直接打开潜影盒，不占用任何装备栏，目标是和其他模组尽量兼容。
-  href: https://github.com/Thatgfsj-minecraft/handy-shulkers
-  note: Fabric 1.21.11
+  desc: 中国象棋 Android 版：人机、人人、摆阵四种模式，内置 alpha-beta 迭代加深引擎。
+  href: https://github.com/Thatgfsj/xiangqi
+  note: 单机棋类
 
-- title: sky-islands
-  type: Minecraft Mod / Java
+- title: tarot-oracle
+  type: Android / Kotlin
   status: RELEASED
-  desc: 创建世界时可选的内置空岛类型：经典、小岛、单方块，生物群系与种子保持正常。
-  href: https://github.com/Thatgfsj-minecraft/sky-islands
-  note: Fabric 1.21.11
+  desc: 塔罗镜：78 张韦特塔罗完全离线，单屏抽牌、手动翻牌，可分享到 DeepSeek 求解读。
+  href: https://github.com/Thatgfsj/tarot-oracle
+  note: 离线卡牌
 
-- title: compressed-blocks
-  type: Minecraft Mod / Java
+- title: iching-oracle
+  type: Android / Kotlin
   status: RELEASED
-  desc: 把常见方块 3×3 压成 1～9 重，压缩工具耐久按 9ⁿ 增长，六重起不可破坏。
-  href: https://github.com/Thatgfsj-minecraft/compressed-blocks
-  note: Fabric 1.21.11
+  desc: 易经卜卦：从周易六十四卦随机抽签，一键分享到 DeepSeek 求解读。
+  href: https://github.com/Thatgfsj-easyRep/iching-oracle
+  note: 离线占卜
 
-- title: mc-mod-dev-skill
-  type: Agent Skill / Minecraft
-  status: WIP
-  desc: 通用 Minecraft 模组开发技能包：先识别版本、Loader、映射与构建系统，再按实际环境开发。
-  href: https://github.com/Thatgfsj-minecraft/mc-mod-dev-skill
-  note: 持续验证中
+- title: MyPackage
+  type: Android / Kotlin
+  status: RELEASED
+  desc: 我的快递：本地快递驿站管理应用，一键直达取件码，动态二维码分享与迁移。
+  href: https://github.com/Thatgfsj/MyPackage
+  note: 本地工具
+
+- title: TVLive
+  type: Android / Kotlin
+  status: RELEASED
+  desc: 免费开源电视直播客户端，默认 CCTV-8，支持 Android TV 与手机，多源测速。
+  href: https://github.com/Thatgfsj/TVLive
+  note: Android TV
 
 - title: 未命名新作
   type: TBD

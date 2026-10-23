@@ -2518,6 +2518,154 @@ main:focus {
   text-decoration: underline;
 }
 
+
+/* 仓库卡片（游戏页 / 我的世界 / 自创作品） */
+.repo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin: 22px 0 20px;
+}
+
+.repo-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 18px 20px;
+  background: var(--paper);
+  border: 1px solid var(--line-soft);
+}
+
+.repo-card:hover {
+  border-color: var(--line);
+  background: var(--paper-2);
+}
+
+.repo-card__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.repo-card__type {
+  padding: 2px 6px;
+  font-family: var(--font-mono);
+  font-size: 8.5px;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+}
+
+.repo-card__ext {
+  font-family: var(--font-mono);
+  font-size: 8.5px;
+  letter-spacing: 0.08em;
+  color: var(--ink-3);
+  text-decoration: none;
+}
+
+.repo-card__ext:hover {
+  color: var(--accent);
+}
+
+.repo-card__name {
+  font-family: var(--font-mono);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--ink);
+  overflow-wrap: anywhere;
+}
+
+.repo-card__name a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.repo-card__name a:hover {
+  color: var(--accent);
+}
+
+.repo-card__meta {
+  font-family: var(--font-mono);
+  font-size: 8.5px;
+  line-height: 1.6;
+  letter-spacing: 0.03em;
+  color: var(--ink-3);
+}
+
+.repo-card__desc {
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--ink-2);
+}
+
+.repo-card__features {
+  margin-top: 4px;
+  padding-top: 9px;
+  border-top: 1px solid var(--line-soft);
+  list-style: none;
+  font-size: 12px;
+  line-height: 1.7;
+  color: var(--ink-2);
+}
+
+.repo-card__features li {
+  position: relative;
+  padding-left: 14px;
+  margin: 0.18em 0;
+}
+
+.repo-card__features li::before {
+  content: '+';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-family: var(--font-mono);
+}
+
+.repo-card__features--wide {
+  max-width: 80ch;
+  margin: 12px 0 0;
+}
+
+.repo-card__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: auto;
+  padding-top: 10px;
+  border-top: 1px solid var(--line-soft);
+  font-family: var(--font-mono);
+  font-size: 8.5px;
+  color: var(--ink-3);
+}
+
+.repo-card__actions a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.repo-card__actions a:hover {
+  text-decoration: underline;
+}
+
+.layer-chips {
+  margin-top: 12px;
+}
+
+.game-body-text code {
+  padding: 0.08em 0.36em;
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+  color: var(--ink);
+  background: var(--paper-2);
+  border: 1px solid var(--line-soft);
+}
+
 /* 地图 / 存档 / 作品 */
 .map-frame {
   max-width: 1000px;
@@ -2859,6 +3007,10 @@ main:focus {
   }
 
   .mod-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .repo-grid {
     grid-template-columns: minmax(0, 1fr);
   }
 

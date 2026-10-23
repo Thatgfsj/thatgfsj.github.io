@@ -1,13 +1,13 @@
 ---
 layout: page
 title: 自创作品
-description: 自己做的东西：Minecraft 模组、Agent 技能与实验。当前为无图版式预览。
+description: 自己写的游戏与应用仓库：象棋、塔罗、易经、快递管理、电视直播。当前为无图版式预览。
 kicker: GAME / ORIGINAL WORKS
 prose: false
 permalink: /games/original/
 ---
 
-<p class="page-note">无图版式预览 · 截图与演示稍后补 · 共 {{ site.data.original_works.size }} 项</p>
+<p class="page-note">无图版式预览 · 只收录自研仓库 · 共 {{ site.data.original_works.size }} 项（含 1 个占位）</p>
 
 <div class="game-poster game-poster--banner" aria-hidden="true">
   <span class="game-poster__stamp">NO IMAGES YET</span>
@@ -17,7 +17,7 @@ permalink: /games/original/
   <span class="game-poster__note">先把结构做出来，图之后再补</span>
 </div>
 
-<p class="game-body-text">这里放自己写的东西。第一版先只做文字索引：项目、类型、状态和一句话说明。等截图和演示准备好，再把视觉补上。</p>
+<p class="game-body-text">这里是自己写的游戏与应用仓库。第一版只做文字索引：仓库、类型、状态和一句话说明；等截图和演示准备好，再把视觉补上。</p>
 
 <div class="works-list">
   {% for w in site.data.original_works %}
