@@ -87,6 +87,41 @@ permalink: /about/
   </section>
 </div>
 
+## 组织
+
+<div class="about-grid">
+  <section class="about-card">
+    <h3><span>07</span>thatgfsj-dsh</h3>
+    <p class="about-card__meta">DeepSeek Harness 插件与技能</p>
+    <ul>
+      <li>dsh-phone、dsh-emotion-analyzer、dsh-composer-assist、dsh-trae-api</li>
+      <li>dsh-migrate、dsh-Compress-codex、dsh-ops（主仓库在 T-Auto）</li>
+      <li>个人账号里的 DSH 插件正在迁入该组织</li>
+    </ul>
+    <p><a href="https://github.com/thatgfsj-dsh" target="_blank" rel="noopener">打开组织 ↗</a></p>
+  </section>
+
+  <section class="about-card">
+    <h3><span>08</span>Thatgfsj-minecraft</h3>
+    <p class="about-card__meta">Minecraft 模组与开发工具</p>
+    <ul>
+      <li>handy-shulkers、sky-islands、compressed-blocks</li>
+      <li>mc-mod-dev-skill 模组开发技能包</li>
+    </ul>
+    <p><a href="https://github.com/Thatgfsj-minecraft" target="_blank" rel="noopener">打开组织 ↗</a></p>
+  </section>
+
+  <section class="about-card">
+    <h3><span>09</span>Thatgfsj-easyRep</h3>
+    <p class="about-card__meta">整理与归档仓库</p>
+    <ul>
+      <li>wangwenwrite-skill、RouterMonitor 等项目归档</li>
+      <li>部分项目在此归档；主仓库以项目页链接为准</li>
+    </ul>
+    <p><a href="https://github.com/Thatgfsj-easyRep" target="_blank" rel="noopener">打开组织 ↗</a></p>
+  </section>
+</div>
+
 ## 开源贡献
 
 <p>业余时间主要给常用仓库做精准维护与适配。下面这几个是近期比较有代表性的：</p>
@@ -101,6 +136,7 @@ permalink: /about/
 
 <ul>
   <li>GitHub：<a href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener">github.com/Thatgfsj</a></li>
+  <li>DSH 组织：<a href="https://github.com/thatgfsj-dsh" target="_blank" rel="noopener">github.com/thatgfsj-dsh</a></li>
   <li>本站：<a href="{{ '/feed.xml' | relative_url }}">RSS 订阅</a></li>
 </ul>
 

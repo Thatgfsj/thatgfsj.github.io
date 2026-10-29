@@ -9,9 +9,9 @@ layout: default
       <div class="hero__main">
         <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span>PERSONAL WORKSTATION · ONLINE</p>
         <h1 class="hero__title">Thatgfsj</h1>
-        <p class="hero__tagline">孙政<span class="sep" aria-hidden="true">/</span>全栈开发者<span class="sep" aria-hidden="true">/</span>工具链与 AI 工程</p>
+        <p class="hero__tagline">孙政<span class="sep" aria-hidden="true">/</span>全栈开发者<span class="sep" aria-hidden="true">/</span>DSH 插件与工具链</p>
         <p class="hero__bio">
-          把想法变成能跑的东西。日常借助 AI 直接开工，也坚持把系统底层弄明白；折腾工具链、自动化流程和 AI 工程化，业余给常用开源仓库提 PR。
+          把想法变成能跑的东西。日常借助 AI 直接开工，也坚持把系统底层弄明白；折腾工具链、自动化流程和 AI 工程化，DSH 插件与技能维护在 thatgfsj-dsh 组织。
         </p>
         <div class="hero__actions">
           <a class="btn btn--primary" href="{{ '/projects/' | relative_url }}">查看项目 <span class="btn__arrow" aria-hidden="true">→</span></a>
@@ -33,7 +33,8 @@ layout: default
           <dl class="specs">
             <dt>ROLE</dt><dd>Full-stack Developer</dd>
             <dt>STACK</dt><dd>Python · Rust · TypeScript</dd>
-            <dt>FOCUS</dt><dd>AI Agent / 工具链 / 自动化</dd>
+            <dt>FOCUS</dt><dd>AI Agent / DSH 插件 / 工具链</dd>
+            <dt>ORG</dt><dd><a href="https://github.com/thatgfsj-dsh" target="_blank" rel="noopener">thatgfsj-dsh</a></dd>
             <dt>LOC</dt><dd>{{ site.data.stats.location }}</dd>
             <dt>STATUS</dt><dd><span class="status-dot" aria-hidden="true"></span>在线 · 开放交流</dd>
           </dl>
@@ -76,7 +77,7 @@ layout: default
       <div class="panel__body">
         <header class="section-head">
           <h2>精选项目</h2>
-          <p>从 AI 长期记忆、Agent 网页控制层到桌面小工具——都在实际使用中打磨。</p>
+          <p>从 AI 长期记忆、DSH 插件到桌面小工具——都在实际使用中打磨。</p>
         </header>
 
         <div class="file-list">
