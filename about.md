@@ -136,7 +136,7 @@ permalink: /about/
 
 <ul>
   <li>GitHub：<a href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener">github.com/Thatgfsj</a></li>
-  <li>DSH 组织：<a href="https://github.com/thatgfsj-dsh" target="_blank" rel="noopener">github.com/thatgfsj-dsh</a></li>
+  <li>组织：<a href="https://github.com/Thatgfsj?tab=organizations" target="_blank" rel="noopener">github.com/Thatgfsj?tab=organizations</a></li>
   <li>本站：<a href="{{ '/feed.xml' | relative_url }}">RSS 订阅</a></li>
 </ul>
 
