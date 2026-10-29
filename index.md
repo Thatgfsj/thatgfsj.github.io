@@ -116,7 +116,6 @@ layout: default
       <div class="panel__body">
         <header class="section-head">
           <h2>技术栈</h2>
-          <p>按应用领域整理的工具箱，不按熟练度打星级。</p>
         </header>
         {% include stack.html %}
       </div>
@@ -135,7 +134,6 @@ layout: default
       <div class="panel__body">
         <header class="section-head">
           <h2>开源足迹</h2>
-          <p>过去一年的提交记录，以及给常用仓库提的几个 PR。</p>
         </header>
 
         <div class="opensource-grid">
@@ -180,7 +178,6 @@ layout: default
       <div class="panel__body">
         <header class="section-head">
           <h2>最新文章</h2>
-          <p>把踩过的坑、抓过的包、写过的工具，尽量写成别人也能复用的笔记。</p>
         </header>
 
         <div class="post-list">
