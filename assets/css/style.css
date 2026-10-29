@@ -654,6 +654,12 @@ main:focus {
   color: var(--term-ink);
 }
 
+.specs dd a {
+  color: var(--term-amber);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
 .specs dd .status-dot {
   margin-right: 6px;
   vertical-align: 1px;

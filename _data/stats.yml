@@ -1,15 +1,15 @@
 # ============================
 # GitHub / 站点数据（手动维护）
-# 数据核对时间：2026-10-23
+# 数据核对时间：2026-10-30
 # 来源：gh api users/Thatgfsj + repos/languages 求和
 # ============================
-repos: 29
-stars: 20
-followers: 13
-code_size: 13.2
+repos: 27
+stars: 22
+followers: 14
+code_size: 11.0
 code_unit: MiB
 contributions: "1,514"
 contrib_window: "2025.10 — 2026.10"
-updated: "2026-10-23"
+updated: "2026-10-30"
 location: 中国
-scope_note: "个人账号口径，不含 Thatgfsj-easyRep 组织"
+scope_note: "个人账号公开仓库（含 1 个 fork）；Thatgfsj-easyRep / thatgfsj-dsh 组织另计"

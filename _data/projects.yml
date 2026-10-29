@@ -1,6 +1,6 @@
 # ============================
 # 项目数据 — index / projects 共用
-# 数据核对：2026-10-23（gh api）
+# 数据核对：2026-10-30（gh api）
 #   featured: true 的项目会出现在首页；projects 页展示全量并分页
 #   badge: 可选标记（旧版 / 已归档）
 # ============================
@@ -24,8 +24,8 @@
 - name: "dsh-ops"
   url: "https://github.com/T-Auto/dsh-ops"
   lang: "TypeScript / Rust"
-  stars: 3888
-  stars_label: "3,888"
+  stars: 4775
+  stars_label: "4,775"
   featured: true
   desc: "DSH 底层操作工具插件：有界文件 / 文档工具，减少 Token 消耗与任务耗时。"
   desc_full: "DSH（DeepSeek Harness）底层操作工具插件：为 Agent 提供有界文件与文档工具，Native / PTC 双模式，核心用 TypeScript + Rust worker 实现，目标是在更少 Token 与更短时间内完成任务。"
@@ -89,15 +89,43 @@
   desc: "Rust 技能包：Rust 编程、Python–Rust 互操作（PyO3），支持 Claude Code / Cline / OpenClaw / OpenCode。"
   desc_full: "Rust Skills 技能包，覆盖 Rust 核心编程、Python–Rust 互操作（PyO3）以及跨平台 CLI 工具开发；支持 Claude Code / Cline / OpenClaw / OpenCode 等多个宿主。"
 
+- name: "dsh-phone"
+  url: "https://github.com/thatgfsj-dsh/dsh-phone"
+  lang: "TypeScript"
+  stars: 0
+  desc: "DSH 插件：在后端跑一个 Android 实例，经浏览器右侧栏呈现，并向 Agent 注册 9 个 phone_* 工具。"
+  desc_full: "DSH 插件 dsh-phone：给 DeepSeek Harness 提供运行在后端的 Android 实例，经浏览器右侧栏呈现；注册 phone_status / phone_screenshot / phone_tap / phone_shell 等 9 个工具，支持 redroid / Emulator / attach 三种运行时。"
+
+- name: "dsh-emotion-analyzer"
+  url: "https://github.com/thatgfsj-dsh/dsh-emotion-analyzer"
+  lang: "TypeScript"
+  stars: 0
+  desc: "DSH 插件：本地 ONNX 给每条主模型回复打情绪分，投影进会话并注入可拖拽悬浮框。"
+  desc_full: "DSH 插件 dsh-emotion-analyzer：对主模型每条回复做本地 ONNX 情绪打分，把累积状态投影进 Session，并在 DSH 网页注入可拖拽的情绪监测框；零第三方模型 API。"
+
+- name: "dsh-composer-assist"
+  url: "https://github.com/thatgfsj-dsh/dsh-composer-assist"
+  lang: "JavaScript"
+  stars: 0
+  desc: "DSH 插件：根据当前对话预测下一条输入，支持草稿补全、提示词润色与 Tab 采用。"
+  desc_full: "DSH 插件 dsh-composer-assist：上下文感知的输入预测——根据当前对话预测下一条消息，Tab 采用但不发送；同时支持输入草稿补全与提示词润色。"
+
+- name: "dsh-trae-api"
+  url: "https://github.com/thatgfsj-dsh/dsh-trae-api"
+  lang: "JavaScript"
+  stars: 0
+  desc: "DSH 插件：把 Trae Work CN 的额度暴露成本地 OpenAI / Anthropic 兼容 API。"
+  desc_full: "DSH 插件 dsh-trae-api：将 Trae Work CN 的积分/额度转化为本地 OpenAI / Anthropic 兼容 API，让 Claude Code、Cursor、Cline 等工具直接调用 Trae 底层模型。"
+
 - name: "dsh-Compress-codex"
-  url: "https://github.com/Thatgfsj/dsh-Compress-codex"
+  url: "https://github.com/thatgfsj-dsh/dsh-Compress-codex"
   lang: "JavaScript"
   stars: 1
   desc: "DSH 插件：Codex 风格上下文压缩后端，替代原生 compaction-basic 策略层。"
   desc_full: "DSH 插件：Codex 风格的上下文压缩后端，用来替换原生的 compaction-basic 策略层，降低长上下文任务的 Token 成本。"
 
 - name: "dsh-migrate"
-  url: "https://github.com/Thatgfsj/dsh-migrate"
+  url: "https://github.com/thatgfsj-dsh/dsh-migrate"
   lang: "JavaScript"
   stars: 1
   desc: "DSH 插件：把 DeepSeek Harness 安装打包成 zip，迁移到另一台电脑再释放。"
@@ -106,9 +134,9 @@
 - name: "dsh-plugin-skills"
   url: "https://github.com/Thatgfsj/dsh-plugin-skills"
   lang: "JavaScript"
-  stars: 1
-  desc: "DSH Agent Skills：如何构建 DSH 插件、如何编写 DSH 技能（对照 dsh 0.2.0-rc.2 验证）。"
-  desc_full: "DSH（DeepSeek Harness）agent skills：讲解如何构建 DSH 插件、如何编写 DSH 技能，已对照 dsh 0.2.0-rc.2 验证。"
+  stars: 5
+  desc: "DSH Agent Skills：如何构建 DSH 插件、如何编写 DSH 技能（对照 dsh 0.2.1-rc.2 验证）。"
+  desc_full: "DSH（DeepSeek Harness）agent skills：讲解如何构建 DSH 插件、如何编写 DSH 技能，已对照 dsh 0.2.1-rc.2 验证；含 DSH 内部结构参考。"
 
 - name: "android-gradle-skills"
   url: "https://github.com/Thatgfsj/android-gradle-skills"
