@@ -1,8 +1,12 @@
 # ============================
 # 项目数据 — index / projects 共用
-# 数据核对：2026-10-30（gh api）
-#   featured: true 的项目会出现在首页；projects 页展示全量并分页
+# 数据核对：2026-11-04（gh api）
+#   featured: true 的项目会出现在首页；projects 页展示全量并分页（每页 10 条）
+#   收录口径：Thatgfsj 个人账号 + Thatgfsj-easyRep / Thatgfsj-minecraft / thatgfsj-dsh 组织；
+#             不含 fork、组织资料仓库（.github）、站点源码与个人资料仓库
+#             （Thatgfsj-contribs 仅有上游 fork 与自动生成的 demo，按此口径不收录）
 #   badge: 可选标记（旧版 / 已归档）
+#   注意：条目数跨页时需同步新增 projects/page-N.md，否则最后一页会 404
 # ============================
 
 - name: "neuroweave-cortex"
@@ -24,8 +28,8 @@
 - name: "dsh-ops"
   url: "https://github.com/T-Auto/dsh-ops"
   lang: "TypeScript / Rust"
-  stars: 4775
-  stars_label: "4,775"
+  stars: 5141
+  stars_label: "5,141"
   featured: true
   desc: "DSH 底层操作工具插件：有界文件 / 文档工具，减少 Token 消耗与任务耗时。"
   desc_full: "DSH（DeepSeek Harness）底层操作工具插件：为 Agent 提供有界文件与文档工具，Native / PTC 双模式，核心用 TypeScript + Rust worker 实现，目标是在更少 Token 与更短时间内完成任务。"
@@ -131,10 +135,31 @@
   desc: "DSH 插件：把 DeepSeek Harness 安装打包成 zip，迁移到另一台电脑再释放。"
   desc_full: "DSH 插件：打包大肥鱼（export）/ 释放大肥鱼（import），把一份 DeepSeek Harness 安装迁移到另一台电脑。"
 
+- name: "dsh-xiangqi"
+  url: "https://github.com/thatgfsj-dsh/dsh-xiangqi"
+  lang: "JavaScript"
+  stars: 0
+  desc: "DSH 插件：起一个对弈网站，人类用手机浏览器走子，Agent 用工具应战（象棋 / 五子棋 / 国际象棋）。"
+  desc_full: "DSH 插件 dsh-xiangqi：在宿主进程里起独立对弈网站，人类用手机浏览器走子，Agent 通过 xiangqi_* / gomoku_* / chess_* 工具应战；支持长轮询刷新、自动唤醒 Agent、内网穿透、中文记谱与落子音效，零第三方依赖。"
+
+- name: "dsh-session-delete"
+  url: "https://github.com/thatgfsj-dsh/dsh-session-delete"
+  lang: "JavaScript"
+  stars: 1
+  desc: "DSH 插件：全中文会话删除 + 回收站，侧栏行内删除、可还原或彻底删除。"
+  desc_full: "DSH 插件 dsh-session-delete：在侧栏会话行直接删除会话，删除先进插件设置页的回收站，可还原或彻底删除；支持批量管理、运行中保护与子代理整树删除，界面全中文。"
+
+- name: "dsh-disable-pwsh"
+  url: "https://github.com/thatgfsj-dsh/dsh-disable-pwsh"
+  lang: "JavaScript"
+  stars: 0
+  desc: "DSH 插件：无条件禁用 pwsh 工具，不挑平台 / 预设 / 会话，子代理同样生效。"
+  desc_full: "DSH 插件 dsh-disable-pwsh：把 pwsh 工具从模型可见的工具目录里移除——不管 Linux、macOS 还是 Windows，也不管 standard / cordis / 自建预设；宿主平面与预设平面两层都管，异常自吞，不影响会话创建。"
+
 - name: "dsh-plugin-skills"
   url: "https://github.com/Thatgfsj/dsh-plugin-skills"
   lang: "JavaScript"
-  stars: 5
+  stars: 6
   desc: "DSH Agent Skills：如何构建 DSH 插件、如何编写 DSH 技能（对照 dsh 0.2.1-rc.2 验证）。"
   desc_full: "DSH（DeepSeek Harness）agent skills：讲解如何构建 DSH 插件、如何编写 DSH 技能，已对照 dsh 0.2.1-rc.2 验证；含 DSH 内部结构参考。"
 
@@ -166,6 +191,13 @@
   desc: "为项目设计、生成并校验 README 表头的 DSH 技能。"
   desc_full: "为项目设计、生成并校验一个优秀 README 表头的 DeepSeek Harness agent skill，覆盖多平台渲染约束与暗色模式。"
 
+- name: "i-am-perfectionist"
+  url: "https://github.com/Thatgfsj/i-am-perfectionist"
+  lang: "Skill"
+  stars: 0
+  desc: "反向「ADHD」技能：先问清完美标准、正反方后台辩论，只交付完美结果。"
+  desc_full: "反方向的 agent 技能：让 agent 在高要求任务上先澄清「什么算完美」，后台正反方子代理对抗辩论，整理验证后只交付结果；带提问 / 辩论轮数闸门，防止完美主义死循环。"
+
 - name: "AntigravityAutoApprove"
   url: "https://github.com/Thatgfsj/AntigravityAutoApprove"
   lang: "C#"
@@ -187,12 +219,40 @@
   desc: "用正则 + BeautifulSoup 指纹识别网站是否由 Durable / Framer / v0 等 AI 工具生成。"
   desc_full: "AI Website Detector：用正则与 BeautifulSoup 指纹识别网站是否由 Durable / Framer / v0 等 AI 建站工具生成。"
 
+- name: "workflow"
+  url: "https://github.com/Thatgfsj/workflow"
+  lang: "Jupyter / Colab"
+  stars: 0
+  desc: "Colab 跑 Spark-X2.6-4B：vLLM 起服务 + WebUI，另附 q4 llama 量化版笔记本。"
+  desc_full: "两个 Colab 笔记本：在 Colab 上把 Spark-X2.6-4B 跑起来——fp16 版用 vLLM 起 API 与 WebUI，另附 q4 llama 量化版；包含模型下载、环境准备与服务存活脚本。"
+
 - name: "LiveSub"
   url: "https://github.com/Thatgfsj/LiveSub"
   lang: "C++"
   stars: 0
   desc: "直播实时语音字幕：本地 Qwen3-ASR + llama.cpp，麦克风实时转写，支持 OBS 窗口捕获。"
   desc_full: "直播实时语音字幕工具：本地 Qwen3-ASR + llama.cpp 推理，麦克风实时转字幕，Direct2D 透明窗，支持 OBS 窗口捕获。"
+
+- name: "voiceinput"
+  url: "https://github.com/Thatgfsj/voiceinput"
+  lang: "Rust"
+  stars: 0
+  desc: "后台语音输入：鼠标中键 + 右键长按触发，whisper 流式转写并直接键入光标处。"
+  desc_full: "Rust 写的无窗口后台语音输入工具：鼠标中键 + 右键同时长按触发，whisper.cpp 流式转写，松开即停、增量输出并模拟键盘输入到当前光标位置；托盘运行，config.toml 可配。"
+
+- name: "subnautica-snmap"
+  url: "https://github.com/Thatgfsj/subnautica-snmap"
+  lang: "C#"
+  stars: 0
+  desc: "《深海迷航》小地图 / 大地图注入器：F7 小地图、F9 大地图，不依赖模组框架。"
+  desc_full: "《深海迷航》修改器式小地图注入器：不随游戏启动、不依赖 BepInEx 等模组框架；F7 圆形小地图、F9 独立大地图、实时坐标 / 生物群系、扫描室物品点与 474 个内置图标，多图层地图可配置。"
+
+- name: "subnautica-subcraft-pack"
+  url: "https://github.com/Thatgfsj/subnautica-subcraft-pack"
+  lang: "PowerShell"
+  stars: 0
+  desc: "SubCraft 的 Windows 一键包：在《深海迷航》里用 Minecraft 的角色、物理与方块玩。"
+  desc_full: "SubCraft × 深海迷航 Windows 一键包：基于 MIT 的 SubCraft 做打包与补丁——Minecraft 侧拥有玩家、物理与方块，深海迷航侧拥有世界与画面，两边通过共享内存交换数据；含 BepInEx 安装脚本与 Steam 启动选项生成。"
 
 - name: "YU-Oracle-Desktop"
   url: "https://github.com/Thatgfsj-easyRep/YU-Oracle-Desktop"
@@ -235,6 +295,13 @@
   stars: 0
   desc: "我的快递：本地快递驿站管理 Android 应用（Jetpack Compose），取件码直达 + 二维码迁移。"
   desc_full: "我的快递：本地快递驿站管理 Android 应用，Jetpack Compose 实现，支持一键直达取件码与动态二维码分享迁移。"
+
+- name: "class-homework"
+  url: "https://github.com/Thatgfsj/class-homework"
+  lang: "JavaScript"
+  stars: 0
+  desc: "中文233班作业公告板：新中式静态作业发布站，按科目分类 + 截止倒计时。"
+  desc_full: "中文233班作业公告板：改一个 script.js 就能维护作业数据的静态网站，按科目分类卡片、截止倒计时、搜索筛选与响应式布局。"
 
 - name: "seckill-system"
   url: "https://github.com/Thatgfsj-easyRep/seckill-system"
