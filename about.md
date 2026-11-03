@@ -95,8 +95,8 @@ permalink: /about/
     <p class="about-card__meta">DeepSeek Harness 插件与技能</p>
     <ul>
       <li>dsh-phone、dsh-emotion-analyzer、dsh-composer-assist、dsh-trae-api</li>
-      <li>dsh-migrate、dsh-Compress-codex、dsh-ops（主仓库在 T-Auto）</li>
-      <li>个人账号里的 DSH 插件正在迁入该组织</li>
+      <li>dsh-xiangqi 棋类对弈、dsh-session-delete 会话删除、dsh-disable-pwsh</li>
+      <li>dsh-migrate、dsh-Compress-codex；dsh-ops 主仓库在 T-Auto</li>
     </ul>
     <p><a href="https://github.com/thatgfsj-dsh" target="_blank" rel="noopener">打开组织 ↗</a></p>
   </section>
