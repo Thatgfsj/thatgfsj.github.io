@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 游戏
-description: 玩过的、改过的、自己做的东西：我的世界模组、深海迷航地图与自创作品。
+description: 玩过的、改过的、自己做的东西：我的世界模组、深海迷航地图、Sky 关卡回放与自创作品。
 permalink: /games/
 ---
 
@@ -14,6 +14,8 @@ permalink: /games/
       <span>MINECRAFT MODS</span>
       <span aria-hidden="true">/</span>
       <span>SUBNautICA 4546B</span>
+      <span aria-hidden="true">/</span>
+      <span>SKY LEVEL VIEWER</span>
       <span aria-hidden="true">/</span>
       <span>ORIGINAL WORKS</span>
     </p>
