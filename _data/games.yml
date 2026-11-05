@@ -86,7 +86,7 @@
   status: ACTIVE
   platform: TRAIL_FIRE.UMAP · UE4 → WEBGL
   updated: 2026-11-05
-  summary: 把游戏关卡搬进浏览器：UE4 关卡二进制 → three.js 单文件 3D 场景。第一关「火试炼」，可自动巡游或自由移动。
+  summary: 把游戏关卡搬进浏览器：UE4 关卡二进制 → three.js 单文件 3D 场景。第一关「火试炼」，进入默认自由移动（M 可切自动巡游）。
   href: /games/sky/
   link_label: 进入 sky 分区
   cover: /assets/img/games/sky/fire-trial-cover.jpg
