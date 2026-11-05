@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 关于
-description: Thatgfsj（孙政），全栈开发者。写代码、折腾工具链、给开源仓库提 PR。
+description: Thatgfsj，全栈开发者。写代码、折腾工具链、给开源仓库提 PR。
 kicker: README.MD
 hide_lede: true
 permalink: /about/
@@ -10,7 +10,7 @@ permalink: /about/
 <div class="about-intro">
   <img class="about-intro__avatar" src="{{ '/assets/img/avatar.png' | relative_url }}" alt="Thatgfsj 的头像" width="96" height="96" loading="lazy">
   <div>
-    <p class="about-intro__lead">我是 <strong>Thatgfsj</strong>（孙政），一个把想法做成能跑的工具的全栈开发者。</p>
+    <p class="about-intro__lead">我是 <strong>Thatgfsj</strong>，一个把想法做成能跑的工具的全栈开发者。</p>
     <p>日常借助 AI 直接开工，也坚持把系统底层弄明白。目前主用 Python / Rust / TypeScript，业余时间给常用开源仓库提 PR。相信好的工具应该简洁、高效，并且能直接解决问题。</p>
   </div>
 </div>
