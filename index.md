@@ -9,7 +9,7 @@ layout: default
       <div class="hero__main">
         <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span>PERSONAL WORKSTATION · ONLINE</p>
         <h1 class="hero__title">Thatgfsj</h1>
-        <p class="hero__tagline">孙政<span class="sep" aria-hidden="true">/</span>全栈开发者<span class="sep" aria-hidden="true">/</span>工具链与 AI 工程</p>
+        <p class="hero__tagline">全栈开发者<span class="sep" aria-hidden="true">/</span>工具链与 AI 工程</p>
         <p class="hero__bio">
           把想法变成能跑的东西。日常借助 AI 直接开工，也坚持把系统底层弄明白；折腾工具链、自动化流程和 AI 工程化，业余给常用开源仓库提 PR。
         </p>
@@ -27,7 +27,7 @@ layout: default
             <img class="terminal__avatar" src="{{ '/assets/img/avatar.png' | relative_url }}" alt="Thatgfsj 的头像" width="64" height="64">
             <div>
               <p class="terminal__id">Thatgfsj</p>
-              <p class="terminal__sub">孙政 · 全栈开发者</p>
+              <p class="terminal__sub">全栈开发者</p>
             </div>
           </div>
           <dl class="specs">
