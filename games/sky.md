@@ -85,13 +85,13 @@ permalink: /games/sky/
   </div>
 </div>
 
-<p class="game-body-text">把游戏关卡搬进浏览器：UE4 关卡二进制解析成 three.js 场景，压成单个 HTML 文件，没有外部依赖。下面嵌的是<strong>自动巡游</strong>演示；想自己走，点「单独打开」进入<strong>自由移动</strong>。</p>
+<p class="game-body-text">把游戏关卡搬进浏览器：UE4 关卡二进制解析成 three.js 场景，压成单个 HTML 文件，没有外部依赖。页面内嵌与「单独打开」都默认<strong>自由移动</strong>，按 <code>M</code> 可以切自动巡游。</p>
 
 {% for l in site.data.sky_levels %}
 <h2 class="game-section-title">{{ l.title }} <span class="game-note">{{ l.en }}</span></h2>
 
 <div class="sky-player">
-  <iframe id="sky-{{ l.id }}" src="{{ l.file | relative_url }}?t=8" title="{{ l.title }} 3D 场景" allow="fullscreen" allowfullscreen></iframe>
+  <iframe id="sky-{{ l.id }}" src="{{ l.file | relative_url }}" title="{{ l.title }} 3D 场景" allow="fullscreen" allowfullscreen></iframe>
   <div class="sky-player__bar">
     <span>{{ l.source }} · {{ l.engine }} · {{ l.triangles }} 三角形 · {{ l.instances }} 实例 · {{ l.sprites }} 烛火</span>
     <span class="sky-player__acts">
