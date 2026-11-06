@@ -117,12 +117,32 @@ permalink: /games/sky/
 <p class="post-back"><a href="{{ '/games/' | relative_url }}">← 返回游戏</a></p>
 
 <script>
+  // 内嵌播放器要能接到键盘，先得让 iframe 里的 document 拿到焦点；
+  // iframe 内的 canvas 会在 pointerdown 里 preventDefault（拖拽看视角），
+  // 所以从父页面在捕获阶段补一次 frame.focus()（同源，可直接挂到 iframe document 上）。
+  document.querySelectorAll('.sky-player iframe').forEach(function (frame) {
+    var focusFrame = function () {
+      try { frame.focus(); } catch (e) {}
+    };
+    var bind = function () {
+      var doc = frame.contentDocument;
+      if (!doc || doc.__skyFocusBound) return;
+      doc.__skyFocusBound = true;
+      doc.addEventListener('pointerdown', focusFrame, true);
+    };
+    frame.addEventListener('load', bind);
+    bind();
+  });
+
   document.querySelectorAll('[data-sky-fullscreen]').forEach(function (btn) {
     btn.addEventListener('click', function () {
       var frame = document.getElementById(btn.getAttribute('data-sky-fullscreen'));
       if (!frame) return;
       var request = frame.requestFullscreen || frame.webkitRequestFullscreen || frame.msRequestFullscreen;
       if (request) request.call(frame);
+      // 全屏 / 点击后把焦点交回播放器，键盘才能用
+      try { frame.focus(); } catch (e) {}
+      try { frame.contentWindow.focus(); } catch (e) {}
     });
   });
 </script>
